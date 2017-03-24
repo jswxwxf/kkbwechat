@@ -1,0 +1,3 @@
+<span class="lcb-pill-switcher lcb-pill-switcher-color-default">
+  <span ng-repeat="opt in ctrl.options" ng-class="{ 'lcb-pill-switcher-on': ctrl.value == opt.value }" ng-click="ctrl.switch(opt)">{{opt.label}}</span>
+</span>

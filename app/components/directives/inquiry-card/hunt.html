@@ -1,0 +1,16 @@
+<div class="lcb-inquiry-card card" ng-click="ctrl.triggerDetail($event)">
+  <div ng-if="!ctrl.claim">
+    <button ng-if="ctrl.inquiry.status == 2" class="button button-small button-outline button-assertive" ui-sref="order.quote.license({ inquiry_id: ctrl.inquiry.id, license_no: ctrl.inquiry.license_no })">补充资料</button>
+    <button ng-if="ctrl.inquiry.status == 3" class="button button-small button-outline button-stable" ng-click="ctrl.showStatus()">等候结果</button>
+    <button ng-if="ctrl.inquiry.status == 4" class="button button-small button-outline button-stable" ng-click="ctrl.showStatus()">等候结果</button>
+    <button ng-if="ctrl.inquiry.status == 5" class="button button-small button-outline button-assertive" ui-sref="order.result({ inquiry_id: ctrl.inquiry.id })">查看结果</button>
+    <button ng-if="ctrl.inquiry.status == 6" class="button button-small button-outline button-stable" ng-click="ctrl.showStatus()">点击查看</button>
+    <button ng-if="ctrl.inquiry.status == 7" class="button button-small button-outline button-stable" ng-click="ctrl.showStatus()">点击查看</button>
+    <button ng-if="ctrl.inquiry.status == 9" class="button button-small button-outline button-assertive" ui-sref="order.inquiry.insurance({ product_id: ctrl.inquiry.product_id, city: ctrl.inquiry.city_id, inquiry_id: ctrl.inquiry.id, license_no: ctrl.inquiry.license_no })">重新报价</button>
+  </div>
+  <img src="/static/images/ico_hunt_driver.png">
+  <h5>{{ctrl.inquiry.product}}</h5>
+  <div class="lcb-smaller-font">{{ctrl.inquiry.license_no}}</div>
+  <div class="lcb-smaller-font assertive">报价日期：{{ctrl.inquiry.quote_date}}</div>
+  <div class="lcb-smaller-font assertive clearfix">报价状态：{{ctrl.getStatus()}}</div>
+</div>

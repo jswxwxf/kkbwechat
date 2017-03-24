@@ -1,0 +1,40 @@
+<ion-modal-view id="insurance-eval-result-container" class="lcb-inset-modal">
+  <ion-header-bar>
+    <h1 class="title">车辆商业险保费</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('result')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+
+    <div id="insurance-eval-result" class="dark">
+
+      <h3 class="text-center">开开保为您节省</h3>
+      <div id="save"class="text-center">
+        <div>{{ctrl.result.pct_save}}%</div>
+      </div>
+
+      <div id="compare">
+        <table>
+          <tr>
+            <th>4s店</th>
+            <td><lcb-progress-bar value="ctrl.result.price_4s" max="ctrl.result.price_4s" color-class="'lcb-light-color'"></lcb-progress-bar></td>
+            <td>{{ctrl.result.price_4s}}</td>
+          </tr>
+          <tr>
+            <th>电网销</th>
+            <td><lcb-progress-bar value="ctrl.result.price_online" max="ctrl.result.price_4s" color-class="'lcb-light-color'"></lcb-progress-bar></td>
+            <td>{{ctrl.result.price_online}}</td>
+          </tr>
+          <tr>
+            <th>开开保</th>
+            <td><lcb-progress-bar value="ctrl.result.price_kkb" max="ctrl.result.price_4s"></lcb-progress-bar></td>
+            <td>{{ctrl.result.price_kkb}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <button id="inquiry" class="button button-block button-clear" ui-sref="order.inquiry.basic">立刻精确报价</button>
+
+    </div>
+
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,180 @@
+#user-grade-report1 {
+
+  line-height: 25px;
+  font-size: 12pt;
+
+  .lcb-comment {
+    color: #944B4B;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .lcb-comment2 {
+    @extend .lcb-comment;
+    margin-top: 10px;
+    font-size: 14pt;
+    span {
+      color: red;
+      font-size: 18pt;
+    }
+  }
+
+  #header {
+    background-color: #30354F;
+    color: white;
+    text-align: center;
+    font-size: 12pt;
+    padding: 30px 30px 15px 30px;
+  }
+
+  #result {
+    background-image: url('/static/images/grades/resultbg.png');
+    background-size: cover;
+    padding: 15px;
+    img {
+      width: 80px;
+      margin: 15px;
+    }
+    > div:first-child {
+      background-color: white;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      > div {
+        float: right;
+      }
+    }
+    > div:last-child {
+      background-color: $balanced;
+      color: white;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+  }
+
+  #tags {
+    > div:first-child {
+      width: 270px;
+      margin: 0 auto;
+    }
+    span {
+      //border: 1px solid #EDDDC4;
+      border-radius: 5px;
+      font-size: 12pt;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 5px;
+      display: inline-block;
+      min-width: 70px;
+      padding: 5px 10px;
+      text-align: center;
+      background-color: #FDBF5C;
+      color: white;
+      line-height: 20px;
+    }
+    .lcb-tag-color1 {
+      background-color: #E96199;
+    }
+    .lcb-tag-color2 {
+      background-color: #A05EF8;
+    }
+    .lcb-tag-color3 {
+      background-color: #4ECBC7;
+    }
+    .lcb-tag-color4 {
+      background-color: #93C3FD;
+    }
+    .lcb-tag-color5 {
+      background-color: #9CD86C;
+    }
+  }
+
+  #sudden {
+    img {
+      width: 50px;
+    }
+    span {
+      color: red;
+      font-size: 18pt;
+    }
+  }
+
+  #accel {
+    div:first-child {
+      font-size: 14pt;
+      padding-top: 10px;
+    }
+    img.lcb-icon {
+      width: 40px;
+      vertical-align: middle;
+      margin-top: -5px;
+      margin-right: 5px;
+    }
+    span {
+      color: red;
+      font-size: 18pt;
+    }
+  }
+
+  #period {
+    img {
+      padding-top: 15px;
+      width: 250px;
+    }
+  }
+
+  #mileage {
+    > div:first-child {
+      position: relative;
+      > div {
+        color: white;
+        font-size: 25pt;
+        text-align: center;
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+      }
+    }
+    img {
+      margin-top: 20px;
+      width: 250px;
+    }
+  }
+
+  #traffic {
+    img {
+      padding: 0 20px;
+      padding-top: 15px;
+      max-width: 400px;
+    }
+  }
+
+  #road {
+    img {
+      padding-top: 15px;
+    }
+  }
+
+  #neighbour {
+    padding-bottom: 50px;
+    img {
+      padding-top: 15px;
+    }
+    span {
+      color: red;
+      font-size: 18pt;
+    }
+  }
+
+  #qrcode {
+    text-align: center;
+    padding: 20px;
+    img {
+      width: 180px;
+    }
+  }
+
+}
+
+#user-grade-report1-container {
+
+}

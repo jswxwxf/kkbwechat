@@ -1,0 +1,28 @@
+<ion-view id="share-draw-scratch-container" view-title="刮刮卡">
+  <ion-content id="share-draw-scratch">
+    <img src="/static/images/draw/header_scratch.png" class="lcb-img-responsive">
+    <div id="card">
+      <img src="/static/images/draw/card.png" class="lcb-img-responsive">
+      <div id="chance">
+        <div>您还有{{ctrl.log.chances}}次机会</div>
+        <img src="/static/images/draw/ribbon.png">
+      </div>
+      <div id="winning" class="padding-horizontal" ng-click="ctrl.showModal('scratch-history')">
+        已中奖{{ctrl.log.history.length}}次 <img src="/static/images/draw/gift.png" alt="">
+      </div>
+      <div id="cover">
+        <div id="award">{{ctrl.award}}</div>
+        <img ng-show="ctrl.log.chances > 0" id="eraser" src="/static/images/draw/cover.png" class="lcb-img-responsive">
+      </div>
+    </div>
+    <div id="intro" class="more-padding lcb-margin">
+      <div class="lcb-title lcb-border-bottom">活动说明</div>
+      <ol class="lcb-ol">
+        <li>刮开图层，可立即查看中奖信息。</li>
+        <li>抽奖机会须当月用完，否则自动失效。</li>
+        <li>里程豆积分，车险抵扣券等奖品会直接放入您的个人账户，请到我的钱包中查看。</li>
+        <li>开开保拥有本活动最终解释权。</li>
+      </ol>
+    </div>
+  </ion-content>
+</ion-view>

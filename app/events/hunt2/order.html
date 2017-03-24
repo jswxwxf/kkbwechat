@@ -1,0 +1,33 @@
+<ion-modal-view id="hunt2-order-container" class="lcb-inset-modal">
+  <ion-content id="hunt2-order">
+
+    <div>
+      <div id="beautyAvatar" class="padding pull-left" ng-click="ctrl.showModal('photo', { animation: 'scale-in' })">
+        <img ng-src="{{ctrl.beauty.avatarUrl}}">
+        <img src="/static/images/icon_zoon.png">
+      </div>
+      <div id="tags" class="padding clearfix">
+        <span ng-repeat="tag in ctrl.beauty.tags">{{tag}}</span>
+      </div>
+    </div>
+
+    <div id="description" class="text-center">接单即可享受开开保提供的晚大床房费</div>
+
+    <table id="route" class="padding">
+      <tr>
+        <td><img src="/static/images/icon_start.png"></td>
+        <td>{{ctrl.beauty.boarding}}</td>
+      </tr>
+      <tr>
+        <td><img src="/static/images/icon_terminal.png"></td>
+        <td>省钱终点站</td>
+      </tr>
+    </table>
+
+    <div id="distance">导航距您约<span>{{ctrl.beauty.distance}}</span>公里</div>
+
+  </ion-content>
+  <ion-footer-bar>
+    <button class="button button-block button-assertive" ng-click="ctrl.accept(ctrl.beauty.id)">接单</button>
+  </ion-footer-bar>
+</ion-modal-view>

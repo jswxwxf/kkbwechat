@@ -1,0 +1,83 @@
+<ion-view view-title="信息登记">
+  <ion-content>
+
+    <form id="insurance-compensate2" name="ctrl.compensate2Form" novalidate>
+
+      <div class="list padding-top">
+        <label class="item item-input">
+          <span class="input-label">姓名 <span class="assertive">*</span></span>
+          <input name="name" ng-model="ctrl.compensate.name" type="text" placeholder="请输入姓名" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">身份证 <span class="assertive">*</span></span>
+          <input name="id" ng-model="ctrl.compensate.id_card" type="text" placeholder="请输入车主身份证" required lcb-validator="idCard">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.compensate2Form.id.$dirty && ctrl.compensate2Form.id.$invalid">请输入正确格式的身份证号</div>
+        <label class="item item-input">
+          <span class="input-label">手机号 <span class="assertive">*</span></span>
+          <input name="mobile" ng-model="ctrl.compensate.mobile" type="tel" placeholder="请输入手机号码" required lcb-validator="mobile">
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.compensate2Form.mobile.$dirty && ctrl.compensate2Form.mobile.$invalid">请输入正确的手机号</div>
+        <div class="item item-input lcb-input-button-right">
+          <label for="code" class="input-label">验证码 <span class="assertive">*</span></label>
+          <input name="code" id="code" ng-model="ctrl.compensate.code" maxlength="6" type="number" placeholder="请输入验证码" required lcb-validator="verifyCode">
+          <div class="lcb-border-left">
+            <button type="button" class="button button-clear button-balanced" ng-disabled="ctrl.compensate2Form.mobile.$invalid" ng-click="ctrl.sendCompensateCode()" count-down>获取验证码</button>
+          </div>
+        </div>
+        <label class="item item-input">
+          <span class="input-label">车牌号 <span class="assertive">*</span></span>
+          <input name="licenseNumber" ng-model="ctrl.compensate.license_no" type="text" placeholder="请输入车牌号" required lcb-validator="licenseNumber">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.compensate2Form.licenseNumber.$dirty && ctrl.compensate2Form.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+        <label class="item item-input item-select">
+          <span class="input-label">车型 <span class="assertive">*</span></span>
+          <select ng-model="ctrl.compensate.model" ng-options="model_id as model.name for (model_id, model) in ctrl.products.models track by model_id" required>
+            <option value="">请选择车型</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="list">
+        <div class="item lcb-white-bg lcb-normal-fontweight">专车平台 <span class="assertive">*</span></div>
+        <lcb-radio name="platform" ng-repeat="(platform_id, platform) in ctrl.products.platforms" ng-model="ctrl.compensate.platform" ng-value="platform_id" class="item-checkbox-right checkbox-balanced" required ng-disabled="!platform.enabled">{{platform.name}}{{platform.enabled ? '' : '（敬请期待）'}}</lcb-radio>
+        <label class="item item-input">
+          <span class="input-label">平台帐号 <span class="assertive">*</span></span>
+          <input name="platform_account" ng-model="ctrl.compensate.platform_account" type="text" placeholder="请输入平台帐号" required>
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.compensate2Form.platform_account.$dirty && ctrl.compensate2Form.platform_account.$invalid">请输入平台帐号</div>
+        <div class="list">
+          <div class="item item-icon-right lcb-file-upload">
+            <span>上传平台帐号截图</span>
+            <img src="/static/images/sample_license_no.jpg">
+            <i class="icon ion-chevron-right"></i>
+            <input type="file" accept="image/*" ng-model='ctrl.compensate.platform_screenshot' lcb-file-uploader>
+          </div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item lcb-white-bg lcb-normal-fontweight">套餐确认 <span class="assertive">*</span></div>
+        <lcb-radio name="package" ng-repeat="(package_id, package) in ctrl.products.packages" ng-model="ctrl.compensate.package" ng-value="package_id" class="item-checkbox-right checkbox-balanced" required ng-disabled="ctrl.compensate.package != package_id">{{package.name}}</lcb-radio>
+      </div>
+
+      <div class="list">
+        <div class="item">套餐价格 <div class="item-note">{{ctrl.price}}元</div></div>
+        <div class="item">支付方式 <div class="item-note">微信支付</div></div>
+      </div>
+
+      <div id="agreement" class="item item-checkbox checkbox-balanced">
+        <div class="checkbox" style="right: auto">
+          <input ng-model="ctrl.agreed" type="checkbox" required>
+        </div>
+        阅读并同意
+        <a href="javascript:void(0)" class="balanced" ng-click="ctrl.showModal('compensate2-rule')">《专车停运补偿服务协议》</a>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-disabled="ctrl.compensate2Form.$invalid" ng-click="ctrl.pay()">去支付</button>
+  </ion-footer-bar>
+</ion-view>

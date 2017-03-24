@@ -1,0 +1,15 @@
+<ion-view view-title="{{ctrl.pageTitles[ctrl.page]}}">
+  <ion-content>
+  
+    <form name="editForm" id="user-edit" novalidate>
+
+      <ng-include src="ctrl.pageUrl"></ng-include>
+
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="editForm.$invalid" ng-click="ctrl.edit()">确认</button>
+      </div>
+      
+    </form>
+  
+  </ion-content>
+</ion-view>

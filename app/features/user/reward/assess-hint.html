@@ -1,0 +1,26 @@
+<ion-modal-view id="user-reward-assess-hint-container" class="lcb-inset-modal">
+  <ion-header-bar>
+    <h1 class="title">补充信息说明</h1>
+  </ion-header-bar>
+  <ion-content overflow-scroll="true">
+
+    <div id="user-reward-assess-hint" class="dark lcb-selectable">
+      <dl>
+        <dt>身份特质</dt>
+        <dd>资料越完善，分数越高，同时分数还受驾龄、信用等影响。</dd>
+        <dt>驾驶路线</dt>
+        <dd>经常行驶相同的路线，则分数会提高；经常在拥堵路段行驶，则会影响此项分数。</dd>
+        <dt>驾驶里程</dt>
+        <dd>平均驾驶里程越低，分数越高，行驶少，则出险概率低。</dd>
+        <dt>驾驶习惯</dt>
+        <dd>文明驾驶，减少急刹车、急加速、急转弯的次数，会相应提高评分。</dd>
+        <dt>驾驶时间</dt>
+        <dd>行驶时间避开高峰期，减少夜间驾驶，评分会提高。</dd>
+      </dl>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar>
+    <button class="button button-clear button-block button-dark" ng-click="ctrl.hideModal('hint')">我知道了</button>
+  </ion-footer-bar>
+</ion-modal-view>

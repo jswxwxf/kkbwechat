@@ -1,0 +1,22 @@
+#insurance-product-choose {
+
+  .item-checkbox {
+    padding-left: 5px;
+    &.item-checkbox-right {
+      padding-right: 50px;
+    }
+    .item-content {
+      font-size: 0.8em;
+      img {
+        float: left;
+        width: 100px;
+      }
+      > div {
+        position: relative;
+        left: 3vw;
+        top: 8px;
+      }
+    }
+  }
+
+}

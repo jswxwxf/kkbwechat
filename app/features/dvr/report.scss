@@ -1,0 +1,233 @@
+#dvr-no-report {
+  h4 {
+    line-height: 30px;
+  }
+}
+
+#dvr-report {
+
+  background-color: white;
+
+  #title {
+    background-color: #1eaffc;
+    color: white;
+    padding: 20px;
+    font-size: 12pt;
+  }
+
+  #score {
+    .lcb-score-bar-vertical {
+      > div:first-child {
+        display: none;
+      }
+      .lcb-bar {
+        width: 50px;
+        height: 150px;
+      }
+      > div:last-child {
+        font-size: 11pt;
+        color: $dark;
+        span {
+          display: inline-block;
+          height: 10px;
+          width: 10px;
+          margin-right: 2px;
+        }
+      }
+    }
+    .lcb-score-bar-vertical:nth-child(1) {
+      .lcb-bar {
+        background-color: #4CB2E7;
+        & > div {
+          background-color: #9BD4F1;
+        }
+      }
+      span {
+        background-color: #4CB2E7;
+      }
+    }
+    .lcb-score-bar-vertical:nth-child(2) {
+      .lcb-bar {
+        background-color: #4FE0E2;
+        & > div {
+          background-color: #9CEEEE;
+        }
+      }
+      span {
+        background-color: #4FE0E2;
+      }
+    }
+    .lcb-score-bar-vertical:nth-child(3) {
+      .lcb-bar {
+        background-color: #9C73DD;
+        & > div {
+          background-color: #C9B1EC;
+        }
+      }
+      span {
+        background-color: #9C73DD;
+      }
+    }
+    .lcb-score-bar-vertical:nth-child(4) {
+      .lcb-bar {
+        background-color: #EE6DC9;
+        & > div {
+          background-color: #EF9ED8;
+        }
+      }
+      span {
+        background-color: #EE6DC9;
+      }
+    }
+  }
+
+  #result {
+
+    #result-level {
+      img {
+        width: 100px;
+      }
+    }
+
+    #tags {
+      span {
+        display: inline-block;
+        width: 70px;
+        padding: 15px 20px;
+        @include small-screen() {
+          width: 60px;
+          padding: 10px 15px;
+        }
+        margin: 2px;
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        &.lcb-tag-1 {
+          background-image: url('/static/images/grades/stage3/tag1.png');
+        }
+        &.lcb-tag-2 {
+          background-image: url('/static/images/grades/stage3/tag2.png');
+        }
+        &.lcb-tag-3 {
+          background-image: url('/static/images/grades/stage3/tag3.png');
+        }
+        &.lcb-tag-4 {
+          background-image: url('/static/images/grades/stage3/tag4.png');
+        }
+        &.lcb-tag-5 {
+          background-image: url('/static/images/grades/stage3/tag5.png');
+        }
+      }
+    }
+
+    h4 {
+      font-weight: normal;
+      font-size: 12pt;
+    }
+
+    > div:last-child {
+      padding: 0 70px;
+    }
+
+  }
+
+  #eval-period {
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 10px;
+    width: 50%;
+    margin: 10px auto;
+    margin-top: 25px;
+  }
+
+  #detail {
+    .col {
+      padding-left: 15px;
+    }
+    @include small-screen() {
+      .col {
+        padding-left: 2px;
+      }
+    }
+    .col-40 {
+      flex: 0 0 44%;
+      max-width: 44%;
+    }
+    img {
+      height: 12pt;
+      position: relative;
+      top: 2px;
+      margin-right: 5px;
+    }
+  }
+
+  #period {
+    border-top: $lcb-border;
+    margin: 10px 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .col-20 {
+      padding-top: 10px;
+      @include small-screen() {
+        margin-right: 10px;
+      }
+    }
+    img {
+      width: 50px;
+    }
+    .lcb-progress-bar-m, .lcb-progress-bar-n, .lcb-progress-bar-e {
+      height: 1.5em;
+      border-radius: 35px;
+    }
+    .lcb-progress-bar-m {
+      background-color: #a8e5fd;
+    }
+    .lcb-progress-bar-n {
+      background-color: #87cefd;
+    }
+    .lcb-progress-bar-e {
+      background-color: #98aafc;
+    }
+    > .row > .col:last-child {
+      > div {
+        padding: 5px;
+      }
+    }
+  }
+
+  #traffic {
+    border-top: $lcb-border;
+    margin: 0 30px;
+    padding: 20px 0;
+    .lcb-progress-bar {
+      height: 1.5em;
+      border-radius: 35px;
+      background-color: #3ef08a;
+      > div {
+        border-radius: 35px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: #fc5d74;
+      }
+    }
+  }
+
+  #road {
+    border-top: $lcb-border;
+    margin: 0 30px;
+    padding: 20px 0;
+    .lcb-progress-bar {
+      height: 1.5em;
+      border-radius: 35px;
+      background-color: #b7f0fe;
+      > div {
+        border-radius: 35px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: #58cdfd;
+      }
+    }
+  }
+
+}

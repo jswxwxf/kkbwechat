@@ -1,0 +1,19 @@
+<ion-view view-title="泛华历史报价">
+  <ion-nav-buttons side="right">
+    <button class="button button-positive button-clear" ui-sref="order.inquiry3.basic">新建报价</button>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <ion-list id="inquiry-fanhua-list">
+      <ion-item ng-repeat="inquiry in ctrl.inquiries">
+        <inquiry-card-fanhua inquiry="inquiry"></inquiry-card-fanhua>
+        <ion-option-button class="button-assertive" ng-click="ctrl.remove(inquiry)">
+          删除
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+    <h4 class="more-padding dark text-center" ng-if="isEmpty(ctrl.inquiries)">暂时没有您的报价信息</h4>
+
+  </ion-content>
+</ion-view>

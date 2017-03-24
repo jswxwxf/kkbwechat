@@ -1,0 +1,44 @@
+#dvr-read-add {
+
+  height: 100%;
+  min-height: 100%;
+
+  .input-label {
+    width: 15px;
+  }
+
+  .watermark_container {
+    width: 100%;
+    height: 50%;
+    .watermark {
+      right: 24px;
+      line-height: 25px!important;
+    }
+  }
+
+  #content {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      line-height: 25px;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      line-height: 25px;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      line-height: 25px;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      line-height: 25px;
+    }
+  }
+
+}
+
+//#dvr-read-add-container {
+//  .scroll-content > .scroll {
+//    height: 100%;
+//    min-height: 100%;
+//  }
+//}

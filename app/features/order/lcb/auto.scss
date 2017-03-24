@@ -1,0 +1,47 @@
+#lcb-auto {
+
+  a {
+    text-decoration: none;
+  }
+
+  @include small-screen() {
+    #order-number {
+      .item-note {
+        padding-top: 5px;
+        float: left;
+      }
+    }
+  }
+
+  .lcb-fees {
+    padding-left: 50px;
+    font-size: 12pt;
+    line-height: 25px;
+    span {
+      float: right;
+      padding-right: 50px;
+      color: $assertive;
+    }
+  }
+
+  .lcb-intro {
+    .item {
+      padding-left: 50px;
+    }
+    .item-note {
+      color: $assertive;
+      padding-right: 50px;
+    }
+    .lcb-description {
+      font-size: 1em;
+      white-space: normal;
+      padding-top: 0;
+      border-top: none;
+      margin-top: -10px;
+      .lcb-ol {
+        padding-left: 25px;
+      }
+    }
+  }
+
+}

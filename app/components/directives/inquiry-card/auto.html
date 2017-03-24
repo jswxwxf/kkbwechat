@@ -1,0 +1,10 @@
+<div class="lcb-inquiry-card card" ng-click="ctrl.triggerDetail($event)">
+  <div ng-if="!ctrl.claim">
+    <button ng-if="!ctrl.inquiry.disabled" class="button button-small button-outline button-assertive" ui-sref="order.result({ inquiry_id: ctrl.inquiry.id })">查看详情</button>
+    <button ng-if="ctrl.inquiry.disabled" class="button button-small button-outline button-stable" disabled>报价失效</button>
+  </div>
+  <img src="/static/images/auto.png">
+  <h5>{{ctrl.inquiry.product}}</h5>
+  <div class="lcb-smaller-font">{{ctrl.inquiry.license_no}}</div>
+  <div class="lcb-smaller-font assertive clearfix">报价日期：{{ctrl.inquiry.quote_date}}</div>
+</div>

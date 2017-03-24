@@ -1,0 +1,114 @@
+<ion-view view-title="驾驶评级月报" id="user-grade-report3-container">
+  <ion-nav-buttons side="right">
+    <car-switcher type="button-nav" can-add="false" on-change="ctrl.loadReport(car.car_id)" ng-if="!lcbConfig.inEvent()"></car-switcher>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="user-grade-report3" class="lcb-white-bg">
+
+      <div id="header">
+        <img src="/static/images/grades/stage3/reportheader.png" class="lcb-img-responsive">
+        <div id="header-period" class="text-center">{{ctrl.report.report_period}}</div>
+      </div>
+
+      <div id="result">
+        <img id="result-bar-top" src="/static/images/grades/stage3/resultbt.png">
+        <img id="result-bar-left" src="/static/images/grades/stage3/resultbl.png">
+        <img id="result-bar-right" src="/static/images/grades/stage3/resultbr.png">
+        <div id="result-level" class="row row-center">
+          <div class="col col-33 text-center"><img ng-src="/static/images/grades/stage3/{{ctrl.report.grade_level.toLowerCase()}}.png" class="lcb-img-responsive"></div>
+          <div id="result-grade-text" class="col lcb-margin"><div class="padding">{{ctrl.report.grade_text}}</div></div>
+        </div>
+        <div id="result-grade-comments" class="text-center">
+          <div class="lcb-margin-vertical">{{ctrl.report.grade_comments}}</div>
+        </div>
+      </div>
+
+      <div id="tags" class="text-center">
+        <img src="/static/images/grades/stage3/resultbb.png" class="lcb-img-responsive">
+        <h1>您的驾驶徽章</h1>
+        <div>
+          <span ng-repeat="tag in ctrl.report.tags track by $index" ng-class="'lcb-tag-' + ($index + 1)">{{tag}}</span>
+        </div>
+      </div>
+
+      <div id="sudden">
+        <img src="/static/images/grades/stage3/caption1.png" class="lcb-img-responsive padding">
+        <div id="sudden-detail">
+          <img src="/static/images/grades/stage3/sudden_bg.png" class="lcb-img-responsive padding">
+          <div>
+            <div class="row text-center">
+              <div class="col">
+                <img src="/static/images/grades/stage3/icon_acceleration.png"><br>
+                急加速<br>
+                <span>{{ctrl.report.acce}}</span>次/天
+              </div>
+              <div class="col">
+                <img src="/static/images/grades/stage3/icon_brake.png"><br>
+                急减速<br>
+                <span>{{ctrl.report.brake}}</span>次/天
+              </div>
+              <div class="col">
+                <img src="/static/images/grades/stage3/icon_turn.png"><br>
+                急转弯<br>
+                <span>{{ctrl.report.turn}}</span>次/天
+              </div>
+            </div>
+            <div class="text-center">
+              {{ctrl.report.abt_comments}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="period" class="text-center">
+        <h3>时间段</h3>
+        <img ng-src="/static/images/grades/stage3/timerange{{ctrl.report.timerange}}.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          {{ctrl.report.timerange_comments}}
+        </div>
+      </div>
+
+      <div id="mileage">
+        <img src="/static/images/grades/stage3/caption4.png" class="lcb-img-responsive padding">
+        <div class="text-center lcb-comment">
+          {{ctrl.report.mileage_comments}}
+        </div>
+        <div id="mileage-number" class="text-center">
+          <div>{{ctrl.report.mileage}}KM</div>
+        </div>
+      </div>
+
+      <div id="traffic" class="text-center">
+        <img src="/static/images/grades/stage3/traffic_bt.png" class="lcb-img-responsive">
+        <h3>行驶拥堵情况</h3>
+        <div class="text-center lcb-comment2">
+          拥堵状态占据了您<span>{{ctrl.report.jam_percent}}%</span>的行驶时长
+        </div>
+        <img ng-src="/static/images/grades/stage3/traffic{{ctrl.report.jam}}.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          {{ctrl.report.jam_comments}}
+        </div>
+      </div>
+
+      <img src="/static/images/grades/stage3/caption6.png" class="lcb-img-responsive">
+      <div id="road">
+        <div class="text-center lcb-comment2">
+          您每天<span>{{ctrl.report.familiar_roads_percent}}%</span>的脚步是踏在您熟悉的土地上
+        </div>
+        <div class="text-center lcb-comment">
+          {{ctrl.report.familiar_roads_comments}}
+        </div>
+      </div>
+
+      <div id="qrcode">
+        <img src="/static/images/grades/qrcode.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          感谢您参与开开保寻找好车主活动
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,76 @@
+#hunt2-fail-container {
+
+  .bar-footer {
+    padding: 0;
+    .button {
+      border-radius: 0;
+    }
+  }
+
+}
+
+#hunt2-fail {
+
+  #route {
+
+    h3 {
+      margin-top: 0;
+    }
+
+    #fail {
+      width: 35%;
+      position: absolute;
+      top: 15px;
+      right: 5px;
+    }
+
+    table {
+      width: 65%;
+      font-size: 11pt;
+      img {
+        height: 20px;
+        position: relative;
+        top: 4px;
+      }
+      td {
+        padding: 5px;
+      }
+      tr {
+        td:first-child {
+          width: 25px;
+        }
+        td:last-child {
+          max-width: 0;
+          @include ellipsis();
+        }
+      }
+    }
+
+  }
+
+  .list {
+    margin-bottom: 0;
+  }
+  .lcb-smaller-font {
+    font-size: 1.1em;
+    padding: 15px 6px;
+    @include iphone5(portrait) {
+      font-size: 1em;
+      padding: 12px 6px;
+    }
+  }
+
+  #compete {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 12pt;
+    h3 {
+      display: block;
+    }
+  }
+
+  #failbeauty {
+    padding: 10px 50px;
+  }
+
+}

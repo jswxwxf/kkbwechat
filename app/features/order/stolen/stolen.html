@@ -1,0 +1,50 @@
+<ion-view view-title="盗抢补偿">
+  <ion-content>
+
+    <div id="order-stolen">
+
+      <div class="list padding-top">
+        <div class="item">
+          姓名
+          <span class="item-note">{{ctrl.stolen.name}}</span>
+        </div>
+        <div class="item">
+          手机
+          <span class="item-note">{{ctrl.stolen.mobile}}</span>
+        </div>
+        <div class="item">
+          车牌号
+          <span class="item-note">{{ctrl.stolen.license_no}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          保障额度
+          <span class="item-note">{{ctrl.stolen.final_price}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          有效期
+          <span class="item-note">{{ctrl.stolen.start_day}} - {{ctrl.stolen.end_day}}</span>
+        </div>
+        <div class="item">
+          订单状态
+          <span class="item-note energized">{{ctrl.stolen.status}}</span>
+        </div>
+        <div class="item item-divider lcb-font-note lcb-no-border-bottom lcb-smaller-font lcb-normal-fontweight">
+          注意事项：<br/>
+          <ol class="lcb-ol">
+            <li>只适用于北京、上海、广州、深圳地区</li>
+            <li>只提供春节期间（2016年2月6日至2月13日）车辆盗抢补偿服务</li>
+            <li>理赔报案截至2016年2月29日下午5点，如需理赔请拨打<a href="tel:4009663899">400-966-3899</a></li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

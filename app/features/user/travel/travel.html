@@ -1,0 +1,75 @@
+<ion-view view-title="行程">
+  <ion-content>
+  
+    <div id="ubi-travel">
+  
+      <div id="total" class="more-padding-vertical">
+        
+        <div class="row row-no-padding">
+          <div class="col">
+            <div>
+              <div><span>{{ctrl.summary.distance}}</span><br/><span>距离:公里</span></div><br />
+              <div><span>{{ctrl.summary.duration}}</span><br/><span>时长:小时</span></div>
+            </div>
+          </div>
+          <div class="col col50">
+            <span>{{ctrl.summary.avg_score}}</span>
+            <progress-arc complete="ctrl.summary.avg_score / 100" size="105" background="#ededef" stroke="#4ed790" stroke-width="6">
+            </progress-arc>
+          </div>
+          <div class="col">
+            <div>
+              <div><span>{{ctrl.summary.fuel_cost}}</span><br/><span>油费:元</span></div><br />
+              <div><span>{{ctrl.summary.avg_lpkm}}</span><br/><span>百公里耗油:升</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <week-paginator name="ctrl.paginator" on-week="ctrl.loadWeek(monday, forward)"></week-paginator>
+
+      <div id="detail" class="padding-horizontal text-center">
+        <h5>每日分数</h5>
+        <div class="lcb-white-bg padding-horizontal">
+          <div class="row">
+            <lcb-score-bar label="一" score="ctrl.travels[0].score" value="parseInt(ctrl.travels[0].score)" vertical="true"></lcb-score-bar>
+            <lcb-score-bar label="二" score="ctrl.travels[1].score" value="parseInt(ctrl.travels[1].score)" vertical="true"></lcb-score-bar>
+            <lcb-score-bar label="三" score="ctrl.travels[2].score" value="parseInt(ctrl.travels[2].score)" vertical="true"></lcb-score-bar>
+            <lcb-score-bar label="四" score="ctrl.travels[3].score" value="parseInt(ctrl.travels[3].score)" vertical="true"></lcb-score-bar>
+            <lcb-score-bar label="五" score="ctrl.travels[4].score" value="parseInt(ctrl.travels[4].score)" vertical="true"></lcb-score-bar>
+            <lcb-score-bar label="六" score="ctrl.travels[5].score" value="parseInt(ctrl.travels[5].score)" vertical="true"></lcb-score-bar>
+            <lcb-score-bar label="日" score="ctrl.travels[6].score" value="parseInt(ctrl.travels[6].score)" vertical="true"></lcb-score-bar>
+          </div>
+        </div>
+      </div>
+      
+      <div id="summary" class="lcb-margin">
+        <h5 class="text-center">不良驾驶习惯统计</h5>
+        <div class="light-bg">
+          <div class="row">
+            <div class="col"><span class="pull-right">{{ctrl.summary.sudden_acce}} (次)</span><img src="/static/images/ico_acceleration.png"><span class="lcb-summary-margin">急加速</span></div>
+            <div class="col"><span class="pull-right">{{ctrl.summary.sudden_turn}} (次)</span><img src="/static/images/ico_swerve.png"><span class="lcb-summary-margin">急转弯</span></div>
+          </div>
+          <div class="row">
+            <div class="col"><span class="pull-right">{{ctrl.summary.sudden_brake}} (次)</span><img src="/static/images/ico_slowdown.png"><span class="lcb-summary-margin">急减速</span></div>
+            <div class="col"><span class="pull-right">{{ctrl.summary.overspeed}} (次)</span><img src="/static/images/ico_overspeed.png"><span class="lcb-summary-margin">超速行驶</span></div>
+          </div>
+          <!--div class="padding-horizontal padding-bottom lcb-bigger-font lcb-congratulation">
+            <i class="icon fa fa-thumbs-o-up balanced padding-right"></i>不错哦，您的分数 94 分，超过 80% 同城的用户，请继续努力！
+          </div-->
+        </div>
+      </div>
+
+      <div class="text-center">
+        如需查看更多详细信息，<br/>请下载开开保官方APP查看
+      </div>
+
+      <div class="padding">
+        <car-switcher value="ctrl.car" type="button" on-change="ctrl.loadTravel(car)"></car-switcher>
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

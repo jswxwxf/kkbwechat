@@ -1,0 +1,140 @@
+<ion-view id="insurance-result-container" view-title="报价结果">
+  <ion-content id="insurance-result" class="has-footer">
+
+    <ion-refresher on-refresh="ctrl.loadInquiry(ctrl.inquiry)" pulling-text="下拉刷新"></ion-refresher>
+
+    <div id="result" class="dark">
+
+      <div class="list">
+
+        <!--div id="status" class="padding dark">
+          <h4>报价状态</h4>
+          <span ng-cloak ng-bind-html="ctrl.getStatusText()"></span>
+          如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a>。
+        </div-->
+
+        <div class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-car"></i>车牌
+            <span class="item-note">
+              {{ctrl.inquiry.license_no}}
+            </span>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-company"></i>
+            保险公司
+            <span class="item-note">
+              {{ctrl.inquiry.company_name}}
+            </span>
+          </div>
+          <!--div class="item item-icon-left">
+            <i class="icon lcb-icon-type"></i>
+            产品类型
+            <span class="item-note">
+              {{ctrl.inquiry.product}}
+            </span>
+          </div-->
+        </div>
+
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-list"></i>
+          商业险种列表
+        </div>
+        <div class="item item-text-wrap lcb-normal-font" ng-show="ctrl.isProcessingRenewal()">
+          已选择按上一年险种报价，我们正在为您报价，稍后会短信通知您！
+        </div>
+        <div class="light-bg lcb-border-bottom text-center" ng-show="!ctrl.isProcessingRenewal()">
+          <package-viewer package="ctrl.inquiry"></package-viewer>
+        </div>
+
+        <div id="fees" class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-money"></i>
+            保费
+            <span class="item-note" ng-if="!ctrl.buttonStatus.showPrice">待计算</span>
+          </div>
+          <div class="item lcb-fees" ng-if="ctrl.buttonStatus.showPrice">
+            <div>商业险：<span class="lcb-fee" ng-bind-html="ctrl.inquiry.standard_commercial | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+            <div>交强险：<span class="lcb-fee" ng-bind-html="ctrl.inquiry.compulsory | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+            <div>车船税：<span class="lcb-fee" ng-bind-html="ctrl.inquiry.tax | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+            <div class="lcb-bold padding-top">合计： <span class="lcb-fee" ng-bind-html="ctrl.getSubPrice() | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+          </div>
+          <div class="item lcb-fees" ng-if="ctrl.buttonStatus.showPrice">
+            <div ng-if="ctrl.inquiry.product_id == 1">优选车险评级折扣：<span class="lcb-fee">-{{ctrl.inquiry.rate_dis}}</span></div> <!-- 这块只有优选车险有 -->
+            <!-- 这块只有惠选车险有 -->
+            <div ng-if="ctrl.inquiry.product_id == 4">
+              <div>
+                <span class="lcb-fee" ng-bind-html="-ctrl.inquiry.credit.usable | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span>
+                行车收益抵扣：<div class="lcb-smaller-font">[累计{{ctrl.inquiry.credit.total | lcbCurrency:{ type: 'float' } }}元，本次可用{{ctrl.inquiry.credit.usable | lcbCurrency:{ type: 'float' } }}元]</div>
+              </div>
+              <div ng-if="!ctrl.lcbUtils.isEmpty(ctrl.inquiry.prizes_remain)">下单立减：<span class="lcb-fee">{{-ctrl.inquiry.prizes_remain | lcbCurrency:{ type: 'float', yuan: true, removeZero: false } }}</span></div>
+            </div>
+            <div class="lcb-bold padding-top">折后价： <span class="lcb-fee" ng-bind-html="ctrl.getDiscountPrice() | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+            <div class="lcb-smaller-font lcb-prizes" ng-repeat="p in ctrl.inquiry.prizes">
+              [<span class="assertive">加送</span>：<a href="javascript:void(0)" ng-click="ctrl.showPrizeDescription(p)">{{p.name}}</a>]
+            </div>
+          </div>
+          <div class="item item-text-wrap lcb-font-note lcb-normal-font">
+            <span ng-cloak ng-bind-html="ctrl.getStatusText()"></span>
+          </div>
+        </div>
+
+        <!--a ng-click="ctrl.chooseRewards()" class="item-icon-left item item-icon-right" ng-if="ctrl.inquiry.product_id == 4 && ctrl.inquiry.credit.reward_credit >= 100">
+          <i class="icon lcb-icon-reward1"></i>
+          <span ng-bind-html="ctrl.getPrizeLabel()"></span>
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a-->
+
+        <div class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-agreement"></i>产品附约<a ng-click="ctrl.showAgreement()" href="javascript:void(0)" class="balanced">《产品服务协议》</a>
+          </div>
+          <div ng-if="ctrl.inquiry.product_id == 2"> <!-- 绿色车险 -->
+            <div class="item item-icon-left lcb-fees">
+              投保大礼包
+              <span class="item-note lcb-normal-font">
+                价值 {{ctrl.inquiry.annually_reward}}元
+              </span>
+            </div>
+            <div class="item item-icon-left lcb-fees">
+              行驶奖励
+              <span class="item-note lcb-normal-font" ng-if="!ctrl.isEmpty(ctrl.inquiry.drive_reward_min)">
+                预计{{ctrl.inquiry.drive_reward_min}} - {{ctrl.inquiry.drive_reward_max}}元
+              </span>
+              <span class="item-note lcb-normal-font" ng-if="ctrl.isEmpty(ctrl.inquiry.drive_reward_min)">
+                待计算
+              </span>
+            </div>
+          </div>
+          <div class="lcb-intro" ng-if="ctrl.inquiry.product_id == 3"> <!-- 凹凸 -->
+            <div class="item item-icon-left lcb-fees">
+              租车奖励(元/天)
+              <span class="item-note lcb-normal-font">
+                {{ctrl.inquiry.drive_reward_max}}元
+              </span>
+            </div>
+            <div class="item lcb-description lcb-font-note">
+              租一天奖一天，上不封顶
+            </div>
+            <div class="item item-icon-left lcb-fees">
+              年底返现(元)
+              <span class="item-note lcb-normal-font">
+                {{ctrl.inquiry.annually_reward}}元
+              </span>
+            </div>
+            <div class="item lcb-description lcb-font-note">
+              全年持续使用智能设备；如下一年度不续保，归还设备后获得该奖励
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="title">实付款：{{ctrl.inquiry.quote_price | lcbCurrency: { type: 'float', yuan: true, processing: '待计算', processingStatus: ctrl.inquiry.status } }}</div>
+    <button type="button" ng-click="ctrl.buy()" class="button button-assertive lcb-bigger-font2" ng-disabled="!ctrl.buttonStatus.canBuy">确认投保</button>
+  </div>
+</ion-view>

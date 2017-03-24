@@ -1,0 +1,14 @@
+<ion-modal-view id="user-home-checkedin-container" class="lcb-inset-modal">
+  <ion-header-bar class="bar-balanced">
+    <h1 class="title">签到成功</h1>
+  </ion-header-bar>
+  <ion-content>
+
+    <div id="user-home-checkedin" class="dark text-center">
+      <img src="static/images/shop/checkedin.png">
+      <h3 class="dark">获得{{ctrl.checkedInResult.signed_result}}个里程豆</h3>
+      <button class="button button-balanced" ng-click="ctrl.hideModal('checkedin')">确认</button>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

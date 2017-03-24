@@ -1,0 +1,36 @@
+#envelope-entry {
+
+  #spinner {
+    padding: 10%;
+    padding-bottom: 30px;
+    margin-top: 28%;
+  }
+
+  #rule-button {
+    padding: 2px 30px;
+    font-size: 12pt;
+    background-color: black;
+    border-radius: 30px;
+  }
+
+  #again-button {
+    margin-top: 0;
+    > .button {
+      padding: 0;
+      width: 200px;
+    }
+
+  }
+
+  a {
+    color: yellow;
+  }
+
+}
+
+#envelope-entry-container {
+
+  background-image: url("/static/images/envelope/entry_bg.png");
+  background-size: cover;
+
+}

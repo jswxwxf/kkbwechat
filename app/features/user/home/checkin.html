@@ -1,0 +1,10 @@
+<ion-view id="user-home-checkin-container" hide-nav-bar="true">
+  <ion-content>
+
+    <div id="user-home-checkin">
+      <img src="static/images/checkin.png"><br/>
+      <button class="button button-assertive" ng-click="ctrl.checkin()" ng-disabled="ctrl.checkedIn">{{ctrl.checkedIn ? '已签到' : '签到有奖'}}</button>
+    </div>
+
+  </ion-content>
+</ion-view>

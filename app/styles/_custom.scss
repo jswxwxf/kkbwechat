@@ -1,0 +1,23 @@
+$base-background-color: #f5f5f5;
+$energized: #ff831d;
+$balanced: #00b45a;
+// $loading-backdrop-bg-color: rgba(0, 0, 0, 0.1);
+// $button-border-radius: 0px;
+
+.scale-in {
+  transform: scale(0.0);
+  opacity: 0;
+}
+.scale-in.ng-enter,
+.scale-in > .ng-enter {
+  transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+}
+.scale-in.ng-enter-active,
+.scale-in > .ng-enter-active {
+  transform: scale(1);
+  opacity: 1;
+}
+.scale-in.ng-leave,
+.scale-in > .ng-leave {
+  transition: all ease-in-out 250ms;
+}

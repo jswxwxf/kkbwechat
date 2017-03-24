@@ -1,0 +1,23 @@
+<ion-modal-view class="lcb-car-selector-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">车型选择</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('model')">关闭</button>
+  </ion-header-bar>
+  <label class="item-input lcb-query-bar">
+    <input ng-model="ctrl.query.model" type="text" placeholder="请输入车型进行搜索">
+  </label>
+  <ion-content>
+
+    <div>
+      <div class="list lcb-result-list">
+        <div class="item item-divider" ng-repeat-start="(k, models) in ctrl.modelMap">
+          {{k}}
+        </div>
+        <a ng-click="ctrl.hideModal('model'); ctrl.setModel(model);" class="item" ng-repeat="model in models track by model.model_id" ng-repeat-end>
+          {{model.name_cn}}
+        </a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

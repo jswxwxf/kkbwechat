@@ -1,0 +1,4 @@
+{
+  "apiServer": "http://api-test.lichengbao.com.cn",
+  "dapiServer": "http://localhost:1337"
+}

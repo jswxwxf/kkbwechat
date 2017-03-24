@@ -1,0 +1,55 @@
+<ion-view view-title="专车停运补偿" id="order-compensate2-container">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear button-dark" ng-click="ctrl.showMask('sharemask')">分享</button>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="order-compensate2">
+
+      <div class="list padding-top">
+        <div class="item">
+          姓名
+          <span class="item-note">{{ctrl.compensate.name}}</span>
+        </div>
+        <div class="item">
+          手机号
+          <span class="item-note">{{ctrl.compensate.mobile | lcbProtect}}</span>
+        </div>
+        <div class="item">
+          车牌号
+          <span class="item-note">{{ctrl.compensate.license_no}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          补偿额度
+          <span class="item-note">{{ctrl.compensate.amount}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          服务期间
+          <span class="item-note">{{ctrl.compensate.valid_from}} - {{ctrl.compensate.valid_to}}</span>
+        </div>
+        <div class="item">
+          订单状态
+          <span class="item-note energized">{{ctrl.compensate.status_name}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          申请补偿截止时间
+          <span class="item-note energized">{{ctrl.compensate.claim_to}}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-disabled="!ctrl.canClaim()" ui-sref="ctrl.claim()">申请补偿</button>
+  </ion-footer-bar>
+</ion-view>

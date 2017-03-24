@@ -1,0 +1,29 @@
+.lcb-inquiry-card-fanhua {
+
+  background-color: white;
+  //padding: 5px;
+  //margin: 5px;
+  //padding-bottom: 10px;
+
+  button {
+    float: right;
+    margin-right: 5px;
+    margin-top: 35px;
+    &.button-stable.button-outline {
+      color: #555;
+      border-color: #555;
+    }
+  }
+
+  img {
+    float: left;
+    width: 70px;
+    margin: 15px 10px 10px 5px;
+  }
+
+  h5 {
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+
+}

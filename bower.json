@@ -1,0 +1,42 @@
+{
+  "name": "lcbweb",
+  "version": "0.1.0",
+  "dependencies": {
+    "ionic": "^1.3.1",
+    "ionic-wizard": "^2.0.1",
+    "components-font-awesome": "^4.6.3",
+    "angular-progress-arc": "^1.0.0",
+    "jquery": "~2.1.4",
+    "angular-moment": "^0.10.3",
+    "angular-ui-validate": "^1.2.2",
+    "lodash": "~3.10.1",
+    "angular-messages": "=1.5.3",
+    "angular-cookies": "=1.5.3",
+    "angular-touch": "=1.5.3",
+    "async": "^1.5.2",
+    "angular-base64-upload": "^0.1.19",
+    "ngstorage": "^0.3.10",
+    "angular-cache": "^4.6.0",
+    "compass-mixins": "^1.0.2",
+    "sass-mediaqueries": "^1.6.1",
+    "tc-angular-chartjs": "^1.0.13",
+    "ui-router-extras": "^0.1.2",
+    "angulartics-piwik": "^1.0.2",
+    "angular-audio": "^1.7.2",
+    "jquery-eraser": "^0.5.2",
+    "exif-js": "^2.1.1",
+    "ion-datetime-picker": "^0.3.0",
+    "ionic-rating": "^0.3.0",
+    "leaflet": "^1.0.1",
+    "leaflet-providers": "^1.1.15",
+    "polyline": "https://github.com/mapbox/polyline.git#^0.2.0",
+    "picker": "https://github.com/ustbhuangyi/picker.git",
+    "ionic-toast": "^0.4.1"
+  },
+  "appPath": "app",
+  "moduleName": "lcbweb",
+  "resolutions": {
+    "angular": "1.5.3",
+    "leaflet": "^1.0.1"
+  }
+}

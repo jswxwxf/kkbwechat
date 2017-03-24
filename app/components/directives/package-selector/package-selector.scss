@@ -1,0 +1,50 @@
+.lcb-package-selector {
+
+  h3 {
+    font-size: 13pt;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9em;
+    td {
+      border-top: $lcb-border;
+      border-bottom: $lcb-border;
+      padding: 10px 5px;
+    }
+    td:nth-child(odd) {
+      padding-left: 15px;
+      width: 30%;
+    }
+    td:nth-child(even) {
+      width: 20%;
+    }
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+    tr:nth-child(even) {
+      background-color: transparent;
+    }
+  }
+
+  .lcb-basic > div:first-child, .lcb-premium > div:nth-child(2), .lcb-supreme > div:nth-child(3), .lcb-custom > div:last-child {
+    border-bottom: 2px $balanced solid;
+  }
+
+  .ion-chevron-right {
+    font-size: 12pt;
+  }
+
+  .input-label {
+    width: 35% !important;
+  }
+
+  select {
+    color: #00b45a!important
+  }
+
+  select.lcb-insurance-not-cover {
+    color: #ff724f!important;
+  }
+
+}

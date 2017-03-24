@@ -1,0 +1,89 @@
+<ion-view view-title="驾驶评级" id="dvr-container">
+  <ion-content>
+
+    <div id="dvr-no-report" ng-if="!ctrl.hasGrade()">
+      <h4 class="more-padding-vertical text-center dark">正常行驶满30天后，<br/>可以获得驾驶评级和对应车险折扣！</h4>
+    </div>
+
+    <div id="dvr-report" class="padding-bottom" ng-if="ctrl.hasGrade()">
+
+      <h3 id="title" class="text-center">评估周期：{{ctrl.report.date_range.join(' 至 ')}}</h3>
+
+      <div id="result">
+        <div class="row row-center">
+          <div class="col col-34 text-center" id="result-level" ><img ng-src="/static/images/grades/stage3/{{ctrl.report.grade.toLowerCase()}}.png" class="lcb-img-responsive"></div>
+          <div class="col" id="tags"><span ng-repeat="tag in ctrl.report.tags track by $index" ng-class="'lcb-tag-' + ($index + 1)">{{tag}}</span></div>
+        </div>
+        <h4 class="padding text-center">当前评级最高可以获得<span class="lcb-red lcb-bigger-font3">{{ctrl.report.discount}}%</span>的车险折扣</h4>
+        <div>
+          <button class="button button-block button-assertive" ng-click="ctrl.inquiry()">立刻报价</button>
+        </div>
+      </div>
+
+      <div id="score" class="more-padding-top">
+        <h3 class="text-center">行驶评分</h3>
+        <div class="row text-center more-padding-horizontal">
+          <lcb-score-bar label="<span></span>里程" score="ctrl.report.assessments.distance" vertical="true"></lcb-score-bar>
+          <lcb-score-bar label="<span></span>时间" score="ctrl.report.assessments.duration" vertical="true"></lcb-score-bar>
+          <lcb-score-bar label="<span></span>路线" score="ctrl.report.assessments.route" vertical="true"></lcb-score-bar>
+          <lcb-score-bar label="<span></span>习惯" score="ctrl.report.assessments.behavior" vertical="true"></lcb-score-bar>
+        </div>
+      </div>
+
+      <h3 class="text-center">开开保大数据为您深度解析</h3>
+
+      <div id="detail" class="padding-vertical">
+        <div class="row">
+          <div class="col"><img src="/static/images/icon_travel.png">累计行驶<span class="lcb-red lcb-bigger-font">{{ctrl.report.mileage}}</span>公里</div>
+          <div class="col col-40"><img src="/static/images/icon_brake.png">急减速<span class="lcb-red lcb-bigger-font">{{ctrl.report.brake}}</span>次/天
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="/static/images/icon_max_speed.png">平均速度<span class="lcb-red lcb-bigger-font">{{ctrl.report.speed}}</span>公里</div>
+          <div class="col col-40"><img src="/static/images/icon_acceleration.png">急加速<span class="lcb-red lcb-bigger-font">{{ctrl.report.acce}}</span>次/天
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="/static/images/icon_time.png">耗时<span class="lcb-red lcb-bigger-font">{{lcbUtils.formatDuration(ctrl.report.duration, { h: true, m: true })}}</span></div>
+          <div class="col col-40"><img src="/static/images/icon_turn.png">急转弯<span class="lcb-red lcb-bigger-font">{{ctrl.report.turn}}</span>次/天
+          </div>
+        </div>
+      </div>
+
+      <div id="period">
+        <h3 class="text-center">时间段</h3>
+        <div class="row">
+          <div class="col col-20"><img src="/static/images/dvr/icon_noon.png"></div>
+          <div class="col">
+            <div>白天</div>
+            <div class="lcb-progress-bar-n" ng-style="{ 'width': ctrl.report.time_range[1] * 100 + '%' }"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-20"><img src="/static/images/dvr/icon_evening.png"></div>
+          <div class="col">
+            <div>夜晚</div>
+            <div class="lcb-progress-bar-e" ng-style="{ 'width': ctrl.report.time_range[2] * 100 + '%' }"></div>
+          </div>
+        </div>
+        <div class="padding text-center lcb-bigger-font">{{ctrl.report.timerange_comments}}</div>
+      </div>
+
+      <div id="traffic">
+        <h3 class="text-center">行驶拥堵情况</h3>
+        <div class="padding text-center lcb-bigger-font"><span>{{ctrl.report.jam}}%</span>拥堵路段</div>
+        <lcb-progress-bar value="ctrl.report.jam" max="100"></lcb-progress-bar>
+        <div class="padding text-center lcb-bigger-font">{{ctrl.report.jam_comments}}</div>
+      </div>
+
+      <div id="road">
+        <h3 class="text-center">熟悉路段</h3>
+        <div class="padding text-center lcb-bigger-font"><span>{{ctrl.report.familiar}}%</span>熟悉路段</div>
+        <lcb-progress-bar value="ctrl.report.familiar" max="100"></lcb-progress-bar>
+        <div class="padding text-center lcb-bigger-font">{{ctrl.report.familiar_roads_comments}}</div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

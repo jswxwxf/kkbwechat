@@ -1,0 +1,25 @@
+<ion-view view-title="{{ctrl.title}}" id="envelope-activated-container" class="lcb-envelope-base" hide-nav-bar="true">
+  <ion-content>
+
+    <div id="envelope-activated" class="padding-bottom">
+
+      <div id="envelope" class="text-center">
+        <img src="/static/images/envelope/envelope_open.png" class="lcb-img-responsive">
+        <div class="assertive lcb-bigger-font lcb-nowrap">
+          恭喜你，获得{{ctrl.detail.rp_amount}}元红包
+        </div>
+      </div>
+
+      <div class="text-center"><button id="share-button" class="button button-assertive lcb-bigger-font2" ng-click="ctrl.showMask('sharemask')">炫一炫</button></div>
+
+      <div id="helpers" class="padding">
+        <div class="padding-vertical lcb-bigger-font"><span>拔刀相助的好友</span><span class="energized pull-right" ng-click="ctrl.list()">查看我的红包</span></div>
+        <div class="padding text-center">
+          <span class="text-center clearfix" ng-repeat="helper in ctrl.detail.active_list"><img ng-src="{{helper.avatar}}"><br/>{{helper.nickname}}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

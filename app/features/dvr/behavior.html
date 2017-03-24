@@ -1,0 +1,17 @@
+<ion-view view-title="驾驶行为分析" id="dvr-behavior-container">
+  <ion-content>
+
+    <div id="dvr-behavior" class="padding-bottom">
+
+      <lcb-pill-switcher options="[ { label: '周报', value: 'week' }, { label: '月报', value: 'month' } ]" on-switch="ctrl.switch(option)" class="padding-top"></lcb-pill-switcher>
+
+      <div class="padding-top" ng-repeat="behavior in ctrl.behaviors">
+        <lcb-behaviorbox lcb-behavior="behavior" lcb-period="ctrl.option.value" lcb-click="ctrl.showCharts(behavior)"/>
+      </div>
+
+    </div>
+
+    <ion-infinite-scroll on-infinite="ctrl.loadMore()" ng-if="ctrl.hasMore()" immediate-check="false"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

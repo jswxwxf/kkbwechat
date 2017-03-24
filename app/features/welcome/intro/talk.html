@@ -1,0 +1,25 @@
+<ion-view view-title="开心驿站" hide-nav-bar="ctrl.full"">
+
+  <ion-content>
+
+    <div id="welcome-talk">
+
+      <div class="row text-center dark padding-vertical">
+        <div class="col" ui-sref-active="lcb-active"><a ui-sref="talk({topic: ''})" ui-sref-opts="{location: 'replace'}" nav-direction="swap">全部</a></div>
+        <div class="col" ui-sref-active="lcb-active"><a ui-sref="talk({topic: '脑洞频道'})" ui-sref-opts="{location: 'replace'}" nav-direction="swap">脑洞频道</a></div>
+        <div class="col" ui-sref-active="lcb-active"><a ui-sref="talk({topic: '四米空间'})" ui-sref-opts="{location: 'replace'}" nav-direction="swap">四米空间</a></div>
+        <div class="col" ui-sref-active="lcb-active"><a ui-sref="talk({topic: '谈天说地'})" ui-sref-opts="{location: 'replace'}" nav-direction="swap">谈天说地</a></div>
+      </div>
+
+      <div class="lcb-talk padding dark lcb-border-bottom" ng-repeat="talk in ctrl.talks" ng-click="ctrl.open(talk)">
+        <div>
+          <img src="static/images/talk01.png" ng-src="{{talk.img}}" class="lcb-img-responsive">
+          <h4>{{talk.title}}</h4>
+        </div>
+        <span class="lcb-font-note">{{talk.type}} | {{talk.updated_at}}</span>
+      </div>
+
+    </div>
+  </ion-content>
+
+</ion-view>

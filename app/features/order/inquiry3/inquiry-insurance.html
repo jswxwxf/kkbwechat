@@ -1,0 +1,26 @@
+<ion-view id="insurance-inquiry3-insurance-container" view-title="选择保险">
+  <ion-content>
+    
+    <form id="insurance-inquiry3-insurance" name="ctrl.insuranceForm" novalidate class="padding-vertical dark">
+
+      <div class="padding lcb-white-bg lcb-font-note">
+        <h3>选择保险公司 <span class="assertive">*</span><a href="javascript:void(0)" class="pull-right" ng-click="ctrl.selectAllProviders()">全选</a></h3>
+      </div>
+      <ion-list id="companies">
+        <ion-checkbox ng-model="ctrl.selectedProviders[p.prvId]" ng-repeat="p in ctrl.providers" ng-true-value="'{{p.prvName}}'" class="checkbox-balanced item-checkbox-right">{{p.prvName}}</ion-checkbox>
+      </ion-list>
+
+      <div class="padding lcb-white-bg lcb-font-note lcb-margin-top">
+        <h3>险种组合 <span class="assertive">*</span></h3>
+      </div>
+      <package-selector-fanhua ng-model="ctrl.insureInfo"></package-selector-fanhua>
+
+      <div class="padding-bottom text-center lcb-margin-top">如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a></div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-assertive lcb-bigger-font2" ng-disabled="ctrl.cantQuote()" ng-click="ctrl.commitInquiry()">立即报价</button>
+  </ion-footer-bar>
+</ion-view>

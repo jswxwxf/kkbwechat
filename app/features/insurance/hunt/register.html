@@ -1,0 +1,20 @@
+<ion-view view-title="登记报名" id="hunt-register-container">
+  <ion-content>
+
+    <div id="hunt-register">
+      <ion-slide-box ion-wizard show-pager="false">
+        <ion-slide>
+          <form name="registerForm" novalidate>
+            <div ng-include="'features/insurance/hunt/register-step1.html'"></div>
+          </form>
+        </ion-slide>
+        <ion-slide>
+          <form name="resultForm" novalidate>
+            <div ng-include="'features/insurance/hunt/register-success.html'"></div>
+          </form>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+
+  </ion-content>
+</ion-view>

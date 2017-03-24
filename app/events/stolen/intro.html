@@ -1,0 +1,32 @@
+<ion-view view-title="盗抢补偿介绍" hide-nav-bar="true">
+  <ion-content id="stolen-intro">
+    <ion-scroll direction="y" paging="true" ng-style="{width: ctrl.getWidth(), height: ctrl.getHeight()}"logo.png>
+      <div id="stolen-intro-content" ng-style="{width: ctrl.getWidth(), height: ctrl.getTotalHeight()}">
+        <div ng-style="{width: ctrl.getWidth(), height: ctrl.getHeight()}">
+          <img src="static/images/stolen/intro-01.jpg" />
+          <img ng-src="{{::ctrl.getLogoUrl()}}" class="lcb-stolen-logo1">
+        </div>
+        <div ng-style="{width: ctrl.getWidth(), height: ctrl.getHeight()}">
+          <img src="static/images/stolen/intro-02.jpg" />
+        </div>
+        <div ng-style="{width: ctrl.getWidth(), height: ctrl.getHeight()}">
+          <img src="static/images/stolen/intro-03.jpg" />
+        </div>
+        <div ng-style="{width: ctrl.getWidth(), height: ctrl.getHeight()}">
+          <img src="static/images/stolen/intro-04.jpg" />
+        </div>
+        <div ng-style="{width: ctrl.getWidth(), height: ctrl.getHeight()}">
+          <img ng-src="{{::ctrl.getLogoUrl()}}" class="lcb-stolen-logo2">
+          <div id="messages">
+            <img src="/static/images/stolen/intro-msg-1.png">
+            <img src="/static/images/stolen/intro-msg-2.png">
+          </div>
+          <div id="actions" class="text-center">
+            <img src="static/images/stolen/entry.png" ui-sref="stolen.apply">
+            <a href="javascript:void(0)" ng-click="ctrl.showPopover('rule', $event)">规则说明</a>
+          </div>
+        </div>
+      </div>
+    </ion-scroll>
+  </ion-content>
+</ion-view>

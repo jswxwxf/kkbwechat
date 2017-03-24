@@ -1,0 +1,57 @@
+#user-lcd-content {
+  background-color: white;
+}
+
+#user-bean {
+  background-color: $base-background-color;
+  .lcd-circle-text {
+    @include _lcb-circle-text(-2.3em);
+    h1 {
+      color: white;
+      margin-bottom: 0;
+    }
+  }
+  .fa {
+    font-size: 1.3em;
+    padding-right: 4px;
+  }
+  #actions {
+    .col:first-child button {
+      margin-right: -30px;
+      padding: 0 20px;
+    }
+    .col:last-child button {
+      margin-left: -30px;
+      padding: 0 20px;
+    }
+  }
+  #detail {
+    background-color: white;
+    padding: 5px 0;
+    #title {
+      span {
+        background-color: white; 
+        padding: 0 15px; 
+        position: relative; 
+        z-index: 5;
+        color: grey;
+      }
+    }
+    .list {
+      margin-top: -10px;
+    }
+    .item {
+      padding: 10px 20px;
+      border-left: none;
+      border-right: none;
+      .lcb-date {
+        font-size: 0.8em;
+        color: gray;
+      }
+      .item-note {
+        font-size: 1em;
+        margin-top: -9px;
+      }
+    }
+  }
+}

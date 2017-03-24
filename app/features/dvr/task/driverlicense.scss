@@ -1,0 +1,19 @@
+#dvr-task-drivelicense {
+
+  .row > .col:first-child > img {
+    border: $lcb-border;
+  }
+
+  #photos {
+    padding-top: 0;
+    padding-bottom: 0;
+    img {
+      height: 115px;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+}

@@ -1,0 +1,39 @@
+<ion-view view-title="补充信息">
+  <ion-content>
+    <div>
+      <div class="list">
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-wechat"></i>
+          微信 <span class="item-note">{{ctrl.profile.accounts[3] | lcbStatus:{ type: 'object', color: false, successLabel: '已授权', errorLabel: '未授权' } }}</span>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-weibo"></i>
+          新浪微博 <span class="item-note">{{ctrl.profile.accounts[1] | lcbStatus:{ type: 'object', color: false, successLabel: '已授权', errorLabel: '未授权' } }}</span>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-qq"></i>
+          QQ <span class="item-note">{{ctrl.profile.accounts[2] | lcbStatus:{ type: 'object', color: false, successLabel: '已授权', errorLabel: '未授权' } }}</span>
+        </a>
+        <!--a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-renren"></i>
+          人人网 <span class="item-note balanced">已授权</span>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-douban"></i>
+          豆瓣 <span class="item-note">授权</span>
+          <i class="icon ion-chevron-right lcb-font-note"></i>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-weibo"></i>
+          微博 <span class="item-note">授权</span>
+          <i class="icon ion-chevron-right lcb-font-note"></i>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-linkedin"></i>
+          LinkedIn <span class="item-note">授权</span>
+          <i class="icon ion-chevron-right lcb-font-note"></i>
+        </a-->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

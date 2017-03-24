@@ -1,0 +1,40 @@
+#ubi-lcb-container {
+
+  background-color: white;
+
+  .button-block {
+    margin: 0;
+  }
+
+  .bar-footer {
+    padding: 5px;
+    height: 54px;
+  }
+
+}
+
+#ubi-lcb {
+  
+  .box {
+    display: block;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+  
+  #intro {
+    div.image {
+      float: left; 
+      height: 55px; 
+      width: 100px; 
+      clear: both;
+    }
+    img.image {
+      float: left;
+      height: 75px;
+      padding-right: 20px;
+    }
+  }
+  
+}

@@ -1,0 +1,71 @@
+<ion-view view-title="设备信息" id="user-device-container" >
+  <ion-nav-buttons side="right">
+    <car-switcher type="button-nav" cars="ctrl.cars" value="ctrl.car" can-add="false" on-change="ctrl.loadDevice(car)"></car-switcher>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="user-device" class="lcb-font-note">
+
+      <div class="lcb-no-device" ng-if="!ctrl.device">
+        <div class="lcb-smaller-font">
+          关于设备指示灯闪烁对应的状态，<br/>请查看<a href="javascript:void(0)" ng-click="ctrl.showModal('sigintro')" class="balanced lcb-link-button lcb-normal-font">《指示灯说明》</a>
+        </div>
+        <div class="device-circle-text">
+          <div><img src="/static/images/ico_obd.png"></div>
+        </div>
+        <div>您还没有绑定设备<br/>如您已购买设备请绑定</div>
+      </div>
+
+      <div ng-if="ctrl.device">
+
+        <div class="list padding-top">
+          <div class="item">
+            绑定车辆
+            <div class="item-note">{{ctrl.device.car_bind}}</div>
+          </div>
+          <div class="item">
+            设备类型
+            <div class="item-note">{{ctrl.device.device_type}}</div>
+          </div>
+          <div class="item">
+            设备编号
+            <div class="item-note">{{ctrl.device.imei}}</div>
+          </div>
+          <div class="item">
+            当前状态
+            <div class="item-note" ng-bind-html="ctrl.device.status | lcbStatus:{ errorLabel: '异常' }"></div>
+          </div>
+          <div class="item">
+            绑定时间
+            <div class="item-note">{{ctrl.device.activated_at}}</div>
+          </div>
+          <div class="item">
+            最后连接时间
+            <div class="item-note">{{ctrl.device.updated_at}}</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="javascript:void(0)" ng-click="ctrl.showModal('sigintro')" class="button button-clear button-balanced">《指示灯说明》</a>
+        </div>
+
+        <div id="actions" class="row text-center dark">
+          <div class="col">
+            <a ui-sref="user.car.status"><img src="/static/images/icon_car_large.png" class="lcb-img-responsive"></a>
+            车辆检测
+          </div>
+          <div class="col">
+            <a ui-sref="user.car.safety" href="javascript:void(0)"><img src="/static/images/icon_set.png" class="lcb-img-responsive"></a>
+            安防设置
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </ion-content>
+  <div class="bar bar-footer" ng-if="!ctrl.device">
+    <button ui-sref="user.device.bind.device" class="button button-block button-balanced lcb-bigger-font">绑定设备</button>
+  </div>
+</ion-view>

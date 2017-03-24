@@ -1,0 +1,11 @@
+<ion-view view-title="我的订单">
+  <ion-content>
+
+    <div id="order-list" ng-repeat="order in ctrl.orders | orderBy: 'created_at'">
+      <order-card order="order"></order-card>
+    </div>
+
+    <h4 class="more-padding dark text-center" ng-if="isEmpty(ctrl.orders)">暂时没有您的保单信息</h4>
+
+  </ion-content>
+</ion-view>

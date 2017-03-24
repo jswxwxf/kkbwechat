@@ -1,0 +1,38 @@
+<ion-view view-title="延时阅读">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content>
+
+    <img src="/static/images/banner_read.png" class="lcb-img-responsive">
+    <form name="registerForm" id="oauth-read" class="list padding-vertical" novalidate>
+
+      <label class="item item-input">
+        <span class="input-label">手机号</span>
+        <input name="mobile" ng-model="ctrl.user.mobile" type="tel" placeholder="请输入注册手机" required lcb-validator="mobile" ng-disabled="!ctrl.isEmpty(ctrl.$location.search().mobile)">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="registerForm.mobile.$dirty && registerForm.mobile.$invalid">请输入正确的手机号</div>
+      <div class="item item-input lcb-input-button-right">
+        <label for="code" class="input-label">验证码</label>
+        <input name="code" id="code" ng-model="ctrl.user.code" maxlength="6" type="number" placeholder="请输入验证码" required lcb-validator="verifyCode">
+        <div class="lcb-border-left">
+          <button type="button" class="button button-clear button-balanced" ng-disabled="registerForm.mobile.$invalid" ng-click="ctrl.sendCode()" count-down>获取验证码</button>
+        </div>
+      </div>
+
+      <div id="actions" class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="registerForm.$invalid" ng-click="ctrl.register()">确定</button>
+      </div>
+
+      <div id="intro" class="more-padding-horizontal dark">
+        延时阅读为用户提供了一种全新的阅读体验。您可以在手机上通过“开开保”公众号，将想要看的文章链接地址或文字直接加入阅读清单。待您上车的时候，我们已经将您的书单通过车机互联的方式导入到车载智能后视镜或中控屏上。这时您只要打开“行车App”，点击播放键，即可收听之前在手机端导入的内容。<br/>
+        延时阅读彻底解放了您的双手，帮助您充分利用车内时间，让您的旅途更加多彩！
+      </div>
+
+      <div class="more-padding">
+        注册代表你已经阅读并同意<a ng-click="ctrl.showModal('read-agreement')" href="javascript:void(0)" class="balanced lcb-link-button lcb-normal-font">《服务协议》</a>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+<ion-view view-title="成功" hide-nav-bar="true" id="stolen-success-container">
+  <ion-content>
+    <img ng-src="{{::ctrl.getLogoUrl()}}" class="lcb-stolen-logo2">
+    <div id="stolen-success" class="padding text-center">
+      <img src="/static/images/stolen/success01.png">
+      <img src="/static/images/stolen/success02.png">
+      <img id="qrcode" src="/static/images/stolen/qrcode.png">
+      <img src="/static/images/stolen/forward.png" ng-click="ctrl.showOverlay($event)" >
+    </div>
+  </ion-content>
+  <div id="lcb-stolen-overlay" ng-click="ctrl.hideOverlay()">
+    <img src="/static/images/share_timeline.png" style="width:100%" alt="">
+  </div>
+</ion-view>

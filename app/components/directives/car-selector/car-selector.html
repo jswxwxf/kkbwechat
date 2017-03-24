@@ -1,0 +1,17 @@
+<div class="lcb-car-selector">
+  <a ng-click="ctrl.showBrandModal()" href="javascript:void(0)" class="item item-icon-right dark" ng-class="{disabled: ctrl.isDisabled()}">
+    {{labelPrefix}}品牌
+    <span class="item-note">{{ctrl.car.brand.name_cn || '请选择品牌'}}</span>
+    <i class="icon ion-chevron-right"></i>
+  </a>
+  <a ng-click="ctrl.showSeriesModal()" href="javascript:void(0)" class="item item-icon-right dark" ng-class="{disabled: ctrl.isDisabled(ctrl.car.brand)}">
+    {{labelPrefix}}车系
+    <span class="item-note">{{ctrl.car.series.name_cn || '请选择车系'}}</span>
+    <i class="icon ion-chevron-right"></i>
+  </a>
+  <a ng-click="ctrl.showModelModal()" href="javascript:void(0)" class="item item-icon-right dark" ng-class="{disabled: ctrl.isDisabled(ctrl.car.series)}">
+    {{labelPrefix}}车型
+    <span class="item-note">{{ctrl.car.model.name_cn || '请选择车型'}}</span>
+    <i class="icon ion-chevron-right"></i>
+  </a>
+</div>

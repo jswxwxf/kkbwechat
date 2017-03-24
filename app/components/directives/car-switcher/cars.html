@@ -1,0 +1,21 @@
+<ion-modal-view class="lcb-car-switcher">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">选择</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('cars')">关闭</button>
+  </ion-header-bar>
+  <ion-content ng-class="{ 'has-footer': ctrl.canAdd }">
+
+    <div>
+      <div class="list">
+        <a ng-click="ctrl.hideModal('cars'); ctrl.setCar(car);"  class="item item-icon-right" ng-repeat="car in ctrl.cars">
+          车牌：{{car.license_no}}
+          <i class="icon ion-checkmark" ng-if="ctrl.car.license_no == car.license_no"></i>
+        </a>
+      </div>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar ng-if="ctrl.canAdd">
+    <button ui-sref="user.car.add" class="button button-block button-balanced lcb-bigger-font">添加车辆</button>
+  </ion-footer-bar>
+</ion-modal-view>

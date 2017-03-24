@@ -1,0 +1,33 @@
+#user-home-checkedin {
+
+  margin-top: 50px;
+
+  img {
+    width: 80%;
+    max-width: 320px;
+  }
+
+  .button {
+    padding: 0 80px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+
+}
+
+#user-home-checkedin-container {
+
+  height: 440px;
+
+  .bar-balanced {
+    height: 70px;
+    .title {
+      font-size: 30px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center!important;
+    }
+  }
+
+}

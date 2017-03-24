@@ -1,0 +1,13 @@
+<ion-modal-view id="dvr-map-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">详情</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('map')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+
+    <div id="dvr-map">
+      <lcb-tripmap lcb-trip="ctrl.selectedTrip"></lcb-tripmap>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,68 @@
+#order-lcb {
+
+  @include small-screen() {
+    #order-number {
+      .item-note {
+        padding-top: 5px;
+        float: left;
+      }
+    }
+  }
+
+  #lcb10fees {
+    table {
+      width: 100%;
+      thead th {
+        background-color: $balanced;
+        color: white;
+        font-weight: bold;
+        text-align: right;
+        padding: 5px 10px;
+      }
+      thead th:first-child {
+        text-align: left;
+      }
+      tbody th {
+        text-align: left;
+        padding-left: 10px;
+      }
+      td {
+        padding: 5px;
+        padding-right: 10px;
+        color: $balanced;
+        text-align: right;
+        span.lcb-less {
+          color: $assertive;
+        }
+      }
+    }
+  }
+
+  #lcb15fees {
+    padding-left: 50px;
+    span {
+      float: right;
+      padding-right: 50px;
+    }
+  }
+
+  #rule {
+    margin: 10px;
+    padding: 15px;
+    background-color: #e0fee8;
+    color: #0b551b;
+    h3 {
+      color: #0b551b;
+    }
+  }
+
+  #reward {
+    padding: 0 35px;
+  }
+
+
+  .lcb-money-color {
+    background-color: #11ae2f;
+  }
+
+}

@@ -1,0 +1,72 @@
+<ion-view id="insurance-inquiry-more-container" view-title="补充信息">
+  <ion-content>
+
+    <form id="insurance-inquiry-more" name="ctrl.moreForm" novalidate class="padding-bottom dark">
+
+      <div class="padding">
+        提供行驶证信息可以获取更精准的车险报价。
+      </div>
+
+      <h4 class="padding">
+        上传行驶证照片 <span class="icon ion-ios-checkmark assertive" ng-show="!isEmpty(ctrl.license_vehicle.front)"></span>
+      </h4>
+      <div id="photos" class="row lcb-white-bg lcb-border-vertical">
+        <div class="col">
+          <img ng-src="{{::ctrl.license_vehicle.front || '/static/images/license_front.png'}}" class="lcb-img-responsive">
+          <input type="file" accept="image/*" ng-model='ctrl.license_vehicle.front' lcb-file-uploader lcb-file-use-src="true">
+        </div>
+        <div class="col">
+          <img ng-src="{{::ctrl.license_vehicle.back || '/static/images/license_second.png'}}" class="lcb-img-responsive">
+          <input type="file" accept="image/*" ng-model='ctrl.license_vehicle.back' lcb-file-uploader lcb-file-use-src="true">
+        </div>
+      </div>
+
+      <div ng-show="isEmpty(ctrl.license_vehicle.front)">
+        <div id="divider" class="more-padding">
+          <hr>
+          <div class="padding-horizontal">或者</div>
+        </div>
+
+        <div class="list">
+          <span class="pull-right padding-right" ng-click="ctrl.showMask('samplelicensemask')"><span class="icon lcb-icon-hint-own"></span>填写说明</span>
+          <h4 class="padding">
+            直接手动填写信息
+          </h4>
+          <label class="item item-input">
+            <span class="input-label"><span class="icon ion-record lcb-icon1"></span>品牌型号</span>
+            <input ng-model="ctrl.inquiry.car_brand" type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label lcb-input-car-vin"><span class="icon ion-record lcb-icon2"></span>车辆识别代码</span>
+            <input ng-model="ctrl.inquiry.car_vin" type="text" placeholder="如：DSCP0229DF172839">
+          </label>
+          <label class="item item-input">
+            <span class="input-label"><span class="icon ion-record lcb-icon3"></span>发动机号码</span>
+            <input ng-model="ctrl.inquiry.engine_no" type="text" placeholder="如：W1905EW">
+          </label>
+          <label class="item item-input">
+            <span class="input-label"><span class="icon ion-record lcb-icon4"></span>注册日期</span>
+            <input ng-model="ctrl.inquiry.register_date" type="date" placeholder="请选择日期">
+          </label>
+          <label class="item item-input">
+            <span class="input-label lcb-input-issue-date"><span class="icon ion-record lcb-icon5"></span>发证日期（过户车）</span>
+            <input ng-model="ctrl.inquiry.transfer_date" type="date" placeholder="请选择日期">
+          </label>
+          <!-- label class="item item-input">
+            <span class="input-label"><span class="icon ion-record lcb-icon6"></span>核定载客</span>
+            <input ng-model="ctrl.inquiry.car_seat" type="number" placeholder="如：5">
+          </label -->
+        </div>
+      </div>
+
+      <div id="hint" class="padding dark">
+        如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-block button-assertive lcb-bigger-font2" ng-click="ctrl.saveMore()">确认信息</button>
+  </ion-footer-bar>
+</ion-view>

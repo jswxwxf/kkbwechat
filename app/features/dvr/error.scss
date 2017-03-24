@@ -1,0 +1,17 @@
+#dvr-error {
+
+  img {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    color: #c4c4c4;
+    line-height: 30px;
+  }
+
+}
+
+#dvr-error-container {
+  @include lcb-center-all(70%);
+}

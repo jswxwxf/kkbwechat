@@ -1,0 +1,32 @@
+#order-compensate {
+
+  .item-note {
+    color: $dark;
+  }
+
+  .energized {
+    color: #ff6e18;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 20px;
+    li {
+      white-space: pre-wrap;
+    }
+  }
+
+}
+
+#order-compensate-container {
+
+  .button-block {
+    margin: 0;
+  }
+
+  .bar-footer {
+    padding: 5px;
+    height: 54px;
+  }
+
+}

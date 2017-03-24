@@ -1,0 +1,41 @@
+<ion-view id="user-invite-container" view-title="邀请好友">
+  <ion-content overflow-scroll="true">
+  
+    <div id="user-invite" class="lcb-selectable">
+
+      <img src="/static/images/banner_invite.png" class="lcb-img-responsive">
+
+      <div id="rule" class="padding-horizontal">
+        <table>
+          <tr>
+            <th>条件</th>
+            <th>奖励</th>
+          </tr>
+          <tr>
+            <td>好友报名成功，并激活盒子</td>
+            <td>￥10元</td>
+          </tr>
+          <tr>
+            <td>好友终评得A，并在开开保购买车险</td>
+            <td>￥100元</td>
+          </tr>
+        </table>
+        <div id="info" class="padding-top">
+          <div class="pull-right"><a ng-click="ctrl.showModal('invite-rule')" href="javascript:void(0)" class="balanced lcb-smaller-font">活动详情</a></div>
+          <div>我的邀请码：<span>{{ctrl.profile.ref_code}}</span></div>
+        </div>
+      </div>
+
+      <div class="padding-horizontal">
+        <button type="button" class="button button-block" ng-click="ctrl.showMask('sharemask')">邀请好友</button>
+      </div>
+
+      <div class="padding-horizontal">点击邀请按钮即默认认为您已经阅读并同意<a ng-click="ctrl.showModal('invite-agreement')" href="javascript:void(0)" class="balanced lcb-smaller-font">《用户邀请用户活动协议》</a></div>
+
+      <div class="padding-bottom text-center lcb-bigger-font"><a ui-sref="{{ctrl.listSref}}">查看受邀好友列表</a></div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

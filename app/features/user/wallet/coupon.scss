@@ -1,0 +1,36 @@
+#user-coupon {
+
+  #info {
+    margin-left: 3px;
+  }
+
+  #available {
+    margin-top: 5px;
+    > div {
+      border: 1px solid $balanced;
+      padding: 0;
+      .col {
+        padding: 21px 0;
+      }
+      .col:first-child {
+        background-color: $balanced;
+        color: white;
+      }
+    }
+  }
+
+  #unavailable {
+    .col {
+      border: $lcb-border;
+    }
+    .col:first-child {
+      background-color: lightgray;
+      color: white;
+    }
+    .col:last-child {
+      background-color: white;
+      color: lightgray;
+    }
+  }
+
+}

@@ -1,0 +1,53 @@
+.lcb-score-bar-horizontal.row {
+
+  background-color: white;
+  margin: 5px 0px;
+  position: relative;
+
+  .col {
+    @include border-radius(2px);
+    height: 30px;
+  }
+
+  .lcb-text-bar {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    padding: 0 5px;
+  }
+
+  .lcb-default-color {
+    background-color: #ffad00;
+  }
+
+  .lcb-assertive-color {
+    background-color: #ff6700;
+  }
+
+  .lcb-balanced-color {
+    background-color: $balanced;
+  }
+
+}
+
+.lcb-score-bar-vertical {
+
+  .lcb-bar {
+    height: 100px;
+    width: 30px;
+    margin: 5px auto;
+    vertical-align: bottom;
+    > div {
+      width: 100%;
+      height: 100%;
+      background-color: #ededef;
+    }
+  }
+
+  .lcb-default-color {
+    background-color: #11c1f3;
+  }
+
+}

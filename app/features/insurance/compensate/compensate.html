@@ -1,0 +1,51 @@
+<ion-view view-title="专车停运补偿">
+  <ion-content>
+
+    <div id="insurance-compensate">
+
+      <div class="lcb-box blue">
+        <img src="static/images/compensate.png">
+      </div>
+
+      <div id="fees" class="list">
+        <div class="item">
+          <div>费用: <span>0元</span></div>
+          <div>已领: <span>{{ctrl.total.data}}份</span></div>
+        </div>
+      </div>
+      <div class="lcb-intro lcb-border-bottom dark">
+        车主参与共享用车平台(专车/拼车)，导致车辆被动停运，可以获得停运补偿。用户领取后获得基础保障898元。详细请查看<a ng-click="ctrl.showModal('intro')" href="javascript:void(0)" class="balanced lcb-link-button lcb-normal-font">《服务介绍》</a>
+      </div>
+
+      <form name="ctrl.compensateForm" class="list padding-vertical" novalidate>
+        <label class="item item-input">
+          <span class="input-label">姓名：</span>
+          <input name="name" ng-model="ctrl.compensate.name" type="text" placeholder="请输入姓名，如张里程" required lcb-validator="name">
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.compensateForm.name.$dirty && ctrl.compensateForm.name.$invalid">请输入正确的中文姓名</div>
+        <label class="item item-input">
+          <span class="input-label">手机号：</span>
+          <input name="mobile" ng-model="ctrl.compensate.mobile" type="tel" placeholder="请输入手机号码，如18721674367" required lcb-validator="mobile">
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.compensateForm.mobile.$dirty && ctrl.compensateForm.mobile.$invalid">请输入正确的手机号</div>
+        <div class="item item-input" id="verifycode">
+          <label for="code" class="input-label">验证码</label>
+          <input id="code" ng-model="ctrl.compensate.code" maxlength="6" type="number" placeholder="请输入验证码" class="verifycode" required lcb-validator="verifyCode">
+          <div>
+            <button type="button" class="button button-energized button-small" ng-disabled="ctrl.compensateForm.mobile.$invalid" ng-click="ctrl.sendCompensateCode()" count-down>获取验证码</button>
+          </div>
+        </div>
+        <label class="item item-input">
+          <span class="input-label">车牌号：</span>
+          <input name="licenseNumber" ng-model="ctrl.compensate.license_no" type="text" placeholder="请输入车牌号，格式如：沪A98981" required lcb-validator="licenseNumber">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.compensateForm.licenseNumber.$dirty && ctrl.compensateForm.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+      </form>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-disabled="ctrl.compensateForm.$invalid" ng-click="ctrl.applyCompensate()">我要领取</button>
+  </ion-footer-bar>
+</ion-view>

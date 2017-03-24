@@ -1,0 +1,42 @@
+<ion-content id="user-reward-general">
+
+  <div id="total" class="padding">
+    <div>昨日收益（元）</div>
+    <div id="amount" class="">{{ctrl.user.awrads}}</div>
+    <br/>
+    累计收益 {{ctrl.user.total_awrads}} 元
+  </div>
+
+  <week-paginator name="ctrl.paginator" on-week="ctrl.loadWeek(monday, forward)"></week-paginator>
+
+  <div id="daily" class="padding">
+    <div class="text-center">每日收益</div>
+    <lcb-score-bar label="周一" score="ctrl.rewards[0].ratio" value="ctrl.rewards[0].amounts" color-class="ctrl.rewards[0].color"></lcb-score-bar>
+    <lcb-score-bar label="周二" score="ctrl.rewards[1].ratio" value="ctrl.rewards[1].amounts" color-class="ctrl.rewards[1].color"></lcb-score-bar>
+    <lcb-score-bar label="周三" score="ctrl.rewards[2].ratio" value="ctrl.rewards[2].amounts" color-class="ctrl.rewards[2].color"></lcb-score-bar>
+    <lcb-score-bar label="周四" score="ctrl.rewards[3].ratio" value="ctrl.rewards[3].amounts" color-class="ctrl.rewards[3].color"></lcb-score-bar>
+    <lcb-score-bar label="周五" score="ctrl.rewards[4].ratio" value="ctrl.rewards[4].amounts" color-class="ctrl.rewards[4].color"></lcb-score-bar>
+    <lcb-score-bar label="周六" score="ctrl.rewards[5].ratio" value="ctrl.rewards[5].amounts" color-class="ctrl.rewards[5].color"></lcb-score-bar>
+    <lcb-score-bar label="周日" score="ctrl.rewards[6].ratio" value="ctrl.rewards[6].amounts" color-class="ctrl.rewards[6].color"></lcb-score-bar>
+  </div>
+
+  <!--div id="legend" class="padding text-center">
+    <div>
+      <div></div>
+      行驶奖励（元）
+    </div>
+    <div>
+      <div></div>
+      停驶奖励（里程豆）
+    </div>
+  </div-->
+
+  <div class="padding text-center lcb-font-note">
+    良好的驾驶习惯可以帮助您获得更好的收益
+  </div>
+
+  <div class="padding">
+    <car-switcher value="ctrl.car" type="button" on-change="ctrl.reload(car)"></car-switcher>
+  </div>
+
+</ion-content>

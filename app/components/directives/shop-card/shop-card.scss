@@ -1,0 +1,97 @@
+.lcb-shop-card {
+
+  position: relative;
+
+  .row {
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    .col:nth-child(2) {
+      padding: 15px;
+      margin-top: -15px;
+      font-size: 16px;
+      h4 {
+        font-size: 20px;
+      }
+      @include small-screen() {
+        font-size: 14px;
+        h4 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .lcb-shop-card-icon {
+    padding: 5px;
+  }
+
+  .button.button-assertive.button-outline {
+    border-color: #fd8889;
+    color: #fd8889;
+  }
+
+  .button-small {
+    padding: 3px 20px;
+    @include small-screen() {
+      padding: 3px 12px;
+    }
+    font-size: 15px;
+  }
+
+  .button.disabled, .button[disabled] {
+    background-color: #d4d4d4!important;
+    color: white!important;
+    border: none;
+    opacity: 1;
+  }
+
+  .lcb-shop-card-bottom {
+    display: block;
+    position: absolute;
+    padding: 0 5px;
+    bottom: 0;
+  }
+
+  &.lcb-shop-card-not-available {
+    .row {
+      border: 1px solid #cecece;
+      border-bottom: none;
+      .col:first-child {
+        border-right: 1px dashed #cecece;
+      }
+      .col:nth-child(2) * {
+        color: #cecece;
+      }
+    }
+  }
+
+  &.lcb-shop-card-ycb {
+    .row {
+      border: 1px solid #fc5050;
+      border-bottom: none;
+      .col:first-child {
+        border-right: 1px dashed #fc5050;
+      }
+      .col:nth-child(2) * {
+        color: #fc5050;
+      }
+    }
+  }
+
+  &.lcb-shop-card-coupon {
+    .row {
+      border: 1px solid #fb7331;
+      border-bottom: none;
+      .col:first-child {
+        border-right: 1px dashed #fb7331;
+      }
+      .col:nth-child(2) * {
+        color: #fb7331;
+      }
+    }
+  }
+
+}
+
+

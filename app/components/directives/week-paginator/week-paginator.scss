@@ -1,0 +1,19 @@
+.lcb-week-paginator {
+  position: static;
+  padding-left: 20px;
+  button:last-child {
+    padding-right: 20px!important;
+  }
+  * {
+    font-weight: normal!important;
+    font-size: 1em!important;
+  }
+  .ion-chevron-right:before {
+    margin-left: 5px;
+    font-size: 12pt!important;
+  }
+  .ion-chevron-left:before {
+    margin-right: 5px;
+    font-size: 12pt!important;
+  }
+}

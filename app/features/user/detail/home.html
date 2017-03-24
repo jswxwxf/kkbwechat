@@ -1,0 +1,35 @@
+<ion-view view-title="补充信息">
+  <ion-content>
+    <form name="detailForm" id="user-detail-home" novalidate>
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">婚姻状况</span>
+          <select ng-model="ctrl.detail.marriage_status">
+            <option value="">请选择</option>
+            <option>未婚</option>
+            <option>已婚</option>
+            <option>离异</option>
+            <option>丧偶</option>
+          </select>
+        </label>
+        <div class="item item-input item-select">
+          <span class="input-label">子女状况</span>
+          <select id="child-boy" ng-model="ctrl.detail.boy">
+            <option value="">请选择</option>
+            <option>1男</option>
+            <option>2男</option>
+          </select>
+          <div class="lcb-down-arrow"></div>
+          <select ng-model="ctrl.detail.girl">
+            <option value="">请选择</option>
+            <option>1女</option>
+            <option>2女</option>
+          </select>
+        </div>
+      </div>
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced lcb-bigger-font" ng-disabled="detailForm.$pristine" ng-click="ctrl.updateDetail()">提交</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

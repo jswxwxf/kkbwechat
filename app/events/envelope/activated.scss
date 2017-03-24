@@ -1,0 +1,38 @@
+#envelope-activated {
+
+  #envelope {
+    position: relative;
+    margin: 0 20%;
+    margin-top: 50px;
+    > div:last-child {
+      font-weight: bold;
+      background-color: white;
+      padding: 25px 5px;
+      border: 8px solid #fecf4e;
+      border-radius: 20px;
+      position: absolute;
+      top: 18%;
+      left: 5%;
+      right: 5%;
+      @include small-screen() {
+        padding: 15px 0;
+        font-size: 10pt!important;
+      }
+    }
+  }
+
+  #share-button {
+    margin-top: 30px;
+    padding: 0 50px;
+    border-radius: 30px;
+    background-color: #fc415d;
+  }
+
+}
+
+#envelope-activated-container {
+
+  background-image: url("/static/images/envelope/result_bg.png");
+  background-size: cover;
+
+}

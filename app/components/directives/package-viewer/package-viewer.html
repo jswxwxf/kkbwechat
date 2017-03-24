@@ -1,0 +1,14 @@
+<div class="lcb-package-viewer">
+  <div class="lcb-package-item" ng-if="show(package.destroy)">车辆损失险 <div ng-bind-html="package.destroy | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.liability)">第三方责任险 <div ng-bind-html="package.liability | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.stolen)">全车盗抢险 <div ng-bind-html="package.stolen | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.passenger_seat)">乘客座位险 <div ng-bind-html="package.passenger_seat | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.driver_seat)">司机座位险 <div ng-bind-html="package.driver_seat | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.scratch)">划痕险 <div ng-bind-html="package.scratch | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.glasses)">玻璃破损捡 <div ng-bind-html="package.glasses | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.water)">涉水险 <div ng-bind-html="package.water | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.burn)">自燃险 <div ng-bind-html="package.burn | lcbInsuranceCover"></div></div>
+  <!--div class="lcb-package-item" ng-if="show(package.lights)">后视镜和车灯 <div ng-bind-html="package.lights | lcbInsuranceCover"></div></div-->
+  <div class="lcb-package-item" ng-if="show(package.escape)">找不到第三方 <div ng-bind-html="package.escape | lcbInsuranceCover"></div></div>
+  <div class="lcb-package-item" ng-if="show(package.excluding)">不计免陪 <div ng-bind-html="package.excluding | lcbInsuranceCover"></div></div>
+</div>

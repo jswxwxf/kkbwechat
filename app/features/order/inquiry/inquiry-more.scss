@@ -1,0 +1,91 @@
+#insurance-inquiry-more {
+  
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  font-size: 11pt;
+
+  #divider {
+    position: relative;
+    font-size: 14pt;
+    div {
+      position: absolute;
+      top: 25%;
+      left: 40%;
+      background-color: #f5f5f5;
+      padding: 0 20px;
+    }
+  }
+
+  #photos {
+    img {
+      height: 115px;
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    font-weight: normal;
+    line-height: normal;
+  }
+
+  .ion-ios-checkmark {
+    font-size: 18pt;
+    position: relative;
+    top: 2px;
+  }
+
+  .lcb-icon-hint-own {
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 5px;
+  }
+
+  .input-label {
+    width: 120px;
+    background-color: white;
+  }
+
+  .lcb-font-note {
+    font-size: 11pt;
+  }
+
+  .lcb-input-issue-date, .lcb-input-car-vin {
+    position: absolute;
+  }
+
+  .ion-record {
+    margin-right: 2px;
+  }
+
+  .lcb-icon1 {
+    color: #FD5A6A;
+  }
+
+  .lcb-icon2 {
+    color: #8A57FF;
+  }
+
+  .lcb-icon3 {
+    color: #57B6FF;
+  }
+
+  .lcb-icon4 {
+    color: #FFAE57;
+  }
+
+  .lcb-icon5 {
+    color: #64D082;
+  }
+
+  .lcb-icon6 {
+    color: #FF5796;
+  }
+
+}
+
+#insurance-inquiry-more-container {
+
+}

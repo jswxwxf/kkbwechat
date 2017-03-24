@@ -1,0 +1,76 @@
+#user-detail {
+
+  .tabs-top > .tabs, .tabs.tabs-top {
+    padding-top: 15px;
+    height: 79px;
+    a {
+      line-height: 25px;
+    }
+  }
+
+  .tabs-striped.tabs-light .tab-item {
+    &.tab-item-active, &.active, &.activated {
+      border-color: $balanced;
+    }
+  }
+
+  .has-tabs-top {
+    top: 123px;
+  }
+
+  .lcb-icon-home, .lcb-icon-drive, .lcb-icon-credit, .lcb-icon-jobedu, .lcb-icon-social {
+    width: 33px;
+    height: 33px!important;
+  }
+
+  .ion-chevron-right {
+    font-size: 12pt;
+  }
+
+  .tab-title {
+    font-size: 12px;
+  }
+
+}
+
+#user-detail-drive {
+  img {
+    width: 270px;
+    height: 200px;
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+#user-detail-credit {
+  img {
+    width: 150px;
+    height: 258px;
+    margin: 10px auto;
+    //width: 195px;
+    //height: 330px;
+  }
+}
+
+#user-detail-home {
+
+  #child-boy {
+    right: 95px;
+  }
+  .lcb-down-arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 110px;
+    margin-top: -3px;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #999;
+    pointer-events: none;
+  }
+
+}

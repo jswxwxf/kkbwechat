@@ -1,0 +1,44 @@
+.lcb-package-selector-fanhua {
+
+  .lcb-title {
+    padding: 14px 16px;
+  }
+  
+  .item-select:after {
+    right: 100px;
+  }
+
+  .item-note {
+    margin-right: 20px;
+  }
+
+  .row {
+    padding: 5px;
+    padding-left: 10px;
+    border-right: none;
+    //.input-label {
+    //  position: relative;
+    //  top: -2px;
+    //}
+    select {
+      right: 80px;
+      color: #00b45a!important;
+      &.lcb-insurance-not-cover {
+        color: #ff724f!important;
+      }
+    }
+    .col {
+      padding-top: 3px;
+    }
+    .col-20 {
+      width: 80px;
+      max-width: 80px;
+      border-right: none;
+      .item-checkbox {
+        border: none;
+        left: 3px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">我的抽奖记录</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('scratch-history')">关闭</button>
+  </ion-header-bar>
+  <ion-content id="share-draw-scratch-history">
+
+    <div ng-show="ctrl.isEmpty(ctrl.log.history)" class="dark more-padding text-center lcb-bigger-font">
+      您目前没有抽奖记录
+    </div>
+
+    <ion-list>
+      <ion-item collection-repeat="h in ctrl.log.history">
+        {{h.result}} <span class="item-note">领取时间：{{h.win_time}}</span>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-modal-view>

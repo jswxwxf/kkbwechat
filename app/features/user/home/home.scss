@@ -1,0 +1,48 @@
+#user-info {
+
+  #avatar {
+
+    padding: 20px;
+    background-color: $balanced;
+    position: relative;
+    color: white;
+
+    .info-circle-avatar {
+      height: 60px;
+      width: 60px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50px;
+      margin: 0 auto;
+    }
+
+    > div:last-child {
+      color: white;
+    }
+
+    #checkin {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      color: white;
+      padding: 0 18px;
+      font-size: 14px;
+      border-radius: 30px;
+      .lcb-icon-checkin-own {
+        margin-top: 4px;
+        width: 15px;
+        height: 16px!important;
+      }
+      .ion-checkmark-circled:before {
+        font-size: 20px;
+      }
+      &.button.disabled, &.button[disabled] {
+        color: white!important;
+        opacity: 1;
+      }
+    }
+
+  }
+
+}

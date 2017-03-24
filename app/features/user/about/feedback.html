@@ -1,0 +1,13 @@
+<ion-view view-title="意见反馈">
+  <ion-content>
+
+    <form name="feedbackForm" id="user-suggestion" novalidate>
+
+      <textarea placeholder="给我们一些建议，让我们更好的为您服务 ~" ng-model="ctrl.feedback.content" required></textarea>
+
+      <button type="button" class="button button-block button-balanced" ng-disabled="feedbackForm.$invalid" ng-click="ctrl.sendFeedback()">提交</button>
+
+    </form>
+
+  </ion-content>
+</ion-view>

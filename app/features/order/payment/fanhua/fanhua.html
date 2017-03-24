@@ -1,0 +1,110 @@
+<ion-view view-title="支付" id="order-fanhua-pay-container">
+  <ion-content class="has-footer">
+
+    <form name="ctrl.payForm" id="order-fanhua-pay" class="dark" novalidate>
+
+      <div class="list">
+
+        <div class="padding-vertical">
+          <div class="item">
+            订单状态
+            <span class="item-note">
+              {{ctrl.detail.taskStateDescription}}
+            </span>
+          </div>
+          <div class="item">
+            保险公司
+            <span class="item-note">
+              {{ctrl.detail.prvName}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.remark">
+            备注
+            <span class="item-note">
+              {{ctrl.detail.remark}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.bizInsureInfo.startDate">
+            商业险生效日期
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.bizInsureInfo.startDate}} - {{ctrl.detail.insureInfo.bizInsureInfo.endDate}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.efcInsureInfo.startDate">
+            交强险生效日期
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.efcInsureInfo.startDate}} - {{ctrl.detail.insureInfo.efcInsureInfo.endDate}}
+            </span>
+          </div>
+        </div>
+
+        <div class="padding-bottom">
+          <div class="item item-divider">
+            车辆信息
+          </div>
+          <div class="item">
+            车牌号
+            <span class="item-note">
+              {{ctrl.detail.carInfo.carLicenseNo}}
+            </span>
+          </div>
+          <div class="item">
+            品牌型号
+            <span class="item-note">
+              {{ctrl.detail.carInfo.vehicleName}}
+            </span>
+          </div>
+        </div>
+
+        <div class="padding-bottom">
+          <div class="item item-divider">
+            车主信息
+          </div>
+          <label class="item item-input">
+            <span class="input-label">姓名</span>
+            <input name="name" ng-model="ctrl.detail.carOwner.name" type="text" placeholder="请输入联系人姓名，如张里程" required lcb-validator="name">
+          </label>
+          <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.payForm.name.$dirty && ctrl.payForm.name.$invalid">请输入正确的中文姓名</div>
+          <label class="item item-input">
+            <span class="input-label">身份证 <span class="assertive">*</span></span>
+            <input name="id" ng-model="ctrl.detail.carOwner.idcardNo" type="text" placeholder="请输入车主身份证" lcb-validator2="idCard" required>
+          </label>
+          <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.payForm.id.$dirty && ctrl.payForm.id.$invalid">请输入正确格式的身份证号</div>
+          <label class="item item-input">
+            <span class="input-label">手机号 <span class="assertive">*</span></span>
+            <input name="mobile" ng-model="ctrl.detail.carOwner.phone" type="tel" placeholder="请输入手机号码，如18721674367" required lcb-validator="mobile">
+          </label>
+          <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.payForm.mobile.$dirty && ctrl.payForm.mobile.$invalid">请输入正确的手机号</div>
+        </div>
+
+        <div class="padding-bottom">
+          <div class="item item-divider">
+            配送信息
+          </div>
+          <label class="item item-input">
+            <span class="input-label">姓名 <span class="assertive">*</span></span>
+            <input name="deliverName" ng-model="ctrl.detail.delivery.name" type="text" placeholder="请输入联系人姓名，如张里程" required lcb-validator="name">
+          </label>
+          <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.payForm.deliverName.$dirty && ctrl.payForm.deliverName.$invalid">请输入正确的中文姓名</div>
+          <label class="item item-input">
+            <span class="input-label">手机号 <span class="assertive">*</span></span>
+            <input name="deliveryMobile" ng-model="ctrl.detail.delivery.phone" type="tel" placeholder="请输入手机号码，如18721674367" required lcb-validator="mobile">
+          </label>
+          <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.payForm.deliveryMobile.$dirty && ctrl.payForm.deliveryMobile.$invalid">请输入正确的手机号</div>
+          <lcb-city-picker-fanhua class="dark" ng-model="ctrl.deliveryArea">省市区 <span class="assertive">*</span></lcb-city-picker-fanhua>
+          <label class="item item-input">
+            <span class="input-label">详细地址 <span class="assertive">*</span></span>
+            <input type="text" ng-model="ctrl.detail.delivery.address" placeholder="请输入详细地址" required>
+          </label>
+        </div>
+
+      </div>
+
+    </form>
+
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="title">保费合计：{{ctrl.getTotalPrice() | lcbCurrency}}</div>
+    <button class="button button-clear pull-right" ng-disabled="ctrl.payForm.$invalid" ng-click="ctrl.pay()">支付</button>
+  </div>
+</ion-view>

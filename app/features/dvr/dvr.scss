@@ -1,0 +1,63 @@
+#dvr {
+
+  %lcb-tab-icon {
+    left: 17px!important;
+    top: 15px!important;
+    width: 25px;
+    height: 25px!important;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .lcb-tab-icon-trip {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_trip.png");
+  }
+
+  .lcb-tab-icon-trip-off {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_trip_b.png");
+  }
+
+  .lcb-tab-icon-behavior {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_behavior.png");
+  }
+
+  .lcb-tab-icon-behavior-off {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_behavior_b.png");
+  }
+
+  .lcb-tab-icon-report {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_report.png");
+  }
+
+  .lcb-tab-icon-report-off {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_report_b.png");
+  }
+
+  .lcb-tab-icon-earning {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_earning.png");
+  }
+
+  .lcb-tab-icon-earning-off {
+    @extend %lcb-tab-icon;
+    background-image: url("/static/images/dvr/tab_icon_earning_b.png");
+  }
+
+  .tab-nav {
+    padding-top: 5px;
+    a {
+      line-height: 22px;
+    }
+  }
+
+  .tab-item.activated, .tab-item.active, .tab-item.tab-item-active {
+    color: #52bdf0;
+  }
+
+}

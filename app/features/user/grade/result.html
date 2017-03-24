@@ -1,0 +1,52 @@
+<ion-view view-title="手机模拟评测" id="user-grade-result-container">
+  <ion-content>
+
+    <div id="user-grade-result">
+
+      <div id="header" class="more-padding">
+        <img id="share" src="/static/images/icon_share.png" ng-click="ctrl.showMask('sharemask')">
+        {{ctrl.result.name | lcbProtect}}的手机模拟评测结果
+        <table id="grade-container">
+          <tr>
+            <td>
+              <span id="grade">{{ctrl.result.grade}}</span><br/>
+              手机评测等级
+            </td>
+            <td></td>
+            <td>
+              <span id="discount">{{ctrl.result.discount}}%</span><br/>
+              最低车险价格
+            </td>
+          </tr>
+        </table>
+        <lcb-progress-bar value="ctrl.result.discount" max="100" color-class="'lcb-balanced-color'"></lcb-progress-bar>
+        <div id="actions" class="text-center">
+          <button class="button button-balanced" ng-click="ctrl.downloadApp()">下载App开始手机评测</button>
+          <a href="javascript:void(0)" ng-click="ctrl.attend()">点此参与正式评测</a>
+        </div>
+      </div>
+
+      <div id="result" class="lcb-margin-vertical lcb-white-bg">
+        <div class="more-padding">上次评测时间：{{ctrl.result.updated_at}}</div>
+        <table>
+          <tr>
+            <td><img src="/static/images/icon_travel.png">里程<br/><span>{{ctrl.result.distance}}</span>公里</td>
+            <td><img src="/static/images/icon_time.png">时间<br/><span>{{ctrl.result.duration}}</span></td>
+            <td><img src="/static/images/icon_max_speed.png">最高速度<br/><span>{{ctrl.result.max_speed}}</span>km/h</td>
+            <td><img src="/static/images/icon_avg_speed.png">平均速度<br/><span>{{ctrl.result.avg_speed}}</span>km/h</td>
+          </tr>
+          <tr>
+            <td><img src="/static/images/icon_acceleration.png">急加速<br/><span>{{ctrl.result.sudden_acc}}</span>次</td>
+            <td><img src="/static/images/icon_brake.png">急减速<br/><span>{{ctrl.result.sudden_brake}}</span>次</td>
+            <td><img src="/static/images/icon_turn.png">急转弯<br/><span>{{ctrl.result.sudden_turn}}</span>次</td>
+            <td><img src="/static/images/icon_overspeed.png">超速<br/><span>{{ctrl.result.speeding}}</span>次</td>
+          </tr>
+        </table>
+      </div>
+
+      <!--img src="/static/images/grade_intro.png" class="lcb-img-responsive"-->
+
+    </div>
+
+  </ion-content>
+</ion-view>

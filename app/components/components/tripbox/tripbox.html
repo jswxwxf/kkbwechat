@@ -1,0 +1,30 @@
+<div class="lcb-tripbox">
+  <div class="text-center dark lcb-tripbox-time">{{$ctrl.lcbUtils.formatTime($ctrl.trip.end_epoch_time)}}</div>
+  <div class="padding lcb-white-bg dark">
+    <div class="lcb-tripbox-trip" ng-click="$ctrl.showMap()">
+      <img src="/static/images/dvr/icon_start.png">
+      <i class="icon ion-record lcb-acce-point" ng-style="{ left: accePoint + '%' }" ng-repeat="accePoint in $ctrl.accePoints track by $index"></i>
+      <i class="icon ion-record lcb-brake-point" ng-style="{ left: brakePoint + '%' }" ng-repeat="brakePoint in $ctrl.brakePoints track by $index"></i>
+      <i class="icon ion-record lcb-turn-point" ng-style="{ left: turnPoint + '%' }" ng-repeat="turnPoint in $ctrl.turnPoints track by $index"></i>
+      <img src="/static/images/dvr/icon_end.png" class="pull-right">
+    </div>
+    <div class="row lcb-border-top lcb-tripbox-status ">
+      <div class="col col-40 text-center lcb-border-right">
+        <span>{{$ctrl.trip.distance}}<br/><span>公里</span></span>
+        <span>{{$ctrl.trip.duration}}<br/><span>分钟</span></span>
+      </div>
+      <div class="col text-center">
+        <div><div>{{$ctrl.trip.sudden_acce}}</div>急加速</div>
+        <div><div>{{$ctrl.trip.sudden_brake}}</div>急减速</div>
+        <div><div>{{$ctrl.trip.sudden_turn}}</div>急转弯</div>
+      </div>
+    </div>
+  </div>
+  <div class="padding lcb-white-bg lcb-border-top lcb-tripbox-action">
+    <div class="lcb-margin-horizontal">
+      <img src="/static/images/dvr/icon_map.png" ng-click="$ctrl.showMap()">
+      <span ng-click="$ctrl.showMap()">{{$ctrl.trip.start_loc_name}} - {{$ctrl.trip.end_loc_name}}</span>
+      <img src="/static/images/dvr/icon_delete.png" ng-click="$ctrl.deleteTrip()">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+$lcb-pill-switcher-color-default: #529bfc;
+
+.lcb-pill-switcher {
+
+  //border: 1px solid $balanced;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 9pt;
+
+  > span {
+    width: 70px;
+    padding: 2px;
+    display: inline-block;
+    background-color: white;
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+}
+
+.lcb-pill-switcher-color-default {
+
+  > span {
+    border: 1px solid $lcb-pill-switcher-color-default;
+    border-left: none;
+    &:first-child {
+      border-left: 1px solid $lcb-pill-switcher-color-default;
+    }
+  }
+
+  .lcb-pill-switcher-on {
+    background-color: $lcb-pill-switcher-color-default;
+    color: white;
+  }
+
+}

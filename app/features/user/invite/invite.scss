@@ -1,0 +1,51 @@
+#user-invite {
+
+  color: white;
+
+  a {
+    color: #53defc;
+  }
+
+  #rule {
+
+    font-size: 13pt;
+    margin-top: -10px;
+
+    table {
+      width: 100%;
+      td, th {
+        padding: 8px 0;
+      }
+      th:last-child {
+        width: 75px;
+      }
+      td:last-child {
+        font-weight: bold;
+        font-size: 14pt;
+      }
+      tr:first-child, tr:last-child {
+        border-bottom: 1px solid #ab8b6d;
+      }
+    }
+
+    #info {
+      span {
+        font-size: 16pt;
+        color: #53defc;
+      }
+    }
+  }
+
+  .button {
+    background-color: #f6ed52;
+    color: red;
+    font-size: 18pt;
+    font-weight: bold;
+    line-height: 47px;
+  }
+
+}
+
+#user-invite-container {
+  background-color: #18192f;
+}

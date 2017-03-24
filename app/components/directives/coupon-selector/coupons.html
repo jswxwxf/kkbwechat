@@ -1,0 +1,29 @@
+<ion-modal-view class="lcb-coupon-selector-container">
+  <ion-header-bar>
+    <h1 class="title">抵扣券</h1>
+    <button class="button button-dark button-clear" ng-click="ctrl.hideModal('coupons')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+
+    <div class="lcb-coupon-selector">
+      <h4 class="more-padding text-center" ng-if="ctrl.isEmpty(ctrl.coupons)">您目前没有可用的抵扣券</h4>
+      <lcb-radio ng-model="ctrl.coupon" ng-value="coupon" class="item-checkbox-right checkbox-assertive" ng-repeat="coupon in ctrl.coupons" ng-click="ctrl.hideModal('coupons')">
+        <div class="row row-no-padding row-center">
+          <div class="col col-40 text-center">
+            <div>
+              <img src="/static/images/coupon_left.png">
+              <span>￥</span>{{coupon.amounts}}
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <h3>车险抵扣券</h3>
+              <span class="lcb-font-note">有效期至{{coupon.valid_to}}</span>
+            </div>
+          </div>
+        </div>
+      </lcb-radio>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

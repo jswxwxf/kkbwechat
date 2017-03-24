@@ -1,0 +1,63 @@
+<ion-view view-title="帐户信息">
+  <ion-content>
+
+    <ion-refresher on-refresh="ctrl.loadProfile(true)" pulling-text="下拉刷新"></ion-refresher>
+  
+    <div id="user-profile">
+    
+      <div class="list">
+        <div class="item item-icon-right">
+          <span>头像</span>
+          <img style="background-image: url({{ctrl.user.avatar || '/static/images/ico_default_avatar.png'}})">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='avatar' lcb-file-uploader="ctrl.updateAvatar" lcb-fix-orient="true">
+        </div>
+        <a ui-sref="user.profile.edit({page: 'username'})" class="item item-icon-right" lcb-disable-by="ctrl.user.name != ctrl.user.mobile">
+          用户名 <span class="item-note">{{ctrl.user.name | lcbProtect}}</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <a ui-sref="user.profile.edit({page: 'password'})" class="item item-icon-right">
+          修改登录密码 <span class="item-note">点击修改密码</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <div class="item item-divider">
+          基础资料
+        </div>
+        <a ui-sref="user.profile.edit({page: 'id'})" class="item item-icon-right" lcb-disable-by="!isEmpty(ctrl.user.id_card)">
+          身份证 <span class="item-note">{{ctrl.user.id_card || '点击补充资料' | lcbProtect}}</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <a ui-sref="user.profile.edit({page: 'name'})" class="item item-icon-right" lcb-disable-by="!isEmpty(ctrl.user.realname)">
+          姓名 <span class="item-note">{{ctrl.user.realname || '点击补充资料'}}</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <a ui-sref="user.detail.home" class="item item-icon-right">
+          补充信息
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <div class="item item-divider">
+          绑定设置
+        </div>
+        <a ui-sref="user.profile.phone" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-phone"></i>
+          手机 <span class="item-note">已绑定</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-wechat"></i>
+          微信 <span class="item-note">{{ctrl.user.accounts[3] | lcbStatus:{ type: 'object', color: false, successLabel: '已绑定', errorLabel: '未绑定' } }}</span>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-weibo"></i>
+          新浪微博 <span class="item-note">{{ctrl.user.accounts[1] | lcbStatus:{ type: 'object', color: false, successLabel: '已绑定', errorLabel: '未绑定' } }}</span>
+        </a>
+        <a href="#" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-qq"></i>
+          QQ <span class="item-note">{{ctrl.user.accounts[2] | lcbStatus:{ type: 'object', color: false, successLabel: '已绑定', errorLabel: '未绑定' } }}</span>
+        </a>
+      </div>
+    
+    </div>
+  
+  </ion-content>
+</ion-view>

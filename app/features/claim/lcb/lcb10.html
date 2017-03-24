@@ -1,0 +1,40 @@
+<ion-view view-title="里程保1.0返现">
+  <ion-content>
+
+    <form name="ctrl.claimForm" id="claim-lcb" novalidate>
+
+      <div class="padding-vertical">
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-car"></i>
+          车牌
+          <span class="item-note lcb-normal-font">
+            {{ctrl.claim.license_no}}
+          </span>
+        </div>
+        <label class="item item-icon-left lcb-item-icon-left item-input">
+          <i class="icon lcb-ico_odometry"></i>
+          <span class="input-label">里程数</span>
+          <input name="end_mile" ng-model="ctrl.claim.end_mile" type="number" placeholder="请输入里程表上的数字" required min="1" ng-readonly="ctrl.isReadonly()">
+        </label>
+      </div>
+
+      <div class="list" ng-if="!ctrl.isReadonly()">
+        <div id="actions" class="item lcb-margin-vertical item-icon-right">
+          <span>上传里程照片</span>
+          <img src="/static/images/sample_odometry.png">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='ctrl.cert' lcb-file-uploader required>
+        </div>
+      </div>
+
+      <div class="padding lcb-font-note lcb-no-border lcb-smaller-font lcb-normal-fontweight">
+        注意事项：<br/>您提交返现申请的5天内，我们将核实，并给予短信反馈，并将返现金额直接存入您的账户中
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-balanced button-block lcb-bigger-font" ng-disabled="ctrl.isInvalid()" ng-click="ctrl.claimOrder()">{{ctrl.buttonText}}</button>
+  </ion-footer-bar>
+</ion-view>

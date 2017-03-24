@@ -1,0 +1,85 @@
+<ion-view id="insurance-inquiry2-container" view-title="选择险种">
+  <ion-content id="insurance-inquiry2">
+
+    <form id="step3" novalidate class="list padding-vertical">
+
+      <label class="item item-input">
+        <span class="input-label">车险起保日期 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.start_day" type="date" placeholder="请输入车险起保日期">
+      </label>
+      <ion-toggle ng-model="ctrl.insurance.compulsory" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">交强险/车船税</ion-toggle>
+      <ion-toggle ng-model="ctrl.insurance.commercial" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">商业险</ion-toggle>
+      <ion-toggle ng-model="ctrl.insurance.destroy" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">机动车辆损失险</ion-toggle>
+      <label class="item item-input item-select">
+        <span class="input-label">第三者责任险</span>
+        <select ng-model="ctrl.insurance.liability">
+          <option value="0">不投保</option>
+          <option value="100000">10万元</option>
+          <option value="150000">15万元</option>
+          <option value="200000">20万元</option>
+          <option value="300000">30万元</option>
+          <option value="500000">50万元</option>
+          <option value="1000000">100万元</option>
+          <option value="2000000">200万元</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <span class="input-label">司机险</span>
+        <select ng-model="ctrl.insurance.driver_seat">
+          <option value="0">不投保</option>
+          <option value="10000">1万元</option>
+          <option value="20000">2万元</option>
+          <option value="30000">3万元</option>
+          <option value="40000">4万元</option>
+          <option value="50000">5万元</option>
+          <option value="500000">50万元</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <span class="input-label">乘客险</span>
+        <select ng-model="ctrl.insurance.passenger_seat">
+          <option value="0">不投保</option>
+          <option value="10000">1万元</option>
+          <option value="20000">2万元</option>
+          <option value="30000">3万元</option>
+          <option value="40000">4万元</option>
+          <option value="50000">5万元</option>
+          <option value="500000">50万元</option>
+        </select>
+      </label>
+      <ion-toggle ng-model="ctrl.insurance.stolen" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">盗抢险</ion-toggle>
+      <label class="item item-input item-select">
+        <span class="input-label">玻璃险</span>
+        <select ng-model="ctrl.insurance.glasses">
+          <option value="0">不投保</option>
+          <option value="1">国产玻璃</option>
+          <option value="2">进口玻璃</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <span class="input-label">划痕险</span>
+        <select ng-model="ctrl.insurance.scratch">
+          <option value="0">不投保</option>
+          <option value="2000">2000元</option>
+          <option value="5000">5000元</option>
+          <option value="20000">20000元</option>
+          <option value="50000">50000元</option>
+        </select>
+      </label>
+      <ion-toggle ng-model="ctrl.insurance.burn" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">自然险</ion-toggle>
+      <ion-toggle ng-model="ctrl.insurance.water" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">涉水险</ion-toggle>
+      <div class="item item-input item-select">
+        <div class="input-label">倒车镜/车灯单独损坏险</div>
+        <select ng-model="ctrl.insurance.destroy">
+          <option value="true">投保</option>
+          <option value="false">不投保</option>
+        </select>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-click="ctrl.insuranceSubmitted()">查看报价</button>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view view-title="上传驾驶证" id="dvr-task-drivelicense-container">
+  <ion-content>
+
+    <div id="dvr-task-drivelicense">
+      <form name="licenseForm" novalidate>
+        <img src="static/images/dvr/banner_task.png" class="lcb-img-responsive">
+        <h4 class="padding-horizontal dark">上传驾驶证，获得额外6倍收益!!!</h4>
+        <div class="item">
+          车牌
+          <span class="item-note">{{ctrl.activeCar.license_no}}</span>
+        </div>
+        <div id="photos" class="item text-center">
+          <div class="row">
+            <div class="col">驾照上传</div>
+            <div class="col">驾照示意图</div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="/static/images/picture_upload.png" class="lcb-img-responsive">
+              <input type="file" accept="image/*" ng-model='ctrl.license' lcb-file-uploader required>
+            </div>
+            <div class="col"><img src="/static/images/sample_drive.png" class="lcb-img-responsive"></div>
+          </div>
+        </div>
+        <div class="padding">
+          <button type="button" class="button button-block button-assertive" ng-disabled="licenseForm.$invalid" ng-click="ctrl.save()">确认</button>
+        </div>
+      </form>
+      <div class="lcb-font-note padding-horizontal">
+        完成当前任务，则可以获得6倍于最近1天行车收益的额外收益。
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

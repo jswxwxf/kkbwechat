@@ -1,0 +1,11 @@
+<ion-view view-title="我要理赔">
+  <ion-content>
+
+    <div id="claim-list" ng-repeat="order in ctrl.orders">
+      <order-card order="order" claim="true"></order-card>
+    </div>
+
+    <div class="more-padding dark text-center" ng-if="isEmpty(ctrl.orders)">暂时没有您可以理赔的保单信息</div>
+
+  </ion-content>
+</ion-view>

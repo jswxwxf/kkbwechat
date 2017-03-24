@@ -1,0 +1,19 @@
+#oauth-read {
+
+  input[disabled] {
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  #actions {
+    padding-top: 20px;
+    > .button-stable {
+      border-color: #b2b2b2;
+    }
+  }
+
+  #intro {
+    line-height: 25px;
+  }
+
+}

@@ -1,0 +1,13 @@
+<ion-view view-title="安防设置">
+  <ion-content>
+
+    <div id="user-car-safety" class="padding-vertical">
+      <ion-toggle ng-model="ctrl.safety.ignite" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'" ng-change="ctrl.save()">点火提醒</ion-toggle>
+      <ion-toggle ng-model="ctrl.safety.shake" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'" ng-change="ctrl.save()">震动提醒</ion-toggle>
+      <ion-toggle ng-model="ctrl.safety.volt" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'" ng-change="ctrl.save()">电压预警</ion-toggle>
+      <ion-toggle ng-model="ctrl.safety.oil" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'" ng-change="ctrl.save()">油量预警</ion-toggle>
+      <ion-toggle ng-model="ctrl.safety.crash" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'" ng-change="ctrl.save()">碰撞报警</ion-toggle>
+    </div>
+
+  </ion-content>
+</ion-view>

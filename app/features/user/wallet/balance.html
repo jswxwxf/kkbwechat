@@ -1,0 +1,32 @@
+<ion-view view-title="帐户余额">
+  <ion-content>
+  
+    <div id="user-balance">
+
+      <div class="padding-vertical">
+        <h1 class="text-center balanced"><sub>¥</sub>{{ctrl.balance.balance}}<button class="button button-balanced button-clear" ui-sref="user.balance.draw" ng-disabled="!ctrl.drawable()">提现</button></h1>
+        <p class="lcb-smaller-font lcb-font-note">
+          余额是您在开开保的一个账户，如账户内有款项，下单购买开开保产品或服务时可以直接勾选使用，抵消部分总额，当账户余额超过10元时，可以选择提现。
+        </p>
+      </div>
+
+      <div class="text-center lcb-font-note"><span>收支明细</span></div>
+
+      <div class="list padding-vertical">
+        <div class="item" ng-repeat="item in ctrl.balance.detail">
+          <div>
+            <span ng-bind-html="item.amounts | lcbCurrency:{ color: true, sign: item.type, type: 'float' }"></span>
+          </div>
+          <div>
+            <span><strong>{{item.reason}}</strong></span>
+            <span class="lcb-smaller-font lcb-font-note">{{item.created_at}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <ion-infinite-scroll on-infinite="ctrl.loadMoreDetail()" ng-if="ctrl.hasMore()"></ion-infinite-scroll>
+  
+  </ion-content>
+</ion-view>

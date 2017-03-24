@@ -1,0 +1,53 @@
+#user-device-container {
+
+  .button-block {
+    margin: 0;
+  }
+
+  .bar-footer {
+    padding: 5px;
+    height: 54px;
+  }
+
+}
+
+#user-device {
+
+  .lcb-no-device {
+
+    text-align: center;
+    padding: 20px;
+
+    a {
+      display: inline;
+      padding: 0;
+      margin: 0;
+    }
+
+    > div:first-child {
+      padding-bottom: 30px;
+    }
+
+    > div:last-child {
+      padding-top: 30px;
+    }
+
+    .device-circle-text {
+      @include _lcb-circle-text(-3em, transparent, #ddd, 50%);
+    }
+
+  }
+
+  #actions {
+    .col {
+      padding: 0 20px;
+      img {
+        width: 70px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+}

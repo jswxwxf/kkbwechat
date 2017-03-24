@@ -1,0 +1,48 @@
+#order-payment {
+
+  .radio-content {
+    .item-content {
+      span {
+        padding-left: 35px;
+      }
+    }
+  }
+
+  .item-note {
+    font-size: 1em;
+  }
+
+  .item-icon-left .radio-icon {
+    left: auto;
+  }
+
+  .item-divider {
+    line-height: 30px;
+  }
+
+  #detail {
+    padding: 10px 15px;
+    padding-top: 10px;
+    .row {
+      padding-top: 10px;
+    }
+  }
+
+  #coupon {
+    border-top: none;
+    margin-top: -15px;
+  }
+
+}
+
+#order-payment-container {
+  .bar-footer {
+    padding: 0;
+    height: 50px;
+    .button-bar {
+      .button {
+        border-radius: 0;
+      }
+    }
+  }
+}

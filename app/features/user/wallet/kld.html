@@ -1,0 +1,48 @@
+<ion-view view-title="卡拉丁">
+  <ion-content>
+  
+    <div id="user-kld">
+      
+      <div class="padding">
+        <h5><i class="icon lcb-icon-notepad"></i>服务简介</h5>
+        <div class="lcb-smaller-font" style="text-indent: 2em;">
+          卡拉丁空调滤清器采用行业领先技术，独有四层过滤净化技术能最大限度阻隔过滤车中各类有害气体。
+          除了拥有 PM2.5 过滤技术和汽车尾气活性炭洗附功能外，还会有抗菌和防毒，去味及防霉四大功效，更能从容应对各类天气及复杂路况。
+        </div>
+      </div>
+      
+      <form name="applyForm" novalidate>
+        <h5 class="padding"><i class="icon lcb-icon-edit"></i>填写信息</h5>
+        <div>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label"><span class="assertive">*</span> 联系人</span>
+              <input name="name" type="text" ng-model="ctrl.kld.name" maxlength="20" placeholder="请输入联系人" required lcb-validator="name">
+            </label>
+            <div class="item item-divider lcb-item-error text-center" ng-show="applyForm.name.$dirty && applyForm.name.$invalid">请输入正确的中文姓名</div>
+            <label class="item item-input">
+              <span class="input-label"><span class="assertive">*</span> 电话</span>
+              <input name="mobile" type="tel" ng-model="ctrl.kld.mobile" placeholder="请输入手机" required lcb-validator="mobile">
+            </label>
+            <div class="item item-divider lcb-item-error text-center" ng-show="applyForm.mobile.$dirty && applyForm.mobile.$invalid">请输入正确的手机号</div>
+            <label class="item item-input">
+              <span class="input-label"><span class="assertive">*</span> 地址</span>
+              <input type="text" ng-model="ctrl.kld.address" placeholder="请输入地址" required>
+            </label>
+          </div>
+        </div>
+        <div class="padding text-center">
+          <button type="button" class="button button-assertive" ng-disabled="applyForm.$invalid" ng-click="ctrl.apply()">确认提交</button>
+        </div>
+      </form>
+    
+      <div class="padding">
+        <h5><i class="icon lcb-icon-picture"></i>服务展示</h5>
+      </div>
+
+      <img src="/static/images/product_kld.png" class="lcb-img-responsive">
+
+    </div>
+    
+  </ion-content>
+</ion-view>

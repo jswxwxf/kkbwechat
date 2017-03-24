@@ -1,0 +1,134 @@
+<ion-view view-title="驾驶评级月报" id="user-grade-report1-container">
+  <ion-nav-buttons side="right">
+    <car-switcher type="button-nav" can-add="false" on-change="ctrl.loadReport(car.car_id)" ng-if="!lcbConfig.inEvent()"></car-switcher>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="user-grade-report1" class="lcb-white-bg">
+
+      <div id="header">
+        <img src="static/images/grades/reportheader.png" class="lcb-img-responsive">
+        <div>{{ctrl.report.report_period}}</div>
+        <div>by开开保大数据实验室</div>
+      </div>
+
+      <div id="result">
+        <div class="row">
+          <div class="row row-no-padding">
+            <div class="col col-33 text-center col-center"><img ng-src="static/images/grades/report{{ctrl.report.grade_level.toLowerCase()}}.png"></div>
+            <div class="col lcb-margin">{{ctrl.report.grade_text}}</div>
+          </div>
+        </div>
+        <div class="row row-no-padding padding clearfix text-center">
+          <div class="col lcb-margin-vertical">{{ctrl.report.grade_comments}}</div>
+        </div>
+      </div>
+
+      <div id="tags" class="padding">
+        <div>
+          <span ng-repeat="tag in ctrl.report.tags track by $index" ng-class="'lcb-tag-color' + ($index + 1)">{{tag}}</span>
+        </div>
+        <div class="more-padding-top">
+          <img src="static/images/grades/tagsdriver.png" class="lcb-img-responsive">
+        </div>
+      </div>
+
+      <img src="static/images/grades/dividor.png" class="lcb-img-responsive">
+
+      <img src="static/images/grades/caption1.png" class="lcb-img-responsive">
+      <div id="sudden" class="more-padding">
+        <div class="row text-center">
+          <div class="col">
+            <img src="static/images/icon_acceleration.png"><br>
+            急加速<br>
+            <span>{{ctrl.report.acce}}</span>次/天
+          </div>
+          <div class="col">
+            <img src="static/images/icon_brake.png"><br>
+            急减速<br>
+            <span>{{ctrl.report.brake}}</span>次/天
+          </div>
+          <div class="col">
+            <img src="static/images/icon_turn.png"><br>
+            急转弯<br>
+            <span>{{ctrl.report.turn}}</span>次/天
+          </div>
+        </div>
+        <div class="text-center lcb-comment">
+          {{ctrl.report.abt_comments}}
+        </div>
+      </div>
+
+      <!--img src="static/images/grades/caption2.png" class="lcb-img-responsive">
+      <img src="static/images/grades/acceldriver.png" class="lcb-img-responsive">
+      <div id="accel">
+        <div class="text-center"><img src="static/images/icon_overspeed.png" class="lcb-icon">最大超速<span>{{ctrl.report.speeding}}</span>%</div>
+        <div class="text-center lcb-comment">
+          {{ctrl.report.speeding_comments}}
+        </div>
+      </div-->
+
+      <img src="static/images/grades/caption3.png" class="lcb-img-responsive">
+      <div id="period" class="text-center">
+        <img ng-src="static/images/grades/timerange{{ctrl.report.timerange}}.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          {{ctrl.report.timerange_comments}}
+        </div>
+      </div>
+
+      <img src="static/images/grades/caption4.png" class="lcb-img-responsive">
+      <div id="mileage">
+        <div class="text-center">
+          <img src="static/images/grades/icon_mileage.png" class="lcb-img-responsive">
+          <div>{{ctrl.report.mileage}}KM</div>
+        </div>
+        <div class="text-center lcb-comment">
+          {{ctrl.report.mileage_comments}}
+        </div>
+      </div>
+
+      <img src="static/images/grades/caption5.png" class="lcb-img-responsive">
+      <div id="traffic" class="text-center">
+        <div class="text-center lcb-comment2">
+          拥堵状态占据了您<span>{{ctrl.report.jam_percent}}%</span>的行驶时长
+        </div>
+        <img ng-src="static/images/grades/traffic{{ctrl.report.jam}}.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          {{ctrl.report.jam_comments}}
+        </div>
+      </div>
+
+      <img src="static/images/grades/caption6.png" class="lcb-img-responsive">
+      <div id="road">
+        <div class="text-center lcb-comment2">
+          您每天<span>{{ctrl.report.familiar_roads_percent}}%</span>的脚步是踏在您熟悉的土地上
+        </div>
+        <img src="static/images/grades/road.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          {{ctrl.report.familiar_roads_comments}}
+        </div>
+      </div>
+
+      <!--img src="static/images/grades/caption7.png" class="lcb-img-responsive">
+      <div id="neighbour">
+        <img src="static/images/grades/neighbour.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          与{{ctrl.report.mate}}个人擦肩而过，频率最高的<span>{{ctrl.report.mate_license_no}}</span><br>
+          这么有缘分 要不咱们拜个把子？
+        </div>
+      </div-->
+
+      <img src="static/images/grades/dividor.png" class="lcb-img-responsive more-padding-top">
+
+      <div id="qrcode">
+        <img src="static/images/grades/qrcode.png" class="lcb-img-responsive">
+        <div class="text-center lcb-comment">
+          感谢您参与开开保寻找好车主活动<br>
+          我们下个月再见
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

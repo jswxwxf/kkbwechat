@@ -1,0 +1,216 @@
+<div class="list lcb-package-selector-fanhua">
+  <div class="lcb-title item lcb-bold">
+    商业险 <span class="pull-right">不计免陪</span>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <div class="input-label">车辆损失险</div>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.VehicleDemageIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.VehicleDemageIns.amount == '0' }">
+        <option value="1">投保</option>
+        <option value="0">不投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.VehicleDemageIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <div class="input-label">第三者责任险</div>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.ThirdPartyIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.ThirdPartyIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="50000">5万元</option>
+        <option value="100000">10万元</option>
+        <option value="150000">15万元</option>
+        <option value="200000">20万元</option>
+        <option value="300000">30万元</option>
+        <option value="500000">50万元</option>
+        <option value="1000000">100万元</option>
+        <option value="2000000">200万元</option>
+        <option value="2500000">250万元</option>
+        <option value="3000000">300万元</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.ThirdPartyIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">全车盗抢险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.TheftIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.TheftIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="1">投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.TheftIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">司机座位险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.DriverIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.DriverIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="5000">5000元</option>
+        <option value="10000">1万元</option>
+        <option value="20000">2万元</option>
+        <option value="30000">3万元</option>
+        <option value="40000">4万元</option>
+        <option value="50000">5万元</option>
+        <option value="100000">10万元</option>
+        <option value="150000">15万元</option>
+        <option value="200000">20万元</option>
+        <option value="500000">50万元</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.DriverIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">乘客座位险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.PassengerIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.PassengerIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="5000">5000元</option>
+        <option value="10000">1万元</option>
+        <option value="20000">2万元</option>
+        <option value="30000">3万元</option>
+        <option value="40000">4万元</option>
+        <option value="50000">5万元</option>
+        <option value="100000">10万元</option>
+        <option value="150000">15万元</option>
+        <option value="200000">20万元</option>
+        <option value="500000">50万元</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.PassengerIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">划痕险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.ScratchIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.ScratchIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="2000">2000元</option>
+        <option value="5000">5000元</option>
+        <option value="10000">1万元</option>
+        <option value="20000">2万元</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.ScratchIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">玻璃破损险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.GlassIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.GlassIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="1">国产玻璃</option>
+        <option value="2">进口玻璃</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">涉水险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.WadingIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.WadingIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="1">投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.WadingIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">自燃险</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.CombustionIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.CombustionIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="1">投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.CombustionIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">找不到第三方</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.VehicleDemageMissedThirdPartyCla.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.VehicleDemageMissedThirdPartyCla.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="1">投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">指定专修厂</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.SpecifyingPlantCla.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.SpecifyingPlantCla.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="1">投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <span class="input-label">精神损害抚慰金</span>
+      <select ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.CompensationForMentalDistressIns.amount" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.bizInsureInfo.riskKinds.CompensationForMentalDistressIns.amount == '0' }">
+        <option value="0">不投保</option>
+        <option value="10000">1万元</option>
+        <option value="20000">2万元</option>
+        <option value="30000">3万元</option>
+        <option value="40000">4万元</option>
+        <option value="50000">5万元</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+      <ion-checkbox ng-model="ctrl.insureInfo.bizInsureInfo.riskKinds.CompensationForMentalDistressIns.notDeductible" class="checkbox-balanced" ng-true-value="'Y'" ng-false-value="'N'"></ion-checkbox>
+    </div>
+  </div>
+  <div class="row item item-input item-select">
+    <div class="col">
+      <div class="input-label lcb-bold">交强险/车船税</div>
+      <select ng-model="ctrl.insureInfo.efcInsure" ng-class="{ 'lcb-insurance-not-cover': ctrl.insureInfo.efcInsure == 'false' }">
+        <option value="true">投保</option>
+        <option value="false">不投保</option>
+      </select>
+      <div class="lcb-down-arrow"></div>
+    </div>
+    <div class="col col-20">
+    </div>
+  </div>
+  <div class="item lcb-bold">
+    保险生效日期
+  </div>
+  <label class="item item-input">
+    <span class="input-label">商业险</span>
+    <input ng-model="ctrl.insureInfo.bizInsureInfo.startDate" type="date" placeholder="请选择日期">
+  </label>
+  <label class="item item-input" ng-if="ctrl.insureInfo.efcInsure == 'true'">
+    <span class="input-label">交强险</span>
+    <input ng-model="ctrl.insureInfo.efcInsureInfo.startDate" type="date" placeholder="请选择日期">
+  </label>
+</div>

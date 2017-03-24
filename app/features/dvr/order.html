@@ -1,0 +1,61 @@
+<ion-view id="dvr-order-container" view-title="保单详情">
+  <ion-content>
+
+    <div id="dvr-order" class="dark">
+
+      <div id="result" class="list">
+
+        <div class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-car"></i>车牌
+            <span class="item-note">
+              {{ctrl.order.license_no}}
+            </span>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-company"></i>
+            保险公司
+            <span class="item-note">
+              {{ctrl.order.company | lcbInsuranceCompany}}
+            </span>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-time"></i>
+            理赔电话
+            <span class="item-note">
+              <a href="tel:4000100100">4000100100</a>
+            </span>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-time"></i>
+            保障期限
+            <span class="item-note">
+              {{ctrl.order.valid_from}} - {{ctrl.order.valid_until}}
+            </span>
+          </div>
+          <div id="order-number">
+            <div class="item item-icon-left">
+              <i class="icon lcb-icon-commercial-sn"></i>
+              商业险保单号<span class="item-note">{{ctrl.order.commercial_sn}}</span>
+            </div>
+            <div class="item item-icon-left">
+              <i class="icon lcb-icon-compulsory-sn"></i>
+              交强险保单号<span class="item-note">{{ctrl.order.compulsory_sn}}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-list"></i>
+          商业险种列表
+        </div>
+        <div class="light-bg lcb-border-bottom text-center">
+          <package-viewer package="ctrl.order"></package-viewer>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

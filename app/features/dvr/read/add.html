@@ -1,0 +1,23 @@
+<ion-modal-view id="dvr-read-add-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">新增内容</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('add')">关闭</button>
+  </ion-header-bar>
+  <ion-content delegate-handle="add">
+
+    <form id="dvr-read-add" name="ctrl.castForm" class="list" novalidate>
+      <label class="item item-input">
+        <span class="input-label">标题</span>
+        <input ng-model="ctrl.newCast.title" type="text" placeholder="选填，不填写将自动从网址或文章中截取">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">正文</span>
+      </label>
+      <textarea id="content" ng-model="ctrl.newCast.content" placeholder="1. 请直接将网页地址复制到此处（以http://或https://开头），系统将自动解析网页内容，并读取文字形成文章上传车机。2. 或直接复制文本到此处，文字即制在5000千字以内，超过5000字部分将自动舍去。3. 由于不同网址页面编译方法的不同，部分网址可能无法正确解析，敬请谅解。" required></textarea>
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-disabled="ctrl.castForm.$invalid" ng-click="ctrl.add()">提交</button>
+  </ion-footer-bar>
+</ion-modal-view>

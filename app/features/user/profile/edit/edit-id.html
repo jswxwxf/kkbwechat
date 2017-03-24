@@ -1,0 +1,11 @@
+<div class="list padding-vertical">
+  <label class="item item-input">
+    <span class="input-label">身份证号</span>
+    <input name="id" type="text" ng-model="ctrl.editUser.id_card" placeholder="请输入身份证号" required lcb-validator="idCard">
+  </label>
+  <div class="item item-divider lcb-item-error text-center" ng-show="editForm.id.$dirty && editForm.id.$invalid">请输入正确的身份证号</div>
+</div>
+
+<div class="text-center padding">
+  <span class="lcb-font-note">身份证只能修改一次</span>
+</div>

@@ -1,0 +1,36 @@
+#hunt2-success {
+
+  #congratulation {
+    padding: 40px 20px 20px 20px;
+    >img:first-child {
+      width: 50%;
+    }
+    h4 {
+      color: lightgrey;
+      span {
+        color: red;
+      }
+    }
+  }
+
+  .list {
+    margin-top: -5px;
+    .item {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      white-space: normal;
+      .icon {
+        top: 13px!important;
+      }
+    }
+  }
+
+
+}
+
+.lcb-hunt2-success-icon-camera-own {
+  margin-top: 2px;
+  margin-right: 2px;
+  width: 50px * 0.7 + 1;
+  height: 40px * 0.7 + 0.5 !important;
+}

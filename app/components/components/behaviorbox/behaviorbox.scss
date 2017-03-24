@@ -1,0 +1,51 @@
+.lcb-behaviorbox {
+
+  background-color: #529BFC;
+  border-radius: 5px;
+  margin: 0 15px;
+  box-shadow: 0 0 10px #aaa;
+
+  @include small-screen() {
+    margin: 0 5px;
+  }
+
+  .lcb-behaviorbox-header {
+    color: white;
+    padding: 5px 15px;
+    font-size: 10pt;
+    .lcb-behaviorbox-score {
+      color: #D4F08F;
+      .rating {
+        color: #74FCFE;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .lcb-behaviorbox-body {
+    padding: 0 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    .row {
+      padding: 2px;
+      &+.row {
+        margin-top: auto;
+      }
+      .col {
+        border-right: $lcb-border;
+        span {
+          color: #62A9FC;
+          padding: 0 1px;
+        }
+        span:last-child {
+          color: #C2C2C2;
+        }
+      }
+      .col:last-child {
+        border-right: none;
+      }
+    }
+
+  }
+
+}

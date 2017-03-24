@@ -1,0 +1,27 @@
+<ion-view id="dvr-earning-container" view-title="收益">
+  <ion-content>
+
+    <div id="dvr-earning" class="dark">
+
+      <div id="earning" class="card">
+        <div class="item item-divider item-header">
+          累计行车收益 <span class="pull-right"><span>{{ctrl.credits.total}}</span>元</span>
+        </div>
+        <div class="item item-text-wrap item-body">
+          行车收益仅限度于在开开保平台购买车险产品时，抵扣保费，无法直接提现。
+        </div>
+      </div>
+
+      <lcb-earning-taskbox></lcb-earning-taskbox>
+
+      <div id="trend" class="lcb-margin">
+        <div class="padding">历史收益（最近30天）</div>
+        <div class="padding">
+          <lcb-chart chart-of="earning" height="120"></lcb-chart>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

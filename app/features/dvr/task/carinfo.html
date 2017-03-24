@@ -1,0 +1,34 @@
+<ion-view view-title="登记车辆信息" id="dvr-task-carinfo-container">
+  <ion-content>
+
+    <div id="dvr-task-carinfo">
+      <form name="carinfoForm" novalidate>
+        <img src="static/images/dvr/banner_task.png" class="lcb-img-responsive">
+        <h4 class="padding-horizontal dark">登记车辆信息，获得额外6倍收益!!!</h4>
+        <div class="item">
+          车牌
+          <span class="item-note">{{ctrl.activeCar.license_no}}</span>
+        </div>
+        <label class="item item-input">
+          <span class="input-label">车架号</span>
+          <input ng-model="ctrl.vehicle.car_vin" type="text" maxlength="20" placeholder="请输入车架号" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">发动机号</span>
+          <input ng-model="ctrl.vehicle.engine_no" type="text" maxlength="20" placeholder="请输入发动机号" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">初次登记日期</span>
+          <input ng-model="ctrl.vehicle.registered_on" type="date" placeholder="请输入初次登记日期" required>
+        </label>
+        <div class="padding">
+          <button type="button" class="button button-block button-assertive" ng-disabled="carinfoForm.$invalid" ng-click="ctrl.save()">确认</button>
+        </div>
+      </form>
+      <div class="lcb-font-note padding-horizontal">
+        完成当前任务，则可以获得6倍于最近1天行车收益的额外收益。
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

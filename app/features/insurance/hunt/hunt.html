@@ -1,0 +1,15 @@
+<ion-view view-title="优选" id="hunt-intro-container">
+  <ion-content>
+
+    <div id="hunt-intro" class="lcb-white-bg">
+      <img src="static/images/hunt_intro.png" class="lcb-img-responsive" />
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <div class="button-bar">
+      <!--button type="button" class="button button-assertive lcb-bigger-font2" ng-click="ctrl.attend()">我要报名</button-->
+      <button ng-if="!lcbConfig.inEvent()" type="button" class="button button-assertive lcb-bigger-font2" ui-sref="order.inquiry.basic({ product_id: 1 })">我要报价</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

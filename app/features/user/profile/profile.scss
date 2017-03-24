@@ -1,0 +1,28 @@
+#user-profile {
+  
+  > .list > .item {
+    
+    &:first-child {
+      margin: $lcb-margin-vertical 0;
+      > span {
+        position: relative;
+        top: 22px;
+      }
+      > img {
+        float: right;
+        width: 65px;
+        max-width: 65px;
+        height: 65px;
+        max-height: 65px;
+        border-radius: 50px;
+      }
+    }
+  
+    > .ion-chevron-right {
+      font-size: 12pt;
+    }
+
+  }
+
+  
+}

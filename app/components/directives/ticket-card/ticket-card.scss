@@ -1,0 +1,92 @@
+.lcb-ticket-card {
+
+  margin: 10px;
+  background-color: white;
+  border: $lcb-border;
+  border-radius: 5px;
+  h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.3em;
+  }
+  span:last-child {
+    font-size: 0.9em;
+  }
+  > div {
+    padding: 10px;
+  }
+  > div:first-child {
+    height: 80px;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 15px;
+    background-image: url('/static/images/ticketbottombar.png');
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 35%;
+    > span:first-child {
+      float: right;
+      font-size: 3em;
+      padding-top: 15px;
+      > sub {
+        font-size: 0.5em;
+        position: relative;
+        top: 0px;
+      }
+    }
+  }
+
+  > div:last-child {
+    button {
+      float: right;
+      margin-top: -5px;
+    }
+  }
+
+  div.lcb-ticket-dd {
+    background-color: #fb7331;
+  }
+  span.lcb-ticket-dd {
+    color: #fb7331;
+  }
+
+  div.lcb-ticket-kd {
+    background-color: #3bc648;
+  }
+  span.lcb-ticket-kd {
+    color: #3bc648;
+  }
+
+  div.lcb-ticket-wlt {
+    background-color: #33ab3e;
+  }
+
+  span.lcb-ticket-wlt {
+    color: #33ab3e;
+  }
+
+  div.lcb-ticket-ycb {
+    background-color: #fc5050;
+  }
+
+  span.lcb-ticket-ycb {
+    color: #fc5050;
+  }
+
+  div.lcb-ticket-coupon {
+    background-color: #fb7331;
+  }
+
+  span.lcb-ticket-coupon {
+    color: #fb7331;
+  }
+
+  div.lcb-ticket-expired {
+    background-color: #9fa1a7;
+  }
+  span.lcb-ticket-expired {
+    color: #9fa1a7;
+  }
+
+}

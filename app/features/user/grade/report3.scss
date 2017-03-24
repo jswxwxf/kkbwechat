@@ -1,0 +1,208 @@
+#user-grade-report3 {
+
+  .lcb-comment {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .lcb-comment2 {
+    @extend .lcb-comment;
+    padding-top: 10px;
+    font-size: 12pt;
+    span {
+      color: red;
+      font-size: 18pt;
+    }
+  }
+
+  #header {
+    position: relative;
+    #header-period {
+      position: absolute;
+      bottom: 5px;
+      width: 60%;
+      height: 100px;
+      line-height: 100px;
+      background-image: url('/static/images/grades/stage3/reportperiod.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+  }
+
+  #result {
+    position: relative;
+    margin-top: -5px!important;
+    #result-bar-top {
+      position: absolute;
+      width: 12%;
+      left: 10%;
+    }
+    #result-bar-left {
+      position: absolute;
+      width: 10px;
+      top: 20%;
+      height: 250px;
+    }
+    #result-bar-right {
+      position: absolute;
+      right: 0;
+      top: 15%;
+      width: 23px;
+      height: 200px;
+    }
+    #result-level {
+      padding-top: 50px;
+      padding-left: 15px;
+    }
+    #result-grade-text {
+      background-color: #527d74;
+      color: #e5dd84;
+      > div {
+        border: 2px solid #e5dd84;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+    #result-grade-comments {
+      padding: 5px 32px;
+    }
+  }
+
+  #tags {
+    padding-top: 30px;
+    margin-bottom: 20px;
+    h1 {
+      color: #2b636a;
+    }
+    span {
+      display: inline-block;
+      width: 70px;
+      padding: 15px 20px;
+      margin: 2px;
+      text-align: center;
+      background-size: cover;
+      color: white;
+      @include small-screen() {
+        margin: 0 10px;
+      }
+      &.lcb-tag-1 {
+        background-image: url('/static/images/grades/stage3/tag1.png');
+      }
+      &.lcb-tag-2 {
+        background-image: url('/static/images/grades/stage3/tag2.png');
+      }
+      &.lcb-tag-3 {
+        background-image: url('/static/images/grades/stage3/tag3.png');
+      }
+      &.lcb-tag-4 {
+        background-image: url('/static/images/grades/stage3/tag4.png');
+      }
+      &.lcb-tag-5 {
+        background-image: url('/static/images/grades/stage3/tag5.png');
+      }
+    }
+  }
+
+  #sudden {
+    background-color: #b5e7ff;
+    #sudden-detail {
+      position: relative;
+      padding-bottom: 15px;
+      > div {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        right: 2%;
+        padding: 40px;
+        background-image: url('/static/images/grades/stage3/sudden_bg_phone.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        img {
+          width: 50px;
+          @include small-screen() {
+            width: 30px;
+          }
+        }
+        > div {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  #period {
+    background-color: #f0fffe;
+    h3 {
+      color: #6cd7ff;
+      padding: 15px;
+      font-size: 30pt;
+    }
+    img {
+      padding: 5px 15px;
+    }
+  }
+
+  #mileage {
+    background-color: #b5e7ff;
+    padding-bottom: 20px;
+    #mileage-number {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      background-image: url('/static/images/grades/stage3/mileage_bg_clock.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      >div {
+        color: #ff89a2;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+      }
+    }
+    .lcb-comment {
+      padding: 5px;
+      padding-bottom: 10px;
+    }
+  }
+
+  #traffic {
+    background-color: #e2ffb5;
+    color: #527d74!important;
+    h3 {
+      padding: 0;
+      font-size: 30pt;
+    }
+    img {
+      padding: 0 20px;
+      padding-top: 15px;
+      max-width: 400px;
+    }
+  }
+
+  #road {
+    background-color: #6fe7cb;
+    padding-bottom: 20px;
+    margin-top: -6px;
+    .lcb-comment {
+      padding: 5px;
+    }
+  }
+
+  #qrcode {
+    text-align: center;
+    padding: 20px;
+    img {
+      width: 180px;
+    }
+  }
+
+}
+
+#user-grade-report3-container {
+
+}

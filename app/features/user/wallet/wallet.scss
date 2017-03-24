@@ -1,0 +1,19 @@
+#user-wallet {
+  .row > .col {
+    background-color: white;
+    margin: 2px;
+    padding-bottom: 12px;
+    font-size: 1em;
+    img {
+      width: 40%;
+      margin: 15px 0;
+    }
+    > div:last-child {
+      color: #565557;
+      font-size: 0.9em;
+    }
+    &:empty {
+      background-color: transparent;
+    }
+  }
+}

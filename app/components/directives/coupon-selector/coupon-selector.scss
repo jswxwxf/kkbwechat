@@ -1,0 +1,50 @@
+.lcb-coupon-selector {
+
+  .item {
+    margin: 15px;
+    padding: 0;
+    padding-right: 60px;
+    border-radius: 5px;
+    border-left: none;
+  }
+
+  .row {
+    > .col:first-child {
+      > div {
+        position: relative;
+        margin: 25px 0;
+        font-size: 35px;
+        color: red;
+        > span {
+          font-size: 12pt;
+        }
+        img {
+          position: absolute;
+          z-index: 5;
+          top: -27px;
+          left: 0;
+          width: 5px;
+          height: 210%;
+        }
+      }
+      border-right: 1px dashed lightgrey;
+    }
+    > .col:last-child {
+      > div {
+        margin: 25px 20px;
+        @include small-screen() {
+          margin-left: 9px;
+        }
+        h3 {
+          font-weight: normal;
+          font-size: 18px;
+          padding-bottom: 5px;
+        }
+        .lcb-font-note {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+}

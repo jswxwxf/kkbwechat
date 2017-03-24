@@ -1,0 +1,20 @@
+#insurance-eval {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  .input-label {
+    width: auto;
+  }
+
+  .item-select select {
+    padding-right: 38px;
+  }
+
+  @include small-screen() {
+    #price.item-input input {
+      flex: 1 120px;
+    }
+  }
+
+}

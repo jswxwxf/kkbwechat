@@ -1,0 +1,49 @@
+#insurance-compensate {
+
+  padding-bottom: 80px;
+
+  #fees {
+    .item {
+      > div:last-child {
+        margin-left: 15px;
+        span {
+          color: $balanced;
+        }
+      }
+      > div:first-child {
+        float: right;
+        margin-right: 15px;
+        span {
+          color: $energized;
+        }
+      }
+    }
+  }
+
+  .lcb-intro {
+    background-color: white;
+    padding: 15px;
+    margin-top: -20px;
+  }
+
+  .input-label {
+    width: 25%;
+  }
+
+  #verifycode {
+    #code {
+      flex: 1 120px;
+    }
+    > div:last-child {
+      position: relative;
+      left: -5px;
+      margin-top: -2px;
+      button {
+        display: inline-block;
+        font-size: 1em;
+        min-width: 100px;
+      }
+    }
+  }
+
+}

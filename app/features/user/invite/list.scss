@@ -1,0 +1,26 @@
+#user-invite-list {
+
+  color: #f6e596;
+
+  table {
+    width: 100%;
+    font-size: 11pt;
+    th {
+      font-weight: bold;
+    }
+    td, th {
+      padding: 10px 2px;
+      text-align: center;
+    }
+    @include small-screen() {
+      .lcb-activated, .lcb-grade {
+        width: 50px;
+      }
+    }
+  }
+
+}
+
+#user-invite-list-container {
+  background-color: #e95a4d;
+}

@@ -1,0 +1,27 @@
+<ion-modal-view id="insurance-result-reward-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">请选择礼品</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('reward')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+
+    <form id="insurance-result-reward">
+
+      <div class="padding dark text-center">礼品可以多选，但合计额度不可超过可用额度</div>
+
+      <ion-list>
+        <ion-checkbox ng-model="prize.selected" ng-repeat="prize in ctrl.prizes" class="item item-thumbnail-left item-checkbox-right checkbox-assertive" required>
+          <img ng-src="{{prize.picture}}">
+          <h2>{{prize.name}}</h2>
+          <div class="item-text-wrap"><strong class="assertive">{{prize.price}}</strong><br/>{{prize.description}}</div>
+        </ion-checkbox>
+      </ion-list>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar align-title="left" >
+    <div class="title">已选额度：{{ctrl.getSelectedPrize(ctrl.prizes)}} | <span>可用：{{ctrl.inquiry.credit.reward_credit}}</span></div>
+    <button type="button" ng-click="ctrl.selectPrizes()" class="button button-assertive lcb-bigger-font2 pull-right" ng-disabled="ctrl.getSelectedPrize(ctrl.prizes) > ctrl.inquiry.credit.reward_credit">确定</button>
+  </ion-footer-bar>
+</ion-modal-view>

@@ -1,0 +1,13 @@
+<div class="lcb-package-selector">
+
+  <div class="row row-no-padding text-center" ng-class="'lcb-' + ctrl.currentTab">
+    <div class="col" ng-click="ctrl.selectTab('basic')">基本款</div>
+    <div class="col" ng-click="ctrl.selectTab('premium')">精英款</div>
+    <div class="col" ng-click="ctrl.selectTab('supreme')">至尊款</div>
+    <div class="col" ng-click="ctrl.selectTab('custom')">自定义</div>
+  </div>
+
+  <div ng-include="ctrl.currentUrl">
+  </div>
+
+</div>

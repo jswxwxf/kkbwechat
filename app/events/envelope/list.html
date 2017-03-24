@@ -1,0 +1,32 @@
+<ion-view id="envelope-list-container" view-title="{{ctrl.title}}" hide-nav-bar="true" class="lcb-envelope-base">
+  <ion-content>
+  
+    <div id="envelope-list">
+
+      <img src="/static/images/envelope/banner_list.png" class="lcb-img-responsive">
+
+      <div class="padding" ng-if="!ctrl.isEmpty(ctrl.list)">
+        <table>
+          <tr>
+            <th>时间</th>
+            <th>红包</th>
+            <th>状态</th>
+          </tr>
+          <tr ng-repeat="envelope in ctrl.list">
+            <td>{{envelope.rp_time}}</td>
+            <td>{{envelope.rp_amount}}</td>
+            <td>{{envelope.status}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="empty" class="padding text-center" ng-if="ctrl.isEmpty(ctrl.list)">
+        <div class="lcb-bigger-font2">您还没有红包哦~</div>
+        <!--div class="text-center" id="again-button"><button class="button button-assertive lcb-bigger-font2" ui-sref="envelope.entry">去抽奖</button></div-->
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

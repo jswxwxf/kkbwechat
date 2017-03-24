@@ -1,0 +1,10 @@
+<div class="lcb-ticket-card">
+  <div ng-class="ctrl.className">
+    <span><sub>￥</sub><span ng-bind="ctrl.ticket.amounts | lcbCurrency: { type:'int' }"></span></span>
+    <h3>{{ctrl.ticket.card_type}}</h3>
+    <span>有效期至{{ctrl.ticket.valid_to}}</span>
+  </div>
+  <div>
+    车牌：<span ng-class="ctrl.className" class="lcb-selectable">{{ctrl.ticket.license_no}}</span>
+  </div>
+</div>

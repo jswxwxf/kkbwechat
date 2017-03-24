@@ -1,0 +1,116 @@
+#share-draw-scratch {
+
+  background-image: url('/static/images/draw/bg.png');
+  background-size: cover;
+
+  #card {
+
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: -30%;
+
+    #chance {
+      position: absolute;
+      top: 5%;
+      left: -5px;
+      height: 35px;
+      width: 50%;
+      div:first-child {
+        position: absolute;
+        font-size: 12pt;
+        top: 10px;
+        left: 5px;
+        color: white;
+      }
+      img {
+        height: 100%;
+      }
+    }
+
+    #winning {
+      position: absolute;
+      top: 10%;
+      right: 5px;
+      color: white;
+      background-color: #aa4b2e;
+      border-radius: 15px;
+      font-size: 11pt;
+      line-height: 20pt;
+      padding-right: 40px;
+      img {
+        position: absolute;
+        width: 30px;
+        top: -5px;
+        right: 0;
+      }
+    }
+
+    @include small-screen() {
+      #chance {
+        height: 30px;
+        div:first-child {
+          top: 7px;
+          font-size: 10pt;
+        }
+      }
+      #winning {
+        font-size: 9pt;
+        line-height: 16pt;
+        img {
+          width: 25px;
+        }
+      }
+    }
+
+    #cover {
+      position: absolute;
+      top: 30%;
+      left: 15%;
+      right: 15%;
+      height: 30%;
+      background-color: white;
+      border-radius: 2px;
+      img, canvas {
+        position: absolute;
+        top: 5%;
+        bottom: 5%;
+        left: 2%;
+        width: 96%;
+        height: 90%;
+      }
+      #award {
+        height: 100%;
+        font-size: 13pt;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+
+  #intro {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: white;
+    margin: 25px;
+    .lcb-title {
+      margin: 0 auto;
+      width: 50%;
+      text-align: center;
+      font-size: 14pt;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .lcb-ol {
+      font-size: 12pt;
+      line-height: 25px;
+    }
+  }
+
+}
+
+#share-draw-scratch-container {
+
+}

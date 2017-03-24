@@ -1,0 +1,50 @@
+<ion-view view-title="补充信息">
+  <ion-content>
+    <form name="detailForm" id="user-detail-jobedu" novalidate>
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">单位性质</span>
+          <select ng-model="ctrl.detail.company_type">
+            <option value="">请选择</option>
+            <option>机关</option>
+            <option>企业</option>
+            <option>事业单位</option>
+          </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">单位名称</span>
+          <input ng-model="ctrl.detail.company" type="text" placeholder="请输入所在单位">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">工作职责</span>
+          <input ng-model="ctrl.detail.job_title" type="text" placeholder="请输入工作职责">
+        </label>
+      </div>
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">最高学历</span>
+          <select ng-model="ctrl.detail.degree">
+            <option value="">请选择</option>
+            <option>小学</option>
+            <option>初中</option>
+            <option>高中</option>
+            <option>大学</option>
+            <option>硕士</option>
+            <option>博士</option>
+          </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">毕业学校</span>
+          <input ng-model="ctrl.detail.school" type="text" placeholder="请输入毕业学校">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">毕业专业</span>
+          <input ng-model="ctrl.detail.major_in" type="text" placeholder="请输入毕业专业">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced lcb-bigger-font" ng-disabled="detailForm.$pristine" ng-click="ctrl.updateDetail()">提交</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

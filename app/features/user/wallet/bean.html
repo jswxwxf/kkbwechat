@@ -1,0 +1,39 @@
+<ion-view view-title="里程豆">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="ctrl.showModal('bean-rule')">使用帮助</button>
+  </ion-nav-buttons>
+  <ion-content id="user-lcd-content">
+  
+    <div id="user-bean">
+
+      <div class="padding">
+        <div class="lcd-circle-text"><div><h1 ng-bind="ctrl.bean.balance | lcbCurrency:{shorter: true, floor: true, removeZero: false}"></h1>里程豆</div></div>
+      </div>
+      
+      <div id="actions" class="row text-center">
+        <div class="col">
+          <button class="button button-outline button-small button-dark" disabled><i class="fa fa-gift"></i>领取奖励</button>
+        </div>
+        <div class="col">
+          <button class="button button-outline button-small button-dark icon-left ion-ios-cart-outline" ui-sref="user.shop">积分商城</button>
+        </div>
+      </div>
+
+      <div class="more-padding lcb-smaller-font lcb-font-note">里程豆仅可以在积分商城购买使用，不可提现或转赠，每一笔里程豆的有效期为1年，过期不使用，则自动失效。</div>
+      
+      <div id="detail">
+        <div id="title" class="text-center"><span>收支明细</span></div>
+        <div class="list list-inset">
+          <div class="item" ng-repeat="item in ctrl.bean.detail">
+            {{item.reason}}<br><span class="lcb-date">{{item.created_at}}</span>
+            <div class="item-note balanced" ng-bind-html="item.amounts | lcbCurrency:{ sign: item.type, color: true }"></div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <ion-infinite-scroll on-infinite="ctrl.loadMoreDetail()" ng-if="ctrl.hasMore()"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

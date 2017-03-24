@@ -1,0 +1,17 @@
+<ion-view view-title="活动详情" id="insurance-auto-container">
+  <ion-content>
+
+    <div id="insurance-auto" class="padding-bottom">
+      <img src="/static/images/auto_intro.png" class="lcb-img-responsive">
+      <p class="balanced text-center">还不是凹凸租车用户？<a href="http://autozuche.com/" class="balanced">点击这里注册吧！</a></p>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" ng-if="lcbConfig.inEvent()" class="button button-block button-balanced lcb-bigger-font2" ng-click="ctrl.attend('insurance.auto.register')">我要报名</button>
+    <div class="button-bar" ng-if="!lcbConfig.inEvent()">
+      <button type="button" class="button button-balanced button-outline lcb-bigger-font2" ng-click="ctrl.attend('insurance.auto.register')">我要报名</button>
+      <button type="button" class="button button-balanced lcb-bigger-font2" ui-sref="order.inquiry.basic({ product_id: 3, city: '440300' })">我要报价</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

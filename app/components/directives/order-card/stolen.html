@@ -1,0 +1,8 @@
+<div class="lcb-order-card card" ng-click="ctrl.triggerDetail($event)">
+  <button ng-if="!ctrl.claim" class="button button-small button-outline button-balanced" ui-sref="order.stolen({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type })">查看详情</button>
+  <button ng-if="ctrl.claim" class="button button-small button-outline button-assertive" ui-sref="claim.stolen({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type })">申请返现</button>
+  <img src="/static/images/stolen/stolen.jpg">
+  <h5>盗抢补偿</h5>
+  <div class="lcb-smaller-font">{{ctrl.order.license_no}}</div>
+  <div class="lcb-smaller-font balanced clearfix">订单日期：{{ctrl.order.valid_until}}</div>
+</div>

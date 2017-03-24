@@ -1,0 +1,23 @@
+.lcb-day-paginator {
+  img {
+    height: 28px;
+    vertical-align: middle;
+  }
+  img[disabled] {
+    opacity: 0.2;
+  }
+  label {
+    display: inline-block;
+    line-height: 28px;
+    position: relative;
+    top: 2px;
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}

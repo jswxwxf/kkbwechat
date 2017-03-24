@@ -1,0 +1,12 @@
+<div class="lcb-grade-indicator padding-horizontal dark">
+  <div class="text-center padding-vertical">
+    <div class="pull-right">{{ctrl.grade.now_days}}/{{ctrl.grade.total_days}}</div>
+    <div class="text-left">{{ctrl.grade.desc}}</div>
+  </div>
+  <img ng-src="{{ctrl.getProgressImage()}}" class="padding lcb-img-responsive">
+  <div class="lcb-grade">
+    <div class="lcb-grade-30">{{ctrl.grade.score1 || '&nbsp;'}}</div>
+    <div class="lcb-grade-90">{{ctrl.grade.score3 || '&nbsp;'}}</div>
+    <div class="lcb-grade-60 text-center">{{ctrl.grade.score2 || '&nbsp;'}}</div>
+  </div>
+</div>

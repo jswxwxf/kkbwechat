@@ -1,0 +1,34 @@
+#comac-luckydraw {
+
+  padding: 160px 20px 0 20px;
+
+  #dock {
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -30px;
+    position: relative;
+    z-index: -10;
+  }
+
+  #wheel-container {
+    position: relative;
+  }
+
+  #spin {
+    position: absolute;
+    width: 25%;
+    top: 35%;
+    left: 38%;
+  }
+
+}
+
+#comac-luckydraw-container {
+
+  background-image: url('/static/images/comac/background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #941e1e;
+
+}

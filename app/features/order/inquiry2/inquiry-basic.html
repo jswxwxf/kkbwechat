@@ -1,0 +1,33 @@
+<ion-view id="insurance-inquiry2-container" view-title="车险报价">
+  <ion-content id="insurance-inquiry2">
+
+    <form id="step1" novalidate class="list padding-vertical">
+
+      <label class="item item-input item-select">
+        <span class="input-label">投保城市 <span class="assertive">*</span></span>
+        <select ng-model="ctrl.insurance.city" ng-options="city as city.name_cn for city in ctrl.cities" required>
+          <option value="">请选择投保城市</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">车牌号码 <span class="assertive">*</span></span>
+        <input name="licenseNumber" ng-model="ctrl.insurance.license_no" type="text" placeholder="请输入车牌号，如：沪A98981" required lcb-validator="licen seNumber">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">车主姓名 <span class="assertive">*</span></span>
+        <input name="name" ng-model="ctrl.insurance.name" type="text" placeholder="请输入车主姓名" required lcb-validator="name">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">车主身份证号 <span class="assertive">*</span></span>
+        <input name="id_card" ng-model="ctrl.insurance.id_card" type="text" placeholder="请输入车主身份证" required lcb-validator="idCard">
+      </label>
+
+      <div class="more-padding">
+        <button class="button button-block button-balanced" ng-click="ctrl.basicSubmitted()">开始报价</button>
+        <button class="button button-block button-balanced" ui-sref="order.inquiry2.result">历史报价</button>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

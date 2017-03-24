@@ -1,0 +1,40 @@
+#user-recall {
+
+  padding: 5px 25px;
+  background-color: #f5f5f5;
+
+  h3 {
+    font-size: 21px;
+    @include small-screen() {
+      font-size: 18px;
+    }
+  }
+
+  * {
+    font-size: 12pt;
+    line-height: 30px;
+  }
+
+  @include small-screen() {
+    * {
+      font-size: 11pt;
+      line-height: 25px;
+    }
+  }
+
+  #address {
+    padding-left: 2em;
+  }
+
+  #staple {
+    width: 50%;
+    float: right;
+    margin-top: -100px;
+    padding-bottom: 10px;
+  }
+
+}
+
+#user-recall-container {
+
+}

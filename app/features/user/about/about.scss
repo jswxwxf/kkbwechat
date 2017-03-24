@@ -1,0 +1,24 @@
+#user-about {
+
+  .ion-chevron-right {
+    font-size: 12pt;
+  }
+  .item-icon-right {
+    padding-right: 34px;
+    .icon {
+      right: 4px;
+    }
+  }
+
+  #actions {
+    img {
+      width: 130px;
+    }
+  }
+
+}
+
+#user-about-container .bar-footer {
+  background-image: none;
+  background-color: transparent;
+}

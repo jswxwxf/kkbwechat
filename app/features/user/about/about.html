@@ -1,0 +1,27 @@
+<ion-view view-title="关于我们" id="user-about-container">
+  <ion-content>
+
+    <div id="user-about">
+
+      <div class="list">
+        <a ui-sref="user.faq" class="item item-icon-right">常见问题 <i class="icon ion-chevron-right"></i></a>
+        <a ui-sref="user.feedback" class="item item-icon-right">意见反馈 <i class="icon ion-chevron-right"></i></a>
+        <a ui-sref="user.contact" class="item item-icon-right">联系我们 <i class="icon ion-chevron-right"></i></a>
+      </div>
+
+      <div id="actions" class="row text-center" ng-if="!lcbConfig.inWechat()">
+        <div class="col" data-tap-disabled="true">
+          <a href="https://itunes.apple.com/app/id1072318836"><img src="/static/images/apple_store.png" class="lcb-img-responsive"></a>
+        </div>
+        <div class="col" data-tap-disabled="true">
+          <a href="https://www.kaikaibao.com/app/download/kaikaibao.apk"><img src="/static/images/android_market.png" class="lcb-img-responsive"></a>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar ng-click="ctrl.logout()">
+
+  </ion-footer-bar>
+</ion-view>

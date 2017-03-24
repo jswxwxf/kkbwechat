@@ -1,0 +1,16 @@
+<ion-view view-title="延时阅读" id="dvr-read-follow-container">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="dvr-read-follow" class="text-center" data-tap-disabled="true">
+      <h4 ng-if="complete"><i class="icon ion-ios-checkmark-outline"></i> 信息提交成功</h4>
+      <div class="dark">
+        <h3 ng-if="complete">只差最后一步啦！</h3>
+        <p>长按关注“开开保”微信公众号<br/>输入“<span class="assertive">延时阅读</span>”调起功能设置</p>
+        <img id="qrcode" src="/static/images/stolen/qrcode.png" class="lcb-img-responsive">
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

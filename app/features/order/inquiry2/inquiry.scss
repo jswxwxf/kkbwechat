@@ -1,0 +1,36 @@
+#insurance-inquiry2 {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  #step1 {
+
+    .input-label {
+      width: 36%;
+    }
+
+  }
+
+  #step2 {
+
+  }
+
+  #step3 {
+    padding-bottom: 30px;
+  }
+
+  #result {
+
+  }
+
+}
+
+#insurance-inquiry2-container {
+
+  .bar-footer {
+    .title {
+      font-size: 10pt;
+    }
+  }
+
+}

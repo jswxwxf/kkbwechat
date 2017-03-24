@@ -1,0 +1,20 @@
+.lcb-package-viewer {
+
+  padding: 5px;
+  margin-left: 1%;
+  text-align: left;
+
+  .lcb-package-item {
+    display: inline-block;
+    width: 32%;
+    padding: 3px;
+    margin: 3px 0;
+    border: $lcb-border;
+    line-height: 2em;
+    text-align: center;
+    div {
+      font-size: 0.9em;
+    }
+  }
+
+}

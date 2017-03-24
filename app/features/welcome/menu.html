@@ -1,0 +1,28 @@
+<ion-side-menu side="left" ng-controller="MenuController as ctrl" expose-aside-when="large">
+  <ion-content id="lcb-menu">
+    <div id="side-menu">
+      <div class="row lcb-user-container">
+        <div class="col" ng-if="!ctrl.userLoggedIn && !lcbConfig.inWechat()">
+          <button class="button button-small button-outline button-dark" ui-sref="signup" menu-close>注册</button>
+          <button class="button button-small button-positive" ui-sref="login" menu-close>登录</button>
+        </div>
+        <div class="col lcb-user" ui-sref="user.profile" menu-close ng-if="ctrl.userLoggedIn">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="background-image: url({{ctrl.user.avatar || '/static/images/ico_default_avatar.png'}})">
+          <span ng-bind="ctrl.user.name"></span>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="tel:4009663899"><img src="/static/images/icon_hotline.png" class="lcb-img-responsive lcb-hotline"></a>
+      </div>
+      <ion-list>
+        <ion-item class="item-icon-left" ui-sref="welcome" menu-close><span class="icon lcb-icon-home2"></span> 首页</ion-item>
+        <ion-item class="item-icon-left" ui-sref="insurance.product" menu-close><span class="icon lcb-icon-product"></span> 产品中心</ion-item>
+        <ion-item class="item-icon-left" ui-sref="user.travel" menu-close><span class="icon lcb-icon-travel"></span> 驾驶评分</ion-item>
+        <ion-item class="item-icon-left" ui-sref="user.wallet" menu-close><span class="icon lcb-icon-reward"></span> 我的钱包</ion-item>
+        <ion-item class="item-icon-left" ui-sref="user.home" menu-close><span class="icon lcb-icon-user"></span> 用户中心</ion-item>
+        <ion-item class="item-icon-left" href="order-list" menu-close><span class="icon lcb-icon-order"></span> 我的订单</ion-item>
+        <ion-item class="item-icon-left" ui-sref="user.about" menu-close><span class="icon lcb-icon-about2"></span> 关于开开保</ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-side-menu>

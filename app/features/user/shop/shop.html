@@ -1,0 +1,17 @@
+<ion-view view-title="积分商城">
+  <ion-content>
+
+    <div id="user-shop" class="padding-bottom dark">
+
+      <img src="static/images/shop/banner_shop.png" class="lcb-img-responsive">
+
+      <div class="lcb-shop-item-list-container">
+        <div ng-repeat="card in ctrl.list">
+          <shop-card card="card" bean="ctrl.bean.balance" on-exchange="ctrl.exchange(item)"></shop-card>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

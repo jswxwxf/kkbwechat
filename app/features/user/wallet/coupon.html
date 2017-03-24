@@ -1,0 +1,42 @@
+<ion-view view-title="抵扣券">
+  <ion-content>
+
+    <div id="user-coupon">
+
+      <div class="padding">
+
+        <div id="info" class="row row-no-padding">
+          <div id="available" class="col">
+            <div class="row text-center">
+              <span class="col">有效</span>
+              <span class="col">{{ctrl.coupon.avaible_num}}张</span>
+            </div>
+          </div>
+          <div id="unavailable" class="col text-center">
+            <div class="row">
+              <div class="col">已使用</div>
+              <div class="col">{{ctrl.coupon.used_num}}张</div>
+            </div>
+            <div class="row">
+              <div class="col">已过期</div>
+              <div class="col">{{ctrl.coupon.expired_num}}张</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="padding lcb-font-note lcb-smaller-font">
+          开开保的抵扣券，只能用于在开开保平台，购买商业车险使用，不能提现、转赠、或用于其他用途。抵扣券都有一定时间的有效期，有效期内用户未使用，则自动失效。
+        </div>
+
+      </div>
+
+      <div ng-repeat="card in ctrl.coupon.cards">
+        <ticket-card ticket="card"></ticket-card>
+      </div>
+
+    </div>
+
+    <ion-infinite-scroll on-infinite="ctrl.loadMoreCards()" ng-if="ctrl.hasMore()"></ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

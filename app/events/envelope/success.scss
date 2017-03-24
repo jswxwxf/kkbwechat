@@ -1,0 +1,47 @@
+#envelope-success {
+
+  #message {
+    position: relative;
+    h3 {
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      font-size: 15pt;
+      color: white;
+      line-height: 30px;
+      span {
+        font-size: 18pt;
+      }
+      @include small-screen() {
+        top: 30px;
+        font-size: 13pt;
+        span {
+          font-size: 15pt;
+        }
+      }
+    }
+  }
+
+  #timer {
+    > span {
+      color: $assertive;
+    }
+    @include small-screen() {
+      font-size: 15px!important;
+    }
+  }
+
+  #help-button {
+    padding: 0 50px;
+    border-radius: 30px;
+    background-color: #fc415d;
+  }
+
+  #rule-button {
+    padding: 2px 30px;
+    font-size: 12pt;
+    background-color: black;
+    border-radius: 30px;
+  }
+
+}

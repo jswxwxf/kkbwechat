@@ -1,0 +1,76 @@
+<ion-view id="insurance-intro-container" view-title="险种介绍">
+  <ion-content overflow-scroll="true">
+
+    <div id="insurance-intro">
+
+      <ion-slide-box show-pager="false" auto-play="true" does-continue="true" on-slide-changed="ctrl.slideChanged($index)" class="padding-bottom lcb-border-bottom lcb-selectable">
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">1</span>车辆损失险</h4>
+          车辆发生碰撞，赔偿自己爱车损失的费用。例如车辆撞了护拦或别人车，自己车辆受损。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">2</span>第三者责任保险</h4>
+          若发生保险事故，保险公司可按条款替您对第三方受到的损失（人或财产）进行赔偿。例如不小心撞坏了别人的车，或不小心撞到别人造成伤亡。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">3</span>全车盗抢保险</h4>
+          赔偿全车被盗窃、抢劫、抢夺造成的车辆损失。例如车辆放在停车场被盗且公安机关立案后60天未查明下落。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">4</span>司机座位责任保险</h4>
+          若使用车辆过程中发生意外事故，赔偿车内司机的伤亡和医疗赔偿费用。例如意外事故中，车上驾驶员不幸受伤。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">5</span>乘客座位责任保险</h4>
+          若使用车辆过程中发生意外事故，赔偿车内乘客的伤亡和医疗赔偿费用。例如意外事故中，车上乘客不幸受伤。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">6</span>玻璃单独破碎险</h4>
+          负责赔偿保险车辆在使用过程中，发生车窗、挡风玻璃的单独破碎损失。例如车辆在高速上行驶被飞石击碎车窗、挡风玻璃。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">7</span>自燃损失险</h4>
+          赔偿车辆因电器、线路、供油系统、供气系统、运载货物等自身原因引发火灾造成的本车损失。例如夏季高温时期，车子因线路故障引发自燃。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">8</span>车身划痕损失险</h4>
+          负责赔偿发生无明显碰撞痕迹的车身划痕损失。例如车辆停放期间，被人用钥匙、小刀等尖锐物恶意划伤。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">9</span>发动机涉水损失险</h4>
+          负责赔偿车辆使用过程中，因发动机进水后导致的发动机的直接损毁。例如在积水路面涉水行驶、在水中启动造成发动机损坏。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">10</span>指定修理厂险</h4>
+          投保此险种后，当机动车损失保险事故发生后，被保险人可指定修理厂进行修理。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">11</span>不计免赔率险</h4>
+          保险条款约定事故发生后被保险人要自己承担一定比例的损失金额。购买此险这部分损失费用保险公司将同样给予赔偿。例如车辆发生自燃，按约定车主应承担20%的损失费用。购买了此险种，这20%的费用同样由保险公司赔偿。
+        </ion-slide>
+        <ion-slide>
+          <h4 class="text-center"><span class="lcb-circle-text2 lcb-margin-right">12</span>机动车损失无法找到第三方特约险</h4>
+          负责赔偿应由第三方负责赔偿的本车损失，但因无法找到第三方而增加的由本人自行承担的损失。例如车辆停放期间被其他车辆或人员碰撞、刮蹭，但事后无法找到第三方赔偿，则该损失由保险公司赔偿。
+        </ion-slide>
+      </ion-slide-box>
+
+      <div id="legend" class="padding" lcb-slide-switcher="ctrl.currentSlide" on-switch="ctrl.handleSwitch(slide)">
+        <span class="lcb-switcher lcb-circle-text2">1</span>
+        <span class="lcb-switcher lcb-circle-text2">2</span>
+        <span class="lcb-switcher lcb-circle-text2">3</span>
+        <span class="lcb-switcher lcb-circle-text2">4</span>
+        <span class="lcb-switcher lcb-circle-text2">5</span>
+        <span class="lcb-switcher lcb-circle-text2">6</span>
+        <span class="lcb-switcher lcb-circle-text2">7</span>
+        <span class="lcb-switcher lcb-circle-text2">8</span>
+        <span class="lcb-switcher lcb-circle-text2">9</span>
+        <span class="lcb-switcher lcb-circle-text2">10</span>
+        <span class="lcb-switcher lcb-circle-text2">11</span>
+        <span class="lcb-switcher lcb-circle-text2">12</span>
+        <img src="/static/images/intro/crash.png" class="lcb-img-responsive">
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

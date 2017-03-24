@@ -1,0 +1,8 @@
+<div class="lcb-order-card card" ng-click="ctrl.triggerDetail($event)">
+  <button ng-if="!ctrl.claim" class="button button-small button-outline button-balanced" ui-sref="order.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type })">查看详情</button>
+  <button ng-if="ctrl.claim" class="button button-small button-outline button-assertive" ui-sref="claim.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type })">申请返现</button>
+  <img src="/static/images/lcb10.png">
+  <h5>里程保1.0</h5>
+  <div class="lcb-smaller-font">{{ctrl.order.license_no}}</div>
+  <div class="lcb-smaller-font balanced clearfix">订单日期：{{ctrl.order.valid_until}}</div>
+</div>

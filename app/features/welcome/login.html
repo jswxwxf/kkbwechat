@@ -1,0 +1,25 @@
+<ion-view view-title="登录" id="login">
+  <ion-content>
+  
+    <form name="loginForm" class="list padding-top" novalidate>
+      
+      <label class="item item-input">
+        <span class="input-label">手机</span>
+        <input name="name" ng-model="ctrl.user.name" type="text" placeholder="请输入用户名或注册手机" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">密码</span>
+        <input name="password" ng-model="ctrl.user.password" type="password" placeholder="请输入密码" required>
+      </label>
+
+      <a id="signup" ui-sref="signup" class="button button-clear button-small button-balanced">注册</a>
+      <a id="forget" ui-sref="forget" class="button button-clear button-small button-balanced">忘记密码？</a>
+
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="loginForm.$invalid" ng-click="ctrl.login()">确定</button>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

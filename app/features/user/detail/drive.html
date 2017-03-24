@@ -1,0 +1,17 @@
+<ion-view view-title="补充信息">
+  <ion-content>
+
+    <form id="user-detail-drive" class="padding text-center">
+
+      <div>
+        <img style="background-image: url({{ctrl.detail.driving_license || '/static/images/picture_upload.png'}})">
+        <input type="file" accept="image/*" ng-model='driver' lcb-file-uploader="ctrl.updateDriverLicense">
+      </div>
+      驾照上传
+      <img src="/static/images/sample_drive.png" class="lcb-img-responsive">
+      驾照示意图
+
+    </form>
+
+  </ion-content>
+</ion-view>

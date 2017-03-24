@@ -1,0 +1,16 @@
+#compensate-success {
+  padding: 60px;
+  h2 {
+    padding-bottom: 100px;
+  }
+  p {
+    font-size: 12pt;
+  }
+  img {
+    width: 180px;
+  }
+}
+
+#compensate-success-container {
+  @include lcb-center-all();
+}

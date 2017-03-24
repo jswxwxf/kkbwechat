@@ -1,0 +1,65 @@
+<ion-view view-title="用户中心">
+  <ion-content>
+
+    <div id="user-info" class="padding-bottom">
+
+      <div id="avatar" class="text-center">
+        <div class="info-circle-avatar" style="background-image: url({{ctrl.user.avatar || '/static/images/ico_default_avatar.png'}})"></div>
+        <div class="padding">{{ctrl.user.name}}</div>
+        <button id="checkin" class="button button-outline button-light button-small icon-left" ng-click="ctrl.checkin()" ng-disabled="ctrl.checkedIn">
+          <i class="icon lcb-icon-checkin-own" ng-if="!ctrl.checkedIn"></i><i class="icon ion-checkmark-circled" ng-if="ctrl.checkedIn"></i> {{ctrl.checkedIn ? '已签' : '签到'}}
+        </button>
+      </div>
+
+      <div class="list padding-top">
+        <a ui-sref="user.profile" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-account"></i>
+          帐户信息
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a>
+        <a ui-sref="user.wallet" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-wallet"></i>
+          我的钱包
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a>
+      </div>
+
+      <div class="list">
+        <a ui-sref="user.device" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-device"></i>
+          设备信息
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a>
+        <a ui-sref="user.car" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-car"></i>
+          车辆信息
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a>
+      </div>
+
+      <div class="list">
+        <a ui-sref="order.list" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-policy"></i>
+          我的订单
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a>
+      </div>
+
+      <div class="list">
+        <a ui-sref="user.about" class="item-icon-left item item-icon-right">
+          <i class="icon lcb-icon-about"></i>
+          关于我们
+          <i class="icon ion-chevron-right lcb-normal-font"></i>
+        </a>
+      </div>
+
+      <div class="list" ng-if="(!lcbConfig.inWechat()) || lcbConfig.isStaging()">
+        <a href="javascript:void(0)" ng-click="ctrl.logout()" class="item text-center">
+          注销
+        </a>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

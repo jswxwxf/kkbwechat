@@ -1,0 +1,13 @@
+<div class="card lcb-earningtaskbox">
+  <div class="item item-divider item-text-wrap item-header">
+    任务列表（完成以下任务获得更多行车收益）
+  </div>
+  <div class="item item-button-right" ng-repeat="task in $ctrl.tasks | orderBy: 'done'" ng-show="$ctrl.shouldShow($index)">
+    {{task.name}}
+    <button class="button button-positive" ng-if="!task.done" ng-click="$ctrl.handleTask(task)">去完成</button>
+    <button class="button button-stable" disabled ng-if="task.done">已完成</button>
+  </div>
+  <div class="item-more" ng-init="$ctrl.showAllClicked = false" ng-if="!$ctrl.showAllClicked">
+    <button class="button button-small button-block  button-stable" ng-click="$ctrl.showAll(); $ctrl.showAllClicked = true;"><i class="fa fa-angle-double-down"></i></button>
+  </div>
+</div>

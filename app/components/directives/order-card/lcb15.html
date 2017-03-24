@@ -1,0 +1,24 @@
+<div class="lcb-order-card card" ng-click="ctrl.triggerDetail($event)">
+  <div ng-if="!ctrl.claim">
+    <button ng-if="ctrl.order.order_15.status == 1" class="button button-small button-outline button-balanced" ui-sref="order.pay({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type })">继续支付</button>
+    <button ng-if="ctrl.order.order_15.status == 2" class="button button-small button-outline button-stable" ng-click="ctrl.showLcb15Status()">等待出单</button>
+    <button ng-if="ctrl.order.order_15.status == 3" class="button button-small button-outline button-balanced" ui-sref="order.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type, product_id: ctrl.order.product_id })">查看订单</button>
+    <button ng-if="ctrl.order.order_15.status == 5" class="button button-small button-outline button-balanced" ui-sref="order.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type, product_id: ctrl.order.product_id })">查看订单</button>
+    <button ng-if="ctrl.order.order_15.status == 6" class="button button-small button-outline button-balanced" ui-sref="order.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type, product_id: ctrl.order.product_id })">查看订单</button>
+    <button ng-if="ctrl.order.order_15.status == 7" class="button button-small button-outline button-balanced" ui-sref="order.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type, product_id: ctrl.order.product_id })">查看订单</button>
+    <button ng-if="ctrl.order.order_15.status == 8" class="button button-small button-outline button-stable" ng-click="ctrl.showLcb15Status()">等待反馈</button>
+    <button ng-if="ctrl.order.order_15.status == 9" class="button button-small button-outline button-stable" ng-click="ctrl.showLcb15Status()">等待处理</button>
+    <button ng-if="ctrl.order.order_15.status == 10" class="button button-small button-outline button-stable" disabled>交易关闭</button>
+    <button ng-if="ctrl.order.order_15.status == 11" class="button button-small button-outline button-stable" disabled>交易关闭</button>
+  </div>
+  <button ng-if="ctrl.claim" class="button button-small button-outline button-assertive" ui-sref="claim.lcb({ order_id: ctrl.order.order_id, order_type: ctrl.order.order_type })">申请返现</button>
+  <img ng-if="ctrl.order.product_id == 1" src="/static/images/ico_hunt_driver.png">
+  <img ng-if="ctrl.order.product_id == 2" src="/static/images/kkb15.png">
+  <img ng-if="ctrl.order.product_id == 3" src="/static/images/auto.png">
+  <img ng-if="ctrl.order.product_id == 4" src="/static/images/hx.png">
+  <img ng-if="ctrl.order.product_id == 0" src="/static/images/kkb15.png">
+  <h5>{{ctrl.order.name}}</h5>
+  <div class="lcb-smaller-font">{{ctrl.order.license_no}}</div>
+  <div class="lcb-smaller-font balanced">订单日期：{{ctrl.order.valid_until}}</div>
+  <div class="lcb-smaller-font balanced clearfix">订单状态：{{ctrl.getLcb15Status()}}</div>
+</div>

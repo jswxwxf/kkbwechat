@@ -1,0 +1,13 @@
+.lcb-radio {
+
+  &.item-icon-left {
+    div:last-child {
+      padding-left: 35px;
+    }
+  }
+
+  input:before {
+    border-color: #bbb;
+  }
+
+}

@@ -1,0 +1,33 @@
+<ion-modal-view id="insurance-fanhua-upload-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">添加影像</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('fanhua-upload')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+
+    <div id="insurance-fanhua-upload">
+      <h4 class="padding-horizontal">{{ctrl.uploadResult.msg}}</h4>
+      <form name="ctrl.uploadForm" ng-repeat="info in ctrl.uploadResult.imageInfos">
+        <div class="row" ng-if="$even" ng-init="nextInfo = ctrl.uploadResult.imageInfos[$index + 1]">
+          <div class="col">
+            <img src="/static/images/ico_add.png" class="lcb-img-responsive">
+            <h5 class="text-center">{{info.imageName}}</h5>
+            <input type="file" accept="image/*" ng-model='ctrl.uploadImages[info.imageType]' lcb-file-uploader lcb-file-use-src="true" required>
+          </div>
+          <div class="col" ng-if="nextInfo">
+            <img src="/static/images/ico_add.png" class="lcb-img-responsive">
+            <h5 class="text-center">{{nextInfo.imageName}}</h5>
+            <input type="file" accept="image/*" ng-model='ctrl.uploadImages[nextInfo.imageType]' lcb-file-uploader lcb-file-use-src="true" required>
+          </div>
+          <div class="col" ng-if="!nextInfo">
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-block button-assertive lcb-bigger-font2" ng-disabled="ctrl.uploadForm.$invalid" ng-click="ctrl.uploadImage()">确认上传</button>
+  </ion-footer-bar>
+</ion-modal-view>

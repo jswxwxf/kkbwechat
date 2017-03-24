@@ -1,0 +1,23 @@
+<ion-view view-title="登记报名">
+  <ion-content>
+
+    <div id="insurance-green-register">
+      <ion-slide-box ion-wizard show-pager="false">
+        <ion-slide>
+          <form name="step1Form" novalidate>
+            <div ng-include="'features/insurance/green/register-step1.html'"></div>
+          </form>
+        </ion-slide>
+        <ion-slide>
+          <form name="resultForm" novalidate>
+            <div ng-include="'features/share/register/register-success.html'"></div>
+          </form>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container" ng-if="!ctrl.onResultPage">
+    <button type="button" class="button button-block button-clear button-balanced lcb-bigger-font" ng-click="ctrl.gotoPinan()">已经登记用户，报价购买通道</button>
+  </ion-footer-bar>
+</ion-view>

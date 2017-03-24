@@ -1,0 +1,15 @@
+<ion-view id="comac-success-container" hide-nav-bar="true">
+  <ion-content>
+
+    <div id="comac-success">
+
+      <h4>{{ctrl.reward}}</h4>
+      <div ng-if="!ctrl.device.device">
+        <h4 class="padding">请点击按扭参加活动</h4>
+        <button type="button" class="button button-assertive" ui-sref="hunt.intro({source: 'comac'})">参加好车主活动</button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

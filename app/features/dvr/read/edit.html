@@ -1,0 +1,22 @@
+<ion-modal-view id="dvr-read-edit-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">内容详情</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('edit')">关闭</button>
+  </ion-header-bar>
+  <ion-content overflow-scroll="true">
+
+    <div id="dvr-read-edit">
+      <div class="item item-thumbnail-left item-text-wrap">
+        <img ng-src="{{ctrl.editCast.image}}">
+        <h2>[{{ctrl.editCast.published_at | lcbDate:'MM-DD'}}] {{ctrl.editCast.title}}</h2>
+      </div>
+      <div class="more-padding lcb-selectable">
+        {{ctrl.editCast.content}}
+      </div>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-assertive lcb-bigger-font" ng-click="ctrl.remove(ctrl.editCast)">删除</button>
+  </ion-footer-bar>
+</ion-modal-view>

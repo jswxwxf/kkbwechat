@@ -1,0 +1,22 @@
+.lcb-package-viewer-fanhua {
+
+  background-color: white;
+
+  h5 {
+    height: 45px;
+    font-weight: normal;
+  }
+
+  .row {
+    .col {
+      padding: 5px;
+      padding-bottom: 15px;
+      border-right: $lcb-border;
+      border-bottom: $lcb-border;
+    }
+    .col:last-child {
+      border-right: none;
+    }
+  }
+
+}

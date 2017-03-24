@@ -1,0 +1,65 @@
+#lcb-hunt {
+
+  a {
+    text-decoration: none;
+  }
+
+  #result {
+    padding-bottom: 55px;
+    @include small-screen() {
+      #order-number {
+        .item-sn {
+          padding-top: 5px;
+          float: left;
+        }
+      }
+    }
+    #status {
+      line-height: 25px;
+    }
+    #detail {
+      padding: 1px;
+      .row {
+        .col {
+          border: $lcb-border;
+          font-size: 0.9em;
+          margin: 3px;
+          line-height: 2em;
+          div {
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+    .lcb-fees {
+      padding-left: 50px;
+      font-size: 12pt;
+      line-height: 25px;
+      span.lcb-fee {
+        float: right;
+        padding-right: 5px;
+        color: $assertive;
+      }
+    }
+    .lcb-intro {
+      .item {
+        padding-left: 2em;
+      }
+      .item-note {
+        color: $assertive;
+      }
+      .lcb-description {
+        font-size: 1em;
+        white-space: normal;
+        padding-top: 0px;
+        padding-left: 30px;
+        border-top: none;
+        margin-top: -10px;
+        .lcb-ol {
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+
+}

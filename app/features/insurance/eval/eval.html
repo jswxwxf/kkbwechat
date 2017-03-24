@@ -1,0 +1,46 @@
+<ion-view view-title="保费试算">
+  <ion-content>
+
+    <form name="evalForm" id="insurance-eval" novalidate>
+
+      <img src="/static/images/banner_eval.png" class="lcb-img-responsive">
+
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">城市 <span class="assertive">*</span></span>
+          <select ng-model="ctrl.evalParams.city" ng-options="city.qValue as city.qLabel for city in ctrl.options.city" required>
+            <option value="">请选择城市</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">车龄(年) <span class="assertive">*</span></span>
+          <select ng-model="ctrl.evalParams.car_age" ng-options="age.qValue as age.qLabel for age in ctrl.options.car_age" required>
+            <option value="">请选择车龄</option>
+          </select>
+        </label>
+        <label id="price" class="item item-input">
+          <span class="input-label">车辆购置价格(万) <span class="assertive">*</span></span>
+          <input type="number" ng-model="ctrl.evalParams.car_price" maxlength="20" placeholder="请输入购置价格" required>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">往年理赔次数<span class="assertive">*</span></span>
+          <select ng-model="ctrl.evalParams.claims" ng-options="claim.qValue as claim.qLabel for claim in ctrl.options.claims" required>
+          </select>
+        </label>
+      </div>
+
+      <div class="list">
+        <div class="item padding-top">
+          保险
+          <span class="item-note">车损+50万第三者责任险+不计免赔</span>
+        </div>
+      </div>
+
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="evalForm.$invalid" ng-click="ctrl.calculate()">试算</button>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

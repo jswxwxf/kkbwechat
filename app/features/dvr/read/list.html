@@ -1,0 +1,23 @@
+<ion-view view-title="延时阅读" id="dvr-read-list-container">
+  <ion-content>
+
+    <h4 class="more-padding-vertical text-center dark" ng-hide="true" ng-show="ctrl.showEmpty">您还没有文章</h4>
+
+    <ion-list id="dvr-read-list">
+      <ion-item ng-repeat="cast in ctrl.podcasts" class="item item-thumbnail-left item-text-wrap" ng-click="ctrl.showEdit(cast)">
+        <img ng-src="{{cast.image}}">
+        <h2>[{{cast.published_at | lcbDate:'MM-DD'}}] {{cast.title}}</h2>
+        <p>点击查看</p>
+        <ion-option-button class="button-assertive" ng-click="ctrl.remove(cast)">
+          删除
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll on-infinite="ctrl.loadPodcasts()" immediate-check="false" ng-if="ctrl.hasMore()"></ion-infinite-scroll>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-click="ctrl.showAdd()">新增内容</button>
+  </ion-footer-bar>
+</ion-view>

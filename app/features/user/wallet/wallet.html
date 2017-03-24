@@ -1,0 +1,49 @@
+<ion-view view-title="我的钱包">
+  <ion-content>
+  
+    <div id="user-wallet">
+    
+      <div class="row text-center">
+        <a class="col item" ui-sref="user.balance">
+          <img src="static/images/ico_balance.png">
+          <div>余额</div>
+          <div>{{ctrl.wallet.balance}}</div>
+        </a>
+        <a class="col item" ui-sref="user.bean">
+          <img src="static/images/ico_lichengdou.png">
+          <div>里程豆</div>
+          <div>{{ctrl.wallet.beans}}</div>
+        </a>
+        <a class="col item" ui-sref="user.coupon">
+          <img src="static/images/ico_dikouquan.png">
+          <div>抵扣券</div>
+          <div>{{ctrl.wallet.dkq}}</div>
+        </a>
+      </div>
+      <div class="row text-center">
+        <a class="col item" ui-sref="user.ycb">
+          <img src="static/images/ico_yangchebao.png">
+          <div>养车宝</div>
+          <div>{{ctrl.wallet.ycb}}</div>
+        </a>
+        <!--a class="col item" ui-sref="user.kld" lcb-disable-by="ctrl.wallet.kld == 0">
+          <img src="static/images/ico_kalading.png">
+          <div>卡拉丁</div>
+          <div>{{ctrl.wallet.kld}}</div>
+        </a-->
+        <a class="col item" ui-sref="user.ticket">
+          <img src="static/images/ico_dache.png">
+          <div>其他卡券</div>
+          <div>{{ctrl.wallet.others}}</div>
+        </a>
+        <a class="col item" ui-sref="user.reward">
+          <img src="static/images/ico_reward.png">
+          <div>奖励返现</div>
+          <div>绿色车险</div>
+        </a>
+      </div>
+
+    </div>
+  
+  </ion-content>
+</ion-view>

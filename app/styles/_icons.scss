@@ -1,0 +1,424 @@
+%lcb-icon {
+  left: 17px!important;
+  top: 15px!important;
+  width: 22px;
+  height: 22px!important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lcb-icon-avatar {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_default_face.png");
+}
+
+.lcb-icon-avatar2 {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_default_avatar.png");
+}
+
+.lcb-icon-car {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_car.png");
+}
+
+.lcb-icon-company {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_company.png");
+}
+
+.lcb-icon-type {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_type.png");
+}
+
+.lcb-icon-agreement {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_agreement.png");
+}
+
+.lcb-icon-list {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_list.png");
+}
+
+.lcb-icon-money {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_money.png");
+}
+
+.lcb-icon-currency {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_currency.png");
+}
+
+.lcb-icon-more {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_more.png");
+}
+
+.lcb-icon-mail {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_mail.png");
+}
+
+.lcb-icon-phone {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_phone.png");
+}
+
+.lcb-icon-phone2 {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_phone2.gif");
+}
+
+.lcb-icon-phone2-own {
+  @extend .lcb-icon-phone2;
+  display: inline-block;
+  width: 29px * 0.5;
+  height: 48px * 0.5 + 1 !important;
+}
+
+.lcb-icon-phone3 {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_phone3.png");
+}
+
+.lcb-icon-wechat {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_wechat.png");
+}
+
+.lcb-icon-alipay {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_pay.png");
+}
+
+.lcb-icon-pos {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_pos.png");
+}
+
+.lcb-icon-weibo {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_weibo.png");
+}
+
+.lcb-icon-qq {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_qq.png");
+}
+
+.lcb-icon-renren {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_renren.png");
+}
+
+.lcb-icon-douban {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_douban.png");
+}
+
+.lcb-icon-linkedin {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_linkedin.png");
+}
+
+.lcb-icon-account {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_account.png");
+}
+
+.lcb-icon-wallet {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_wallet.png");
+}
+
+.lcb-icon-device {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_device.png");
+}
+
+.lcb-icon-policy {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_policy.png");
+}
+
+.lcb-icon-payment {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_payment.png");
+}
+
+.lcb-icon-about {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_about.png");
+}
+
+.lcb-icon-about2 {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_about.png");
+}
+
+.lcb-icon-time {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_time.png");
+}
+
+.lcb-icon-notepad {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_notepad.png");
+}
+
+.lcb-icon-edit {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_edit.png");
+}
+
+.lcb-icon-picture {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_picture.png");
+}
+
+.lcb-icon-home {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_home.png");
+}
+
+.lcb-icon-home2 {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_home.png");
+}
+
+.lcb-icon-drive {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_drive.png");
+}
+
+.lcb-icon-credit {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_credit.png");
+}
+
+.lcb-icon-jobedu {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_jobedu.png");
+}
+
+.lcb-icon-social {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_social.png");
+}
+
+.lcb-icon-hot {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_hot.png");
+}
+
+.lcb-icon-new {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_new.png");
+}
+
+.lcb-icon-product {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_product.png");
+}
+
+.lcb-icon-inquiry {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_inquiry.png");
+  width: 27px;
+}
+
+.lcb-icon-user {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_user.png");
+}
+
+.lcb-icon-order {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_order.png");
+  height: 25px!important;
+}
+
+.lcb-icon-claim {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_claim.png");
+}
+
+.lcb-icon-present {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_present.png");
+}
+
+.lcb-icon-cart {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_cart.png");
+}
+
+.lcb-ico_odometry {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_odometry.png");
+}
+
+.lcb-icon-code {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_code.png");
+}
+
+.lcb-icon-code-own {
+  @extend .lcb-icon-code;
+  display: inline-block;
+  width: 46px * 0.5;
+  height: ceil(36px * 0.5) !important;
+}
+
+.lcb-icon-plate {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_plate.gif");
+}
+
+.lcb-icon-plate-own {
+  @extend .lcb-icon-plate;
+  display: inline-block;
+  width: 44px * 0.5 + 1;
+  height: 35px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-hint {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_hint.png");
+}
+
+.lcb-icon-hint-own {
+  @extend .lcb-icon-hint;
+  display: inline-block;
+  width: 40px * 0.5 + 1;
+  height: 40px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-plus {
+  @extend %lcb-icon;
+  background-image: url("/static/images/ico_plus.png");
+}
+
+.lcb-icon-plus-own {
+  @extend .lcb-icon-plus;
+  display: inline-block;
+  width: 122px * 0.5 + 1;
+  height: 122px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-ticket {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_ticket.png");
+}
+
+.lcb-icon-ticket-own {
+  @extend .lcb-icon-ticket;
+  display: inline-block;
+  width: 37px * 0.5 + 1;
+  height: 36px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-envelop {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_envelop.png");
+}
+
+.lcb-icon-envelop-own {
+  @extend .lcb-icon-envelop;
+  display: inline-block;
+  width: 37px * 0.5 + 1;
+  height: 36px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-travel {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_travel.png");
+}
+
+.lcb-icon-reward {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_reward.png");
+}
+
+.lcb-icon-reward1 {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_reward1.png");
+}
+
+.lcb-icon-ding {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_ding.png");
+}
+
+.lcb-icon-start {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_start.png");
+}
+
+.lcb-icon-start-own {
+  @extend .lcb-icon-start;
+  display: inline-block;
+  width: 30px * 0.5 + 1;
+  height: 31px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-terminal {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_terminal.png");
+}
+
+.lcb-icon-terminal-own {
+  @extend .lcb-icon-terminal;
+  display: inline-block;
+  width: 30px * 0.5 + 1;
+  height: 31px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-clock {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_clock.png");
+}
+
+.lcb-icon-clock-own {
+  @extend .lcb-icon-clock;
+  display: inline-block;
+  width: 30px * 0.5 + 1;
+  height: 31px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-camera {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_camera.png");
+}
+
+.lcb-icon-camera-own {
+  @extend .lcb-icon-camera;
+  display: inline-block;
+  width: 50px * 0.5 + 1;
+  height: 40px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-checkin {
+  @extend %lcb-icon;
+  background-image: url("/static/images/shop/icon_checkin.png");
+}
+
+.lcb-icon-checkin-own {
+  @extend .lcb-icon-checkin;
+  display: inline-block;
+  width: 34px * 0.5 + 1;
+  height: 37px * 0.5 + 0.5 !important;
+}
+
+.lcb-icon-commercial-sn {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_commercial_sn.png");
+}
+
+.lcb-icon-compulsory-sn {
+  @extend %lcb-icon;
+  background-image: url("/static/images/icon_compulsory_sn.png");
+}

@@ -1,0 +1,23 @@
+<ion-view view-title="补充信息">
+  <ion-content>
+
+    <div id="user-detail-credit">
+      <div class="padding-vertical">
+        <div class="row">
+          <div class="col text-center">
+            <img style="background-image: url({{ctrl.detail.credit || '/static/images/picture_upload2.png'}})">
+            <input type="file" accept="image/*" ng-model='credit' lcb-file-uploader="ctrl.updateCredit">
+          </div>
+          <div class="col text-center">
+            <img src="/static/images/sample_credit.png" class="lcb-img-responsive">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">芝麻信用上传</div>
+          <div class="col text-center">芝麻信用示意图</div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

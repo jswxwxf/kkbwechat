@@ -1,0 +1,58 @@
+<ion-view id="insurance-inquiry3-more-container" view-title="完善车辆信息">
+  <ion-content>
+
+    <form id="insurance-inquiry3-more" name="ctrl.moreForm" novalidate>
+
+      <div class="list padding-top">
+        <!-- label class="item item-input">
+          <span class="input-label"><span class="icon ion-record lcb-icon1"></span>品牌型号</span>
+          <input ng-model="ctrl.inquiry.car_brand" type="text" placeholder="如：X123DFR">
+        </label -->
+        <label class="item item-input">
+          <span class="input-label">车主身份证号 <span class="assertive" ng-if="ctrl.enable('idcardNo')">*</span></span>
+          <input name="id" ng-model="ctrl.inquiry.carOwner.idcardNo" type="text" placeholder="请输入车主身份证" lcb-validator2="idCard" ng-required="ctrl.enable('idcardNo')">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.moreForm.id.$dirty && ctrl.moreForm.id.$invalid">请输入正确格式的身份证号</div>
+        <label class="item item-input">
+          <span class="input-label">车辆识别代码 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.inquiry.carInfo.vinCode" type="text" placeholder="如：DSCP0229DF172839" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">发动机号 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.inquiry.carInfo.engineNo" type="text" placeholder="如：W1905EW" required>
+        </label>
+        <div class="item" ng-if="ctrl.inquiry.carInfo.vehicleName">
+          品牌型号 <span class="assertive">*</span>
+          <span class="item-note">{{ctrl.inquiry.carInfo.vehicleName}}</span>
+        </div>
+        <car-selector-fanhua ng-model="ctrl.vehicle" lcb-initial-value="ctrl.inquiry.carInfo.vinCode" class="dark" ng-if="!ctrl.inquiry.carInfo.vehicleName" required>品牌型号 <span class="assertive">*</span></car-selector-fanhua>
+        <label class="item item-input">
+          <span class="input-label">初登日期 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.inquiry.carInfo.registDate" type="date" placeholder="请选择日期" required>
+        </label>
+        <label class="item item-input" ng-if="ctrl.enable('price')">
+          <span class="input-label">新车发票价 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.inquiry.carInfo.price" type="number" required>
+        </label>
+        <ion-toggle ng-model="ctrl.inquiry.carInfo.isTransferCar" toggle-class="toggle-balanced" ng-true-value="'Y'" ng-false-value="'N'">过户车</ion-toggle>
+        <label class="item item-input" ng-if="ctrl.inquiry.carInfo.isTransferCar == 'Y'">
+          <span class="input-label">过户日期 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.inquiry.carInfo.transferDate" type="date" placeholder="请选择日期" required>
+        </label>
+        <!-- label class="item item-input">
+          <span class="input-label"><span class="icon ion-record lcb-icon6"></span>核定载客</span>
+          <input ng-model="ctrl.inquiry.car_seat" type="number" placeholder="如：5">
+        </label -->
+      </div>
+
+      <div id="hint" class="padding-horizontal dark">
+        如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-block button-assertive lcb-bigger-font2" ng-disabled="ctrl.moreForm.$invalid" ng-click="ctrl.updateBasic()">确认信息</button>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view view-title="登记报名" id="hunt-register-container">
+  <ion-content>
+
+    <div id="hunt-register">
+      <form name="registerForm" novalidate>
+        <img src="static/images/banner_hunt.png" class="lcb-img-responsive">
+        <label class="item item-input">
+          <span class="input-label">手机号 <span class="assertive">*</span></span>
+          <input name="mobile" ng-model="ctrl.registry.mobile" type="tel" placeholder="请输入报名手机" required lcb-validator="mobile" ng-readonly="ctrl.mobileReadonly">
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="registerForm.mobile.$dirty && registerForm.mobile.$invalid">请输入正确的手机号</div>
+        <div class="item item-input lcb-input-button-right" ng-if="ctrl.isEmpty(ctrl.loggedInUser)">
+          <label for="code" class="input-label">验证码 <span class="assertive">*</span></label>
+          <input name="code" id="code" ng-model="ctrl.registry.code" maxlength="6" type="number" placeholder="请输入验证码" required lcb-validator="verifyCode">
+          <div class="lcb-border-left">
+            <button type="button" class="button button-clear button-balanced" ng-disabled="registerForm.mobile.$invalid" ng-click="ctrl.sendCode()" count-down>获取验证码</button>
+          </div>
+        </div>
+        <label class="item item-input">
+          <span class="input-label">车牌号 <span class="assertive">*</span></span>
+          <input name="licenseNumber" ng-model="ctrl.registry.license_no" type="text" maxlength="20" placeholder="请输入车牌号" required lcb-validator="licenseNumber">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="registerForm.licenseNumber.$dirty && registerForm.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+        <label class="item item-input">
+          <span class="input-label">配送地址</span>
+          <input name="licenseNumber" ng-model="ctrl.registry.address" type="text" maxlength="20" placeholder="选填方便配送的地址">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">推荐码</span>
+          <input name="refCode" ng-model="ctrl.registry.ref_code" type="text" maxlength="20" placeholder="选填推荐码">
+        </label>
+        <div class="padding assertive">（“*”为必填项，其他为选填项）</div>
+        <div id="rule" class="lcb-font-note">
+          <ol class="lcb-ol">
+            <li>活动区域：现在只限上海地区</li>
+            <li>礼包领取：设备激活后，开开保会自动将奖励卡券发放到您的账户钱包中</li>
+          </ol>
+        </div>
+        <div class="padding lcb-register-actions">
+          <button type="button" class="button button-block button-assertive" ng-disabled="registerForm.$invalid" ng-click="ctrl.register()">确认</button>
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>
+

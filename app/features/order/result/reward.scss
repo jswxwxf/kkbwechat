@@ -1,0 +1,39 @@
+#insurance-result-reward {
+
+  .item-thumbnail-left {
+    min-height: 77px;
+    .item-content {
+      min-height: 77px;
+      padding-left: 85px;
+    }
+  }
+
+}
+
+#insurance-result-reward-container {
+
+  background-color: $stable;
+
+  .bar-footer {
+    background-color: black;
+    color: white;
+    .title {
+      font-size: 12pt;
+      span {
+        font-size: 10pt;
+        color: silver;
+        position: relative;
+        top: -1px;
+      }
+    }
+    .button {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 0 20px;
+      border-radius: 0;
+      min-height: 44px;
+    }
+  }
+
+}

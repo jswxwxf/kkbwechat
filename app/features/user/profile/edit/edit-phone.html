@@ -1,0 +1,28 @@
+<ion-view view-title="修改手机号">
+  <ion-content>
+
+    <div id="user-edit">
+
+      <ion-slide-box ion-wizard show-pager="false">
+        <ion-slide>
+          <form name="step1Form" novalidate>
+          <div ng-include="'features/user/profile/edit/edit-phone-step1.html'"></div>
+          <div class="padding">
+            <button type="button" class="button button-block button-balanced" ng-disabled="step1Form.$invalid" ng-click="ctrl.verifyMobile(ctrl.editUser)">下一步</button>
+          </div>
+          </form>
+        </ion-slide>
+        <ion-slide>
+          <form name="step2Form" novalidate>
+          <div ng-include="'features/user/profile/edit/edit-phone-step2.html'"></div>
+          <div class="padding">
+            <button type="button" class="button button-block button-balanced" ng-disabled="step2Form.$invalid"  ng-click="ctrl.changeMobile()">确认修改</button>
+          </div>
+          </form>
+        </ion-slide>
+      </ion-slide-box>
+
+    </div>
+
+  </ion-content>
+</ion-view>

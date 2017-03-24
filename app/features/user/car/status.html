@@ -1,0 +1,21 @@
+<ion-view view-title="车辆检测">
+  <ion-content>
+
+    <div id="user-car-status">
+
+      <div class="padding">
+        开开保会定期对您的车辆进行综合体检，本页只显示存在风险的部件，如果有风险部件列出，建议您咨询维修机构！
+      </div>
+
+      <div class="list" ng-repeat="stat in ctrl.status">
+        <div class="item">
+          {{stat.name}}
+          <span class="item-note">{{stat.updated_at}}</span>
+        </div>
+      </div>
+
+
+    </div>
+
+  </ion-content>
+</ion-view>

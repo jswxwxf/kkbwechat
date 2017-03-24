@@ -1,0 +1,17 @@
+#hunt2-ignore-container {
+
+  @include lcb-center-all();
+
+  .bar-footer {
+    padding: 0;
+    .button {
+      border-radius: 0;
+    }
+  }
+
+}
+
+#hunt2-ignore {
+  padding: 50px;
+
+}

@@ -1,0 +1,34 @@
+<ion-view view-title="新订单" id="hunt2-deliver-container">
+  <ion-content>
+
+    <div id="hunt2-deliver">
+
+      <div class="padding lcb-white-bg lcb-border lcb-margin-bottom animate-show" ng-show="beauty.showFlag" ng-repeat="beauty in ctrl.beauties">
+        <div class="lcb-beauty">
+          <img src="/static/images/icon_zoon.png" class="lcb-zoon">
+          <img ng-src="/static/images/hunt2/avatar{{beauty.beauty_id}}.png" class="lcb-img-responsive" ng-click="ctrl.showPhoto(beauty)">
+          <div class="lcb-tags"><span ng-repeat="tag in beauty.tags.split(',')">{{tag}}</span></div>
+        </div>
+        <div>
+          <h3>找她安装
+            <!--button ng-if="ctrl.source == 'yd'" class="button button-small button-assertive"
+              count-down2="30" count-down-type="enableToDisable" count-down-when="beauty.showFlag" count-down-prefix="接单" count-down-suffix="s" count-down-text="约单超时"
+              count-down-timeout="ctrl.timeout($last)"
+              ng-click="ctrl.accept(beauty)">约单30s</button-->
+            <button class="button button-small button-assertive"
+              ng-click="ctrl.accept(beauty)" ng-disabled="beauty.disabled">{{beauty.disabled ? '约单已满' : '约单'}}</button>
+          </h3>
+          <div class="lcb-item"><span class="icon lcb-icon-clock-own"></span><span>{{beauty.time}}</span></div>
+          <div class="lcb-item"><span class="icon lcb-icon-start-own"></span><span>{{beauty.loc_abb.split(' ')[0]}}</span><span>{{beauty.loc_abb.split(' ')[1]}}</span></div>
+          <div class="lcb-item"><span class="icon lcb-icon-terminal-own"></span><span>省钱终点站</span></div>
+        </div>
+      </div>
+
+      <div class="padding-horizontal" ng-if="ctrl.source != 'yd'">
+        <button class="button button-block button-assertive lcb-bigger-font" ui-sref="hunt2.ignore">都不喜欢</button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

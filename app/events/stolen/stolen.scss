@@ -1,0 +1,151 @@
+#lcb-stolen-bgm {
+  position:fixed;
+  bottom:10px;
+  right:-55px;
+  z-index:100;
+  img {
+    width:30%;
+  }
+}
+
+.lcb-stolen-logo1 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40%!important;
+}
+
+.lcb-stolen-logo2 {
+  margin: 5px;
+  float: right;
+  width: 40%!important;
+}
+
+#stolen-intro {
+  img {
+    width: 100%;
+  }
+  background-color: #da4b47;
+  .slider-pager {
+    bottom: auto;
+    top: 15px;
+  }
+  #messages {
+    padding-top: 40%;
+    img {
+      width: 80%;
+      margin: 15px;
+    }
+  }
+  #actions {
+    padding-top: 40px;
+    a {
+      color: white;
+      font-size: 16px;
+      line-height: 40px;
+    }
+    img {
+      width: 55%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  #stolen-intro-content {
+    overflow: hidden;
+    > div {
+      overflow: hidden;
+    }
+    > div:last-child {
+      background-image: url('/static/images/stolen/bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+#stolen-rule-container {
+  &.popover {
+    height: 415px;
+    width: 300px;
+  }
+  dd {
+    padding-bottom: 5px;
+  }
+  dl {
+    margin-bottom: 0px;
+  }
+  .bar-footer {
+    .button-block {
+      margin: 0;
+    }
+    border-bottom: {
+      left-radius: 10px;
+      right-radius: 10px;
+    }
+  }
+}
+
+#lcb-stolen-overlay {
+  display:none;
+  position:absolute;
+}
+
+#stolen-apply-container, #stolen-success-container {
+  background-image: url('/static/images/stolen/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#stolen-apply {
+  .button-light {
+    color: white;
+  }
+  .item {
+    background-color: #da4b47;
+    border: 0;
+    .input-label {
+      color: white;
+    }
+  }
+  .item-input {
+    padding-right: 10px;
+    input {
+      background-color: white;
+    }
+  }
+  #applyForm {
+    padding-top: 40%;
+    margin-bottom: 200px;
+    > img:first-child {
+      width: 50%;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .lcb-item-error.item-divider {
+      color: white;
+    }
+  }
+  #actions {
+    button {
+      font-weight: bold;
+      background-color: #f1d651;
+      width: 100px;
+      min-height: 35px;
+    }
+  }
+}
+
+#stolen-success {
+  padding-top: 35%;
+  img {
+    width: 80%;
+  }
+  img:first-child {
+    margin-bottom: 50px;
+  }
+  #qrcode {
+    margin: 5px;
+    width: 50%;
+  }
+}

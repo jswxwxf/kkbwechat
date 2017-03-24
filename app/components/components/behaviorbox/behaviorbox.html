@@ -1,0 +1,24 @@
+<div class="lcb-behaviorbox" ng-click="$ctrl.handleClick()">
+  <div class="dark lcb-behaviorbox-header">
+    驾驶评分 <span class="lcb-behaviorbox-score"><rating ng-model="$ctrl.rate" max="5" readonly="true"></rating>{{$ctrl.behavior.score}}分</span>
+    <span class="pull-right" ng-if="$ctrl.period == 'week'">{{$ctrl.lcbUtils.formatDate($ctrl.behavior.start_date, 'M/D')}} - {{$ctrl.lcbUtils.formatDate($ctrl.behavior.end_date, 'M/D')}}</span>
+    <span class="pull-right" ng-if="$ctrl.period == 'month'">{{$ctrl.lcbUtils.formatDate($ctrl.behavior.start_date, 'M月份')}}</span>
+  </div>
+  <div class="text-center lcb-white-bg dark lcb-behaviorbox-body">
+    <div class="row lcb-border-bottom">
+      <div class="col">里程<br><span>{{$ctrl.behavior.distance}}</span><span>km</span></div>
+      <div class="col">时长<br><span>{{$ctrl.lcbUtils.formatDuration($ctrl.behavior.duration, { h: true, m: true })}}</span><span></span></div>
+      <div class="col">平均速度<br><span>{{$ctrl.behavior.avg_speed}}</span><span>km/h</span></div>
+    </div>
+    <div class="row lcb-border-bottom">
+      <div class="col">急加速<br><span>{{$ctrl.behavior.accelerate}}</span><span>次</span></div>
+      <div class="col">急减速<br><span>{{$ctrl.behavior.brake}}</span><span>次</span></div>
+      <div class="col">急转变<br><span>{{$ctrl.behavior.turn}}</span><span>次</span></div>
+    </div>
+    <div class="row">
+      <div class="col">行驶天数<br><span>{{$ctrl.behavior.driving_days}}</span><span>天</span></div>
+      <div class="col">超速次数<br><span>{{$ctrl.behavior.overspeed}}</span><span>次</span></div>
+      <div class="col">疲劳驾驶<br><span>{{$ctrl.behavior.fatigue_drivie}}</span><span>次</span></div>
+    </div>
+  </div>
+</div>

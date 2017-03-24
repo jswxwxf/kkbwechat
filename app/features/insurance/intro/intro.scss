@@ -1,0 +1,102 @@
+#insurance-intro {
+
+  padding-top: 10%;
+  @include small-screen() {
+    padding-top: 5px;
+  }
+
+  .slider {
+    margin: 30px 15px;
+    .slider-slide {
+      font-size: 11pt;
+      line-height: 25px;
+      color: $dark;
+      h4 {
+        margin-left: -10px;
+        margin-bottom: 20px;
+      }
+      @include small-screen() {
+        h4 {
+          font-size: 12pt;
+        }
+      }
+    }
+  }
+
+  #legend {
+
+    margin-top: 50px;
+    position: relative;
+
+    .lcb-circle-text2 {
+
+      width: 25px;
+      height: 25px;
+      padding: 0;
+      background-color: #A3D2A3;
+      border: 2px solid #FDFEFD;
+      position: absolute;
+
+      &.lcb-on {
+        border: 2px solid #92C5F4;
+        color: white;
+        background-color: #65AEF0;
+        transform: scale(1.2, 1.2);
+      }
+
+      &:nth-child(1) {
+        top: 35%; left: 57%;
+      }
+
+      &:nth-child(2) {
+        top: 40%; left: 30%;
+      }
+
+      &:nth-child(3) {
+        top: 50%; left: 75%;
+      }
+
+      &:nth-child(4) {
+        top: 30%; left: 40%;
+      }
+
+      &:nth-child(5) {
+        top: 30%; left: 75%;
+      }
+
+      &:nth-child(6) {
+        top: 30%; left: 65%;
+      }
+
+      &:nth-child(7) {
+        top: 50%; left: 87%;
+      }
+
+      &:nth-child(8) {
+        top: 53%; left: 65%;
+      }
+
+      &:nth-child(9) {
+        top: 65%; left: 27%;
+      }
+
+      &:nth-child(10) {
+        top: 45%; left: 49%;
+      }
+
+      &:nth-child(11) {
+        top: 15%; left: 22%;
+      }
+
+      &:nth-child(12) {
+        top: 35%; left: 15%;
+      }
+
+    }
+  }
+
+}
+
+#insurance-intro-container {
+  background-color: white;
+}

@@ -1,0 +1,90 @@
+<ion-view id="lcb-green-container" view-title="保单详情">
+  <ion-content>
+
+    <div id="lcb-green" class="dark">
+
+      <div id="result" class="list">
+
+        <div class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-car"></i>车牌
+            <span class="item-note">
+              {{ctrl.order.license_no}}
+            </span>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-company"></i>
+            保险公司
+            <span class="item-note">
+              {{ctrl.order.company | lcbInsuranceCompany}}
+            </span>
+          </div>
+          <div id="order-number">
+            <div class="item item-icon-left">
+              <i class="icon lcb-icon-commercial-sn"></i>
+              商业险保单号<span class="item-note item-sn" ng-if="ctrl.order.commercial_sn != null">{{ctrl.order.commercial_sn}}</span><span class="item-note" ng-if="ctrl.order.commercial_sn == null">正在出单</span>
+            </div>
+            <div class="item item-icon-left">
+              <i class="icon lcb-icon-compulsory-sn"></i>
+              交强险保单号<span class="item-note item-sn" ng-if="ctrl.order.compulsory_sn != null">{{ctrl.order.compulsory_sn}}</span><span class="item-note" ng-if="ctrl.order.compulsory_sn == null">正在出单</span>
+            </div>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-type"></i>
+            产品类型
+            <span class="item-note">
+              {{ctrl.order.product}}
+            </span>
+          </div>
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-time"></i>
+            保障期限
+            <span class="item-note">
+              {{ctrl.lcbUtils.formatPeriod(ctrl.order.valid_from, ctrl.order.valid_until)}}
+            </span>
+          </div>
+        </div>
+
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-list"></i>
+          商业险种列表
+        </div>
+        <div class="light-bg lcb-border-bottom text-center">
+          <package-viewer package="ctrl.order"></package-viewer>
+        </div>
+
+        <div id="fees" class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-money"></i>
+            保费
+          </div>
+          <div class="item lcb-fees">
+            <div>商业险: <span ng-bind-html="ctrl.order.standard_commercial | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+            <div>交强险: <span ng-bind-html="ctrl.order.compulsory | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+            <div>车船税: <span ng-bind-html="ctrl.order.tax | lcbCurrency:{ type: 'float', yuan: true, removeZero: false }"></span></div>
+          </div>
+          <div class="item lcb-fees">
+            <div>商业险网销优惠: <span>-{{ctrl.order.commercial_dis}}</span></div>
+          </div>
+        </div>
+
+        <div class="padding-vertical">
+          <div class="item item-icon-left">
+            <i class="icon lcb-icon-agreement"></i>产品附约<a ng-click="ctrl.showModal('green-agreement')" href="javascript:void(0)" class="balanced">《产品服务协议》</a>
+          </div>
+          <div>
+            <div class="item item-icon-left lcb-fees">
+              行驶奖励
+              <span class="item-note lcb-normal-font">
+                预计{{ctrl.order.drive_reward_min}} - {{ctrl.order.drive_reward_max}}元
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

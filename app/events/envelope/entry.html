@@ -1,0 +1,17 @@
+<ion-view view-title="{{ctrl.title}}" hide-nav-bar="true" id="envelope-entry-container" class="lcb-envelope-base">
+  <ion-content>
+
+    <div id="envelope-entry" class="padding">
+
+      <div id="spinner" class="text-center">
+        <img src="/static/images/envelope/spinner.gif" class="lcb-img-responsive">
+      </div>
+
+      <div class="text-center padding"><a href="#" class="button button-clear button-small lcb-bigger-font2" ui-sref="envelope.list">查看我的红包</a></div>
+      <div class="text-center" id="again-button"><button class="button button-assertive lcb-bigger-font2" ng-click="ctrl.draw()" ng-disabled="!ctrl.drawAvailable">{{ ctrl.buttonText }}</button></div>
+      <div class="text-center padding"><button id="rule-button" class="button button-dark button-small" ng-click="ctrl.showModal('envelope-rule')">活动规则</button></div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

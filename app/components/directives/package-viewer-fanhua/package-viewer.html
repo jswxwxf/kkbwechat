@@ -1,0 +1,25 @@
+<div class="lcb-package-viewer-fanhua">
+  <div ng-repeat="risk in ctrl.package" class="text-center">
+    <div class="row row-no-padding" ng-if="$index % 3 == 0" ng-init="sndRisk = ctrl.package[$index + 1]; thdRisk = ctrl.package[$index + 2]">
+      <div class="col">
+        <h5>{{risk.riskName}} <br/><span ng-if="risk.notDeductible == 'Y'">（不记免赔）</span></h5>
+        <div>{{ctrl.getRiskAmount(risk)}}</div>
+        <div>{{ctrl.getRiskPrice(risk) | lcbCurrency}}</div>
+      </div>
+      <div class="col">
+        <div ng-if="sndRisk">
+          <h5>{{sndRisk.riskName}} <br/><span ng-if="sndRisk.notDeductible == 'Y'">（不记免赔）</span></h5>
+          <div>{{ctrl.getRiskAmount(sndRisk)}}</div>
+          <div>{{ctrl.getRiskPrice(sndRisk) | lcbCurrency}}</div>
+        </div>
+      </div>
+      <div class="col">
+        <div ng-if="thdRisk">
+          <h5>{{thdRisk.riskName}} <br/><span ng-if="thdRisk.notDeductible == 'Y'">（不记免赔）</span></h5>
+          <div>{{ctrl.getRiskAmount(thdRisk)}}</div>
+          <div>{{ctrl.getRiskPrice(thdRisk) | lcbCurrency}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<ion-view view-title="登记报名">
+  <ion-content>
+
+    <div id="insurance-auto-register" class="lcb-has-footer">
+      <ion-slide-box ion-wizard show-pager="false">
+        <ion-slide>
+          <div ng-include="'features/insurance/auto/register-step1.html'"></div>
+        </ion-slide>
+        <ion-slide>
+          <form name="resultForm" novalidate>
+            <div ng-include="'features/share/register/register-success.html'"></div>
+          </form>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+
+  </ion-content>
+</ion-view>

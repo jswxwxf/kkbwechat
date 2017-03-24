@@ -1,0 +1,28 @@
+#insurance-green-register {
+
+  #rule {
+    padding: 20px;
+  }
+
+  #result {
+    padding: 40px;
+    padding-top: 50px;
+    h2 {
+      padding: 10px 0;
+      text-align: center;
+      .icon {
+        font-size: 1.5em;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+
+  #qrcode {
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+
+}

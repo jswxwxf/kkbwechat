@@ -1,0 +1,29 @@
+.lcb-register {
+
+  .icon {
+    margin-top: 5px;
+  }
+
+  #verifycode {
+    border-left: $lcb-border;
+    button {
+      min-height: initial;
+      line-height: normal;
+      min-width: 100px;
+      margin-right: 10px;
+    }
+  }
+
+  .lcb-register-actions {
+    padding-top: 10px;
+  }
+
+  .input-label {
+    width: 10%;
+  }
+
+  input[readonly] {
+    background-color: transparent;
+  }
+
+}

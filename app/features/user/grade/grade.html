@@ -1,0 +1,60 @@
+<ion-view view-title="驾驶评级" id="user-grade-container">
+  <ion-nav-buttons side="right">
+    <car-switcher type="button-nav" can-add="false" value="ctrl.activeCar" on-change="ctrl.loadGrade(car.car_id)"></car-switcher>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="user-grade">
+
+      <img src="static/images/icon_discount40.png" class="lcb-discount">
+      <div id="intro" class="padding-horizontal padding-top lcb-margin-vertical lcb-white-bg">
+        <div class="padding-bottom lcb-border-bottom"><strong>驾驶评级对车主有什么好处？</strong></div>
+        <div class="more-padding-vertical">
+          <span class="lcb-tag-oriange">保费直降<sup class="fa fa-circle"></sup></span>
+          <span class="lcb-tag-balanced">低价车险<sup class="fa fa-circle"></sup></span>
+          <span class="lcb-tag-assertive">最高节省40%<sup class="fa fa-circle"></sup></span>
+        </div>
+      </div>
+
+      <div id="example" class="lcb-white-bg">
+        <span id="hint" class="icon lcb-icon-hint-own pull-right" ng-click="ctrl.showModal('hint')"></span>
+        <span id="license" class="lcb-license-plate">{{ctrl.grade.license_no || '沪Z88888'}}</span>
+        <img src="static/images/icon_example.png" ng-if="ctrl.gradeStatus == 'start'">
+        <div class="lcb-margin-horizontal">
+          <lcb-chart ng-if="ctrl.gradeStatus == 'start'" chart-of="car-assess" height="230" chart-size="large" example="true"></lcb-chart>
+          <lcb-chart ng-if="ctrl.gradeStatus != 'start'" chart-of="car-assess" height="230" chart-size="large"></lcb-chart>
+        </div>
+      </div>
+
+      <div id="progress-container" ng-click="ctrl.gotoReport()">
+        <a href="javascript:void(0)" class="button button-clear button-dark pull-right padding-right" ng-if="ctrl.grade.stage">查看报告</a>
+        <ng-include ng-if="ctrl.gradeStatus == 'start'" src="'features/user/grade/grade-start.html'"></ng-include>
+        <ng-include ng-if="ctrl.gradeStatus == 'inprogress'" src="'features/user/grade/grade-inprogress.html'"></ng-include>
+        <ng-include ng-if="ctrl.gradeStatus == 'done'" src="'features/user/grade/grade-done.html'"></ng-include>
+      </div>
+
+      <div id="products" class="lcb-white-bg padding">
+        <div class="padding-bottom lcb-border-bottom"><strong>驾驶评级适用产品</strong></div>
+        <div class="row text-center">
+          <div class="col lcb-border lcb-no-padding" ui-sref="insurance.hunt.intro">
+            <img src="../../../static/images/box_hunt.png" class="lcb-img-responsive">
+            <strong>优选车险</strong><br/>
+            <span class="lcb-font-note">最高省40%</span>
+          </div>
+          <div class="col lcb-border lcb-no-padding">
+            <img src="../../../static/images/box_ttb.png" class="lcb-img-responsive">
+            <strong>天天保</strong><br/>
+            <span class="lcb-font-note">敬请期待</span>
+          </div>
+          <div class="col lcb-border lcb-no-padding">
+            <img src="../../../static/images/box_lcb.png" class="lcb-img-responsive">
+            <strong>里程保</strong><br/>
+            <span class="lcb-font-note">敬请期待</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

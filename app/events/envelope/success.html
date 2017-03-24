@@ -1,0 +1,25 @@
+<ion-view view-title="{{ctrl.title}}" class="lcb-envelope-container lcb-envelope-base" hide-nav-bar="true">
+  <ion-content>
+
+    <div id="envelope-success" class="padding-bottom">
+
+      <div id="message" class="text-center">
+        <img src="/static/images/envelope/stage_success.png" class="lcb-img-responsive">
+        <h3>恭喜你抢到神秘<span class="assertive">现金红包</span><br>速邀三位好友帮你解封</h3>
+      </div>
+
+      <div id="timer" class="more-padding-vertical lcb-bigger-font2 text-center"><span>{{ctrl.timeoutMessage}}</span>后无人解封，红包就会自燃焚毁</div>
+      <div class="text-center"><button id="help-button" class="button button-assertive lcb-bigger-font2" ng-click="ctrl.showMask('sharemask')">速度求助</button></div>
+      <div class="text-center padding"><button id="rule-button" class="button button-dark button-small" ng-click="ctrl.showModal('envelope-rule')">活动规则</button></div>
+
+      <div id="helpers" class="padding">
+        <div class="padding-vertical lcb-bigger-font"><span>已有{{ctrl.detail.active_list.length}}位好友拔刀相助</span><span class="energized pull-right" ui-sref="envelope.list">查看我的红包</span></div>
+        <div class="padding text-center">
+          <span class="text-center clearfix" ng-repeat="helper in ctrl.detail.active_list"><img ng-src="{{helper.avatar}}"><br/>{{helper.nickname}}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

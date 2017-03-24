@@ -1,0 +1,39 @@
+<ion-view view-title="订单详情">
+  <ion-nav-buttons side="right">
+    <span class="icon lcb-icon-camera-own lcb-hunt2-success-icon-camera-own" ui-sref="hunt2.selfie"></span>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="hunt2-success" class="padding-bottom">
+
+      <div id="congratulation" class="text-center">
+        <img src="/static/images/hunt2/success.png">
+        <h3>恭喜，预约成功！</h3>
+        <h4 class="dark">
+          免费安装智能车载设备<br/>最高节省<span>40%保费</span>
+        </h4>
+      </div>
+
+      <div class="list list-inset">
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-ding"></i>
+          美女带着设备在等你哦！
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-clock"></i>
+          4月8日-4月10日每天{{ctrl.detail.time}}
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-start"></i>
+          {{ctrl.detail.loc_full}}
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-terminal"></i>
+          40%折扣领取终点站
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

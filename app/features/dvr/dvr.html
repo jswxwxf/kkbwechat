@@ -1,0 +1,21 @@
+<ion-view id="dvr-container">
+
+  <div id="dvr" class="dark">
+    <ion-tabs class="tabs-stable tabs-icon-top">
+
+      <ion-tab title="行程" icon-on="lcb-tab-icon-trip" icon-off="lcb-tab-icon-trip-off" ui-sref="dvr.trip">
+        <ion-nav-view name="trip-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="评分" icon-on="lcb-tab-icon-behavior" icon-off="lcb-tab-icon-behavior-off" ui-sref="dvr.behavior">
+        <ion-nav-view name="behavior-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="评级" icon-on="lcb-tab-icon-report" icon-off="lcb-tab-icon-report-off" ui-sref="dvr.report">
+        <ion-nav-view name="report-tab"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+  </div>
+
+</ion-view>

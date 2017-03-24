@@ -1,0 +1,20 @@
+<ion-modal-view class="lcb-car-selector-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">车系选择</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('series')">关闭</button>
+  </ion-header-bar>
+  <label class="item-input lcb-query-bar">
+    <input ng-model="ctrl.query.serie" type="text" placeholder="请输入车系进行搜索">
+  </label>
+  <ion-content>
+
+    <div>
+      <div class="list lcb-result-list">
+        <a ng-click="ctrl.hideModal('series'); ctrl.setSeries(s);"  class="item" ng-repeat="s in ctrl.series track by s.series_id">
+          {{s.name_cn}}
+        </a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

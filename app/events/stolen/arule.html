@@ -1,0 +1,39 @@
+<ion-popover-view id="stolen-rule-container">
+  <ion-header-bar>
+    <h1 class="title">全车盗抢补偿规则</h1>
+  </ion-header-bar>
+  <ion-content overflow-scroll="true">
+
+    <div id="stolen-rule" class="padding dark lcb-selectable">
+      <ol class="lcb-ol lcb-first">
+        <li>领取截止：2月11日晚24时之前免费领取</li>
+        <li>保障期间：2月7日0时至2月13日24时（7天）</li>
+        <li>报案截止：2月29日17时</li>
+        <li>保障金额：基础保障8万（条件：领取）</li>
+        <li>激活生效：领取自动激活</li>
+        <li>适用区域：仅限于在北京、上海、广州、深圳四个城市行政区域内出险车辆</li>
+        <li>赔付期限：自理赔报案日期90天完成审核并支付补偿款</li>
+        <li>实际补偿金额：</li>
+        <ol class="lcb-ol lcb-second">
+          <li>全车损失：折旧金额*（1-20%），最高给付8万。</li>
+          <li>部分损失：8万元内按实际修复费用计算补偿，但不得超过保险事故发生时被保险机动车的折旧金额。</li>
+        </ol>
+        <li>其他规定：</li>
+        <ol class="lcb-ol lcb-second">
+          <li>已经投保商业盗抢险的车辆不享有本保障</li>
+          <li>非家庭自用车不享有本活动保障</li>
+          <li>保障领取激活后的隔日生效，生效日之前已经出险的，不在本活动保障范围内</li>
+        </ol>
+        <li>理赔提交材料：按商业盗抢险理赔规则执行</li>
+        <ol class="lcb-ol lcb-second">
+          <li>须提供损失清单、有关费用单据、《机动车行驶证》、《机动车登记证书》、车辆购置税完税证明（车辆购置附加费缴费证明）或免税证明、机动车停驶手续以及出险当地县级以上公安刑侦部门出具的盗抢立案证明。</li>
+          <li>用户需举证被保险车辆为保障期间出险。</li>
+        </ol>
+      </ol>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar>
+    <button class="button button-clear button-block button-dark" ng-click="ctrl.hidePopover('rule')">我知道了</button>
+  </ion-footer-bar>
+</ion-popover-view>

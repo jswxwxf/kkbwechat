@@ -1,0 +1,25 @@
+<ion-view view-title="登记报名" id="insurance-green-regiser-container" hide-nav-bar="lcbConfig.isFullscreen()">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="insurance-green-register" class="dark">
+      <ion-slide-box ion-wizard show-pager="false">
+        <ion-slide>
+          <form name="step1Form" novalidate>
+            <div ng-include="'events/green/register/register-step1.html'"></div>
+          </form>
+        </ion-slide>
+        <ion-slide>
+          <form name="resultForm" novalidate>
+            <div ng-include="'events/green/register/register-success.html'"></div>
+          </form>
+        </ion-slide>
+      </ion-slide-box>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="dark text-center" ng-if="ctrl.onResultPage">
+    <div>“绿色车险”的保险服务由中国平安产险提供，<br/>优惠奖励与设备支持服务由开开保提供。</div>
+  </ion-footer-bar>
+</ion-view>

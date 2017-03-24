@@ -1,0 +1,25 @@
+.lcb-progress-bar {
+
+  background-color: #eee;
+  height: 10px;
+  position: relative;
+  @include border-radius(5px);
+
+  > div {
+    @include border-radius(5px);
+    height: 100%;
+  }
+
+  .lcb-default-color {
+    background-color: #43aeff;
+  }
+
+  .lcb-light-color {
+    background-color: darkgrey;
+  }
+
+  .lcb-balanced-color {
+    background-color: $balanced;
+  }
+
+}

@@ -1,0 +1,8 @@
+<div class="lcb-order-card card" ng-click="ctrl.triggerDetail($event)">
+  <button ng-if="!ctrl.claim" class="button button-small button-outline button-balanced" ui-sref="order.compensate2({order_id: ctrl.order.order_id})">查看详情</button>
+  <button ng-if="ctrl.claim" class="button button-small button-outline button-assertive" ui-sref="claim.compensate2({order_id: ctrl.order.order_id})">申请补偿</button>
+  <img src="/static/images/picture_stop2x.png">
+  <h5>易到专车停运补偿</h5>
+  <div class="lcb-smaller-font">{{ctrl.order.license_no || '取不到'}}</div>
+  <div class="lcb-smaller-font balanced clearfix">订单日期：{{ctrl.order.valid_until}}</div>
+</div>

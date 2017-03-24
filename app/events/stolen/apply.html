@@ -1,0 +1,48 @@
+<ion-view view-title="领取" hide-nav-bar="true" id="stolen-apply-container">
+  <ion-content id="stolen-apply">
+
+    <img ng-src="{{::ctrl.getLogoUrl()}}" style="margin: 5px; float: right; width: 40%;">
+
+    <form id="applyForm" name="applyForm" novalidate>
+
+      <img src="/static/images/stolen/wantapply.png">
+      <div class="text-center light">本活动只限北京上海广州深圳四城市</div>
+
+      <label class="item item-input">
+        <span class="input-label">姓　名：</span>
+        <input name="name" ng-model="ctrl.stolen.name" type="text" placeholder="请输入姓名" lcb-validator="name">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="applyForm.name.$dirty && applyForm.name.$invalid">请输入正确的中文姓名</div>
+      <label class="item item-input">
+        <span class="input-label">手　机：</span>
+        <input name="mobile" ng-model="ctrl.stolen.mobile" type="tel" placeholder="请输入手机" lcb-validator="mobile">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="applyForm.mobile.$dirty && applyForm.mobile.$invalid">请输入正确的手机号</div>
+      <div class="item item-input lcb-input-button-right">
+        <label for="code" class="input-label">验证码：</label>
+        <input name="code" id="code" ng-model="ctrl.stolen.code" maxlength="6" type="number" placeholder="请输入验证码">
+        <div>
+          <button type="button" class="button button-clear button-light" ng-disabled="applyForm.mobile.$invalid" ng-click="ctrl.sendCode()" count-down>获取验证码</button>
+        </div>
+      </div>
+      <label class="item item-input">
+        <span class="input-label">车牌号：</span>
+        <input name="licenseNumber" ng-model="ctrl.stolen.license_no" type="text" maxlength="20" placeholder="请输入车牌号" required lcb-validator="licenseNumber">
+      </label>
+      <div class="item item-divider lcb-item-error text-right" ng-show="applyForm.licenseNumber.$dirty && applyForm.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+      <label class="item item-input">
+        <span class="input-label">身份证：</span>
+        <input name="id" ng-model="ctrl.stolen.id_card" type="text" maxlength="20" placeholder="请输入身份证" required lcb-validator="idCard">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="applyForm.id.$dirty && applyForm.id.$invalid">请输入正确的身份证号</div>
+
+      <div class="text-center light">领取代表您已经理解并同意该<a href="javascript:void(0)" class="light" ng-click="ctrl.showModal('agreement')">服务协议内容</a></div>
+
+      <div id="actions" class="padding text-center">
+        <button class="button" ng-disabled="applyForm.$invalid" ng-click="ctrl.apply()">领　取</button>
+      </div>
+      
+    </form>
+
+  </ion-content>
+</ion-view>

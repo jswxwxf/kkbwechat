@@ -1,0 +1,37 @@
+#dvr-score {
+
+  .lcb-trendbox {
+
+    border-radius: 5px;
+
+    > div:first-child {
+      color: white;
+      font-size: 12pt;
+      padding-bottom: 10px;
+      margin: 0 5px;
+      border-bottom: 1px solid white;
+    }
+
+    > div:last-child {
+      padding-bottom: 0;
+    }
+
+  }
+
+  #score {
+    background-color: #8b9bf1;
+  }
+
+  #mileage {
+    background-color: #91b1fb;
+  }
+
+  #duration {
+    background-color: #93c4fd;
+  }
+
+  #behaviour {
+    background-color: #82d7fd;
+  }
+
+}

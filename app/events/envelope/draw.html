@@ -1,0 +1,21 @@
+<ion-view view-title="{{ctrl.title}}" class="lcb-envelope-container lcb-envelope-base" hide-nav-bar="true">
+  <ion-content>
+
+    <div id="envelope-draw" ng-if="!ctrl.failed">
+      <img src="/static/images/envelope/stage.png" class="lcb-img-responsive">
+    </div>
+
+    <div id="envelope-fail" ng-if="ctrl.failed">
+
+      <div id="message" class="text-center">
+        <img src="/static/images/envelope/stage_fail.png" class="lcb-img-responsive">
+        <h3>好遗憾<br>你与<span class="assertive">红包</span>擦肩而过</h3>
+      </div>
+
+      <div class="text-center" id="again-button"><button class="button button-assertive lcb-bigger-font2" ng-click="ctrl.draw()" ng-disabled="!ctrl.drawAvailable">{{ ctrl.drawAvailable ? '不服再摇' : '机会用尽' }}</button></div>
+      <div class="text-center padding"><a href="#" class="button button-clear button-small lcb-bigger-font2" ui-sref="envelope.list">查看我的历史红包</a></div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

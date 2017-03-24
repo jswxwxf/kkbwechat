@@ -1,0 +1,23 @@
+#comac-follow {
+
+  text-align: center;
+  h3 {
+    color: white;
+  }
+  img {
+    width: 50%;
+    margin-top: 25px;
+  }
+
+}
+
+#comac-follow-container {
+
+  background-image: url('/static/images/comac/background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #941e1e;
+
+  @include lcb-center-all(100%);
+
+}

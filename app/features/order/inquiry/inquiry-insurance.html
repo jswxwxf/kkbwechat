@@ -1,0 +1,33 @@
+<ion-view id="insurance-inquiry-insurance-container" view-title="选择保险">
+  <ion-content>
+    
+    <form id="insurance-inquiry-insurance" name="ctrl.insuranceForm" novalidate class="padding-vertical dark">
+
+      <div class="padding lcb-white-bg lcb-font-note">
+        <h3>选择保险公司 <span class="assertive">*</span></h3>
+      </div>
+      <div class="lcb-white-bg lcb-border-vertical lcb-margin-bottom">
+        <company-selector name="company" id="company-selector" ng-model="ctrl.inquiry.company" companies="ctrl.companies"></company-selector>
+      </div>
+      <!--div id="hint" class="padding-vertical">
+        <div ng-if="!ctrl.isEmpty(ctrl.inquiry.company) && ctrl.inquiry.product_id == 1" class="padding-horizontal">根据您的驾驶评级，在<span>{{ctrl.inquiry.company.company}}</span>公司购买车险,可以获得<span>{{ctrl.inquiry.company.discount}}%</span>的折扣</div>
+        <div ng-if="!ctrl.isEmpty(ctrl.inquiry.company) && ctrl.inquiry.product_id == 4" class="padding-horizontal">您当前有<span>{{ctrl.credit}}</span>的行车收益可以抵扣车险保费，今日下单购买<span>{{ctrl.inquiry.company.company}}</span>的车险，更将获得下单立减优惠。</div>
+      </div-->
+
+      <ion-checkbox ng-model="ctrl.inquiry.renewal" class="item-checkbox-right checkbox-assertive">直接按上一年险种投保</ion-checkbox>
+      <div ng-hide="ctrl.inquiry.renewal">
+        <div class="padding lcb-white-bg lcb-font-note">
+          <h3>自定义险种组合 <span class="assertive">*</span></h3>
+        </div>
+        <package-selector id="detail" ng-model="ctrl.pkg"></package-selector>
+      </div>
+
+      <div class="padding-bottom text-center lcb-margin-top">如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a></div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-assertive lcb-bigger-font2" ng-disabled="ctrl.insuranceForm.$invalid" ng-click="ctrl.commitInquiry()">立即报价</button>
+  </ion-footer-bar>
+</ion-view>

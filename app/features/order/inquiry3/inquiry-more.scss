@@ -1,0 +1,17 @@
+#insurance-inquiry3-more {
+  
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+}
+
+#insurance-inquiry3-more-container {
+
+  .lcb-footer-button-container {
+    padding: 0;
+    .button {
+      border-radius: 0;
+    }
+  }
+
+}

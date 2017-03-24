@@ -1,0 +1,38 @@
+.lcb-car-selector {
+
+  .item {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    .item-note {
+      width: 70%;
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &.disabled .item-note {
+      color: lightgray;
+    }
+  }
+
+}
+
+.lcb-car-selector-container {
+
+  .lcb-result-list {
+    margin-top: $bar-height;
+    padding-bottom: 3 * $bar-height;
+  }
+
+  .lcb-query-bar {
+    position: absolute;
+    top: $bar-height;
+    z-index: 5;
+    width: 100%;
+    background-color: white;
+    border-bottom: $lcb-border;
+    input {
+      font-size: 12pt;
+    }
+  }
+
+}

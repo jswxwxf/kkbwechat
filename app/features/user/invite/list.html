@@ -1,0 +1,29 @@
+<ion-view id="user-invite-list-container" view-title="受邀好友列表">
+  <ion-content>
+  
+    <div id="user-invite-list">
+
+      <img src="/static/images/banner_invitations.png" class="lcb-img-responsive">
+
+      <div class="padding">
+        <table>
+          <tr>
+            <th>好友手机号</th>
+            <th>注册时间</th>
+            <th class="lcb-activated">是否激活盒子</th>
+            <th class="lcb-grade">终评等级</th>
+          </tr>
+          <tr ng-repeat="invitee in ctrl.list">
+            <td>{{invitee.mobile | lcbProtect}}</td>
+            <td>{{lcbUtils.formatDate(invitee.created_at)}}</td>
+            <td>{{invitee.has_activated_device ? '是' : '否'}}</td>
+            <td >{{invitee.grade || '--'}}</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

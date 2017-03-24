@@ -1,0 +1,64 @@
+<ion-view view-title="提现至">
+  <ion-content>
+  
+    <div id="user-draw" class="padding-vertical">
+
+      <form name="ctrl.wechatForm" class="list" novalidate>
+        <lcb-radio ng-model="ctrl.account_type" ng-value="3" class="checkbox-balanced item-divider lcb-no-border-top" required ng-disabled="ctrl.balance.balance < 10">微信红包（需绑定“开开保”微信号，且余额大于10元）</lcb-radio>
+        <div class="item item-divider lcb-hint lcb-font-note lcb-no-border-top lcb-no-border-bottom">
+          预计 <span>2</span> 个工作日到帐
+        </div>
+      </form>
+    
+      <form name="ctrl.alipayForm" class="list" novalidate>
+        <lcb-radio ng-model="ctrl.account_type" ng-value="1" class="checkbox-balanced item-divider lcb-no-border-top" required ng-disabled="ctrl.balance.balance < 200">支付宝帐户（余额大于200元可选此方法）</lcb-radio>
+        <label class="item item-input">
+          <span class="input-label">帐户</span>
+          <input ng-model="ctrl.alipayDraw.alipay_account" type="text" maxlength="50" placeholder="请输入支付宝帐户" required ng-disabled="ctrl.account_type != 1">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">姓名</span>
+          <input ng-model="ctrl.alipayDraw.name" type="text" maxlength="20" placeholder="请输入姓名" required ng-disabled="ctrl.account_type != 1">
+        </label>
+        <div class="item lcb-item-divider"></div>
+        <label class="item item-input">
+          <span class="input-label">金额</span>
+          <input ng-model="ctrl.alipayDraw.amounts" min="1" type="number" placeholder="本次最多可以提现 {{ctrl.balance.balance}} 元" required ng-disabled="ctrl.account_type != 1">
+        </label>
+        <div class="item item-divider lcb-hint lcb-font-note lcb-no-border-bottom">
+          预计 <span>2</span> 个工作日到帐
+        </div>
+      </form>
+      
+      <form name="ctrl.bankForm" class="list">
+        <lcb-radio ng-model="ctrl.account_type" ng-value="2" class="checkbox-balanced item-divider lcb-no-border-top" required ng-disabled="ctrl.balance.balance < 200">银行帐户（余额大于200元可选此方法）</lcb-radio>
+        <label class="item item-input">
+          <span class="input-label">开户人</span>
+          <input ng-model="ctrl.bankDraw.name" type="text" maxlength="20" placeholder="请输入开户人" required ng-disabled="ctrl.account_type != 2">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">开户行</span>
+          <input ng-model="ctrl.bankDraw.bank" type="text" maxlength="20" placeholder="请输入开户行" required ng-disabled="ctrl.account_type != 2">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">卡号</span>
+          <input ng-model="ctrl.bankDraw.bank_account" maxlength="50" type="number" placeholder="请输入银行卡号" required ng-disabled="ctrl.account_type != 2">
+        </label>
+        <div class="item lcb-item-divider"></div>
+        <label class="item item-input">
+          <span class="input-label">金额</span>
+          <input ng-model="ctrl.bankDraw.amounts" min="1" type="number" placeholder="本次最多可以提现 {{ctrl.balance.balance}} 元" required ng-disabled="ctrl.account_type != 2">
+        </label>
+        <div class="item item-divider lcb-hint lcb-font-note lcb-no-border-bottom">
+          预计 <span>2</span> 个工作日到帐
+        </div>
+      </form>
+      
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="ctrl.isInvalid()" ng-click="ctrl.draw()">提现</button>
+      </div>
+      
+    </div>
+  
+  </ion-content>
+</ion-view>

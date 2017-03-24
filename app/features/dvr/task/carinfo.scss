@@ -1,0 +1,10 @@
+#dvr-task-carinfo {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  h4 {
+    font-size: 16px;
+  }
+
+}

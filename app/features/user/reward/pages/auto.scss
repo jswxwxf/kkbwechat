@@ -1,0 +1,62 @@
+#user-reward-auto {
+
+  #total {
+    color: white;
+    height: 150px;
+    background: {
+      image: url('/static/images/auto_reward.png');
+      repeat: no-repeat;
+      size: cover;
+    }
+  }
+
+  #radar {
+    div:first-child {
+      padding-right: 13px;
+      position: relative;
+      top: 15px;
+      font-size: 1.1em;
+    }
+    div:last-child {
+      width: 210px;
+      height: 110px;
+      position: absolute;
+      right: -50px;
+      top: 40px;
+    }
+  }
+
+  #daily {
+    margin-top: -5px;
+    background-color: white;
+    .row {
+      margin-top: 5px;
+      > .col:first-child {
+        margin-left: 25px;
+        position: relative;
+      }
+    }
+    .lcb-amount {
+      font-size: 1.1em;
+    }
+    .icon {
+      position: absolute;
+      width: 20px;
+      left: -20px;
+    }
+  }
+
+  #intro {
+    p {
+      margin-bottom: 0;
+      text-indent: 2em;
+    }
+  }
+
+  #actions {
+    button {
+      margin: 0;
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+<ion-view view-title="补充行驶证信息">
+  <ion-content>
+
+    <form id="insurance-quote-license" name="licenseForm" novalidate class="list padding-vertical dark">
+
+      <label class="item">
+        请补充车牌号为 {{ctrl.inquiry.license_no}} 的行驶证照片
+      </label>
+      <div id="photos" class="row lcb-white-bg lcb-border-bottom">
+        <div class="col">
+          <img ng-src="{{::ctrl.license_vehicle.front || '/static/images/license_front.png'}}" class="lcb-img-responsive">
+          <input type="file" accept="image/*" ng-model='ctrl.license_vehicle.front' lcb-file-uploader lcb-file-use-src="true" required>
+        </div>
+        <div class="col">
+          <img ng-src="{{::ctrl.license_vehicle.back || '/static/images/license_second.png'}}" class="lcb-img-responsive">
+          <input type="file" accept="image/*" ng-model='ctrl.license_vehicle.back' lcb-file-uploader lcb-file-use-src="true">
+        </div>
+      </div>
+
+      <div class="padding">
+        <button type="button" class="button button-block button-assertive lcb-bigger-font2" ng-disabled="licenseForm.$invalid" ng-click="ctrl.saveLicense()">提交</button>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,123 @@
+.lcb-tripbox {
+
+  background-color: #529BFC;
+  border-radius: 5px;
+  margin: 0 15px;
+  box-shadow: 0 0 10px #aaa;
+
+  @include small-screen() {
+    margin: 0 5px;
+  }
+
+  .lcb-tripbox-time {
+    color: white;
+    padding: 5px 0;
+  }
+
+  .lcb-tripbox-trip {
+
+    border-bottom: $lcb-border;
+    border-bottom-width: 2px;
+    margin: 10px 30px;
+    margin-top: -10px;
+    position: relative;
+
+    img:first-child, img:last-child {
+      width: 25px;
+      position: relative;
+      top: 15px;
+    }
+    img:first-child {
+      left: -10px;
+    }
+    img:last-child {
+      right: -10px;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: -11px;
+      font-size: 6pt;
+    }
+    .lcb-acce-point {
+      color: red;
+    }
+    .lcb-brake-point {
+      color: #33afe9;
+    }
+    .lcb-turn-point {
+      color: #2ad56e;
+    }
+
+  }
+
+  .lcb-tripbox-status {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 35px;
+    >.col {
+      margin-top: 10px;
+    }
+    > .col:first-child {
+      white-space: nowrap;
+      > span {
+        display: inline-block;
+        font-size: 17pt;
+        line-height: 20pt;
+        margin: 5px;
+        > span {
+          font-size: 10pt;
+        }
+      }
+    }
+    > .col:last-child {
+      white-space: nowrap;
+      > div {
+        display: inline-block;
+        font-size: 10pt;
+        margin: auto 2px;
+        > div {
+          margin: 0 auto;
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          margin-bottom: 5px;
+          color: white;
+          background-size: contain;
+        }
+      }
+      > div:first-child > div {
+        background-image: url('/static/images/dvr/bg_accel.png');
+      }
+      > div:nth-child(2) > div {
+        background-image: url('/static/images/dvr/bg_brake.png');
+      }
+      > div:last-child > div {
+        background-image: url('/static/images/dvr/bg_turn.png');
+        width: 37px;
+      }
+    }
+  }
+
+  .lcb-tripbox-action {
+    color: gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    > div {
+      text-indent: 2em;
+      width: 85%;
+      @include ellipsis();
+    }
+    img {
+      position: absolute;
+      height: 20px;
+      &:first-child {
+        left: 30px;
+      }
+      &:last-child {
+        right: 30px;
+      }
+    }
+  }
+
+}

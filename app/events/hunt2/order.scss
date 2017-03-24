@@ -1,0 +1,88 @@
+#hunt2-order-container {
+
+  border-radius: 5px;
+  height: 405px;
+
+  .bar-footer {
+    padding: 7px;
+    margin: 0;
+    height: 60px;
+    .button {
+      margin: 0;
+      font-size: 13pt;
+      border-radius: 25px;
+    }
+  }
+
+}
+
+#hunt2-order {
+
+  #beautyAvatar {
+    position: relative;
+    img:first-child {
+      width: 70px;
+    }
+    img:last-child {
+      position: absolute;
+      right: 5px;
+      bottom: 15px;
+    }
+  }
+
+  #tags {
+    span {
+      border: 1px solid #f1abab;
+      border-radius: 5px;
+      padding: 3px 5px;
+      font-size: 10pt;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 2px;
+      display: inline-block;
+      width: 70px;
+      text-align: center;
+      background-color: #ff6868;
+      color: white;
+    }
+  }
+
+  #description {
+    padding: 20px 10px;
+    font-size: 13pt;
+    font-weight: bold;
+    background-color: #044ca2;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  #route {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 11pt;
+    img {
+      height: 20px;
+      position: relative;
+      top: 4px;
+    }
+    td {
+      padding: 5px;
+    }
+  }
+
+  #distance {
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 50px;
+    width: 95%;
+    background-color: lightgrey;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 11pt;
+    span {
+      color: red;
+    }
+  }
+
+}

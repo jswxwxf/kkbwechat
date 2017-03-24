@@ -1,0 +1,38 @@
+#welcome-talk {
+
+  a {
+    text-decoration: none;
+    color: $dark;
+    font-size: 16px;
+  }
+
+  .lcb-active {
+    border-bottom: 1px solid red;
+    > a {
+      color: red;
+    }
+  }
+
+  .lcb-talk {
+    span {
+      padding-left: 10px;
+    }
+    > div:first-child {
+      min-height: 150px;
+      position: relative;
+      h4 {
+        min-width: 100%;
+        position: absolute;
+        bottom: 0;
+        color: white;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 5px;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+}

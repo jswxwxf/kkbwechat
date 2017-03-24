@@ -1,0 +1,12 @@
+<div class="list padding-vertical">
+  <label class="item item-input">
+    <span class="input-label">用户名</span>
+    <input name="username" ng-model="ctrl.editUser.name" type="text" maxlength="20" placeholder="请输入用户名" required lcb-validator="username">
+  </label>
+  <div class="item item-divider lcb-item-error text-center" ng-show="editForm.username.$dirty && editForm.username.$invalid">请输入正确的用户名</div>
+</div>
+
+<div class="padding">
+  <p class="lcb-bigger-font text-center">您的手机帐号： {{ctrl.user.mobile}}</p>
+  <span class="lcb-font-note">用户名只能修改一次，设置用户名时必须包含字母和数字，以字母开头，字母不区分大小写，长度为4-20字符</span>
+</div>

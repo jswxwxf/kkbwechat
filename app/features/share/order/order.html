@@ -1,0 +1,39 @@
+<div class="lcb-share-order">
+  <div class="item item-icon-left">
+    <i class="icon lcb-icon-car"></i>
+    车牌
+    <span class="item-note">
+      {{ctrl.order.license_no}}
+    </span>
+  </div>
+  <div class="item item-icon-left">
+    <i class="icon lcb-icon-company"></i>
+    保险公司
+    <span class="item-note">
+      {{ctrl.order.company | lcbInsuranceCompany}}
+    </span>
+  </div>
+  <div class="item item-icon-left">
+    <i class="icon lcb-icon-time"></i>
+    保障期限
+    <span class="item-note">
+      {{ctrl.order.valid_from}} - {{ctrl.order.valid_until}}
+    </span>
+  </div>
+  <div class="item item-icon-left" ng-if="!ctrl.isEvent()">
+    <i class="icon lcb-icon-list"></i>
+    险种列表
+  </div>
+  <div class="lcb-detail light-bg text-center lcb-normal-font" ng-if="!ctrl.isEvent()">
+    <package-viewer package="ctrl.order"></package-viewer>
+  </div>
+  <div class="item item-icon-left">
+    <i class="icon lcb-icon-money"></i>
+    保费
+  </div>
+  <div class="lcb-fees item">
+    <div>商业险(85折): <span>{{ctrl.order.commercial | lcbCurrency:{ type: 'float', yuan: true } }}</span></div>
+    <div>交强险: <span>{{ctrl.order.compulsory | lcbCurrency:{ type: 'float', yuan: true } }}</span></div>
+    <div ng-if="!ctrl.isEvent()">车船税: <span>{{ctrl.order.tax | lcbCurrency:{ type: 'float', yuan: true } }}</span></div>
+  </div>
+</div>

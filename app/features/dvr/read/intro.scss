@@ -1,0 +1,25 @@
+#dvr-read-intro {
+
+  h4, p, li {
+    font-size: 1.3em;
+    line-height: 25px;
+  }
+
+  p, li {
+    font-size: 1.2em;
+    color: $dark;
+  }
+
+  ol {
+    padding-left: 30px;
+  }
+
+  .lcb-img-responsive {
+    max-width: 400px;
+  }
+
+}
+
+#dvr-read-intro-container {
+  background-color: white;
+}

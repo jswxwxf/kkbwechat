@@ -1,0 +1,114 @@
+<ion-view view-title="绿色车险">
+  <ion-content>
+
+    <div id="welcome">
+
+      <ion-slide-box auto-play="true">
+        <ion-slide>
+          <div class="box blue" ui-sref="insurance.green">
+            <img src="static/images/green_banner01.png">
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box blue" ui-sref="user.device">
+            <img src="static/images/green_banner02.png">
+          </div>
+        </ion-slide>
+      </ion-slide-box>
+
+      <div id="summary" class="row row-no-padding">
+        <div class="col">
+          <div ui-sref="user.reward">
+            <div>昨日收益</div>
+            <span class="energized">{{ctrl.user.awrads || '--'}}</span>
+            <img src="static/images/icon_yesterday2x.png" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="row row-no-padding">
+            <div class="col" id="total">
+              <div class="row">
+                <div class="col col-center">
+                  <div>累计收益</div>
+                  <span class="energized">{{ctrl.user.total_awrads || '--'}}</span>
+                </div>
+                <div class="col">
+                  <img src="static/images/icon_total2x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-no-padding">
+            <div class="col">
+              <div ui-sref="user.travel" class="row row-center padding-top">
+                <div class="col">驾驶评分</div>
+                <div class="col" id="score">{{ctrl.user.score || '--'}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="insureance" class="list">
+        <span class="item">
+          <span class="row row-no-padding">
+            <span class="col col-center" ui-sref="insurance.green">
+              <img src="static/images/kkb15.png" class="image" />
+            </span>
+            <span class="col col-50" ui-sref="insurance.green">
+              <h2 class="padding-bottom">绿色车险<img src="static/images/ico_hot.png"></h2>
+              <p>携手平安，天天返现送不停</p>
+            </span>
+            <span class="col col-20 col-center">
+              <button class="button button-small button-outline button-energized lcb-purchase" ui-sref="insurance.green.register">登记<br/>报名</button>
+            </span>
+          </span>
+        </span>
+        <span class="item">
+          <span class="row row-no-padding">
+            <span class="col col-center" ui-sref="user.device">
+              <img src="static/images/device.png" class="image" />
+            </span>
+            <span class="col col-50" ui-sref="user.device">
+              <h2 class="padding-bottom">盒子激活通道<img src="static/images/ico_hot.png"></h2>
+              <p>赶紧激活开始领取奖励!</p>
+            </span>
+            <span class="col col-20 col-center">
+              <button id="device" class="button button-small button-outline button-energized" ui-sref="user.device">激活<br/>盒子</button>
+            </span>
+          </span>
+        </span>
+        <!--span class="item">
+          <span class="row row-no-padding">
+            <span class="col">
+              <img src="static/images/picture_sanze2x.png" class="image" />
+            </span>
+            <span class="col col-67">
+              <h2 class="padding-bottom">重大三责互助险<img src="static/images/ico_hot.png"></h2>
+              <p>年付100元，省300元</p>
+            </span>
+            <span class="col col-10 col-center text-right">
+              <span class="energized padding-right">￥100</span>
+            </span>
+          </span>
+        </span>
+        <span class="item" ui-sref="insurance.compensate">
+          <span class="row row-no-padding">
+            <span class="col">
+              <img src="static/images/picture_stop2x.png" class="image" />
+            </span>
+            <span class="col col-67">
+              <h2 class="padding-bottom">专车停运补偿<img src="static/images/ico_new.png"></h2>
+              <p>你开专车，我保障</p>
+            </span>
+            <span class="col col-10 col-center">
+              <span class="energized padding-right">免费</span>
+            </span>
+          </span>
+        </span-->
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

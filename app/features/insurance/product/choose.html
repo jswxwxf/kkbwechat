@@ -1,0 +1,28 @@
+<ion-view view-title="产品选择">
+  <ion-content class="dark">
+
+    <form name="ctrl.chooseForm" id="insurance-product-choose" novalidate>
+
+      <lcb-radio ng-model="ctrl.product" ng-value="'kkb'"  class="item-checkbox-right checkbox-balanced" required>
+        <img src="static/images/kkb15.png" />
+        <div>
+          <h2>绿色车险</h2>
+          <div>天天有返现，年底有红包</div>
+        </div>
+      </lcb-radio>
+      <lcb-radio ng-model="ctrl.product" ng-value="'auto'"  class="item-checkbox-right checkbox-balanced" required>
+        <img src="static/images/auto.png" />
+        <div>
+          <h2>凹凸专属产品</h2>
+          <span>(限深圳地区)</span>
+          <div>车辆租一天，保费省一天</div>
+        </div>
+      </lcb-radio>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-block button-balanced lcb-bigger-font" ng-disabled="ctrl.chooseForm.$invalid" ng-click="ctrl.forward()">确定</button>
+  </ion-footer-bar>
+</ion-view>

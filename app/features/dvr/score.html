@@ -1,0 +1,41 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">驾驶行为分析</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('charts')">关闭</button>
+  </ion-header-bar>
+  <ion-content delegate-handle="charts">
+
+    <div id="dvr-score" class="padding-bottom">
+
+      <div id="score" class="lcb-margin lcb-trendbox">
+        <div class="padding">评分<span class="pull-right">{{ctrl.chartData.score}}分</span></div>
+        <div class="padding">
+          <lcb-chart chart-of="drive-score" height="110"></lcb-chart>
+        </div>
+      </div>
+
+      <div id="mileage" class="lcb-margin lcb-trendbox">
+        <div class="padding">里程<span class="pull-right">{{ctrl.chartData.distance}}公里</span></div>
+        <div class="padding">
+          <lcb-chart chart-of="mileage-score" height="110"></lcb-chart>
+        </div>
+      </div>
+
+      <div id="duration" class="lcb-margin lcb-trendbox">
+        <div class="padding">时长<span class="pull-right">{{ctrl.lcbUtils.formatDuration(ctrl.chartData.duration, { h: true, m: true })}}</span></div>
+        <div class="padding">
+          <lcb-chart chart-of="duration-score" height="110"></lcb-chart>
+        </div>
+      </div>
+
+      <div id="behaviour" class="lcb-margin lcb-trendbox">
+        <div class="padding">百公里三急<span class="pull-right">{{ctrl.chartData.behavior}}次</span></div>
+        <div class="padding">
+          <lcb-chart chart-of="behaviour-score" height="110"></lcb-chart>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-modal-view>

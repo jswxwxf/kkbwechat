@@ -1,0 +1,11 @@
+<div class="lcb-ticket-card">
+  <div ng-class="ctrl.className">
+    <span><sub>￥</sub><span ng-bind="ctrl.ticket.amounts | lcbCurrency:{ type: 'int' } "></span></span>
+    <h3>{{ctrl.ticket.card_type}}</h3>
+    <span>有效期至{{ctrl.ticket.valid_to}}</span>
+  </div>
+  <div>
+    <!--button class="button button-outline button-small button-dark" ng-hide="ctrl.isInvalid()">复制编号</button-->
+    编号：<span ng-class="ctrl.className" class="lcb-selectable">{{ctrl.ticket.serial_no}}</span>
+  </div>
+</div>

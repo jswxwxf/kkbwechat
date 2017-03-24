@@ -1,0 +1,44 @@
+<ion-view view-title="车辆信息">
+  <ion-content>
+
+    <div id="user-car">
+
+      <div class="list">
+        <a class="item item-icon-right" ui-sref="user.car.edit({ car_id: ctrl.car.car_id })">
+          车牌号
+          <span class="item-note">{{ctrl.car.license_no}}</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+        <div class="item item-icon-right">
+          品牌
+          <div class="item-note">{{ctrl.car.car_brand}}</div>
+        </div>
+        <div class="item item-icon-right">
+          车系
+          <div class="item-note">{{ctrl.car.car_series}}</div>
+        </div>
+        <div class="item item-icon-right">
+          车型
+          <div class="item-note">{{ctrl.car.car_model}}</div>
+        </div>
+        <div class="item item-icon-right">
+          车架号
+          <div class="item-note">{{ctrl.car.car_vin}}</div>
+        </div>
+        <div class="item item-icon-right">
+          发动机号
+          <div class="item-note">{{ctrl.car.engine_no}}</div>
+        </div>
+        <div class="item item-icon-right">
+          油品
+          <div class="item-note">{{ctrl.car.oil_type | lcbOil}}</div>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <car-switcher value="ctrl.car" type="button" on-change="ctrl.loadCar(car)" class="lcb-bigger-font"></car-switcher>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,18 @@
+.lcb-file-upload {
+  position: relative;
+  input[type='file'] {
+    z-index: 5;
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

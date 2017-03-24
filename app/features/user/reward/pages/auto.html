@@ -1,0 +1,34 @@
+<ion-content id="user-reward-auto">
+
+  <div id="total" class="padding">
+  </div>
+
+  <div id="daily">
+    <div class="row lcb-border-bottom">
+      <div class="col col-67 lcb-border-right">
+        <img src="static/images/icon_ticket.png" class="icon">租车奖励（元/天）<br/>
+        车辆出租当天免保费<br/>
+        <span class="lcb-smaller-font dark">此项奖励请到凹凸租车收益中进行领取</span>
+      </div>
+      <div class="col col-center text-center assertive lcb-amount">{{ctrl.rewards.drive_reward_max}}</div>
+    </div>
+    <div class="row lcb-border-bottom">
+      <div class="col col-67 lcb-border-right">
+        <img src="static/images/icon_envelop.png" class="icon">年底奖励（元）<br/>
+        保单年度内持续使用智能设备<br/>
+        <span class="lcb-smaller-font dark">此项奖励将在保单到期后进行发放</span>
+      </div>
+      <div class="col col-center text-center assertive lcb-amount">{{ctrl.rewards.annually_reward}}</div>
+    </div>
+  </div>
+
+  <div id="intro" class="padding lcb-font-note lcb-smaller-font">
+    独家合作伙伴：凹凸共享租车
+    <p>凹凸共享租车率先将“车共享”的理念带入中国。平台凭借优质的服务让车主安心将自己的闲置车辆通过平台租给他人使用；租客拥有更为丰富的车型选择，并且能够使用车况更好的车辆。</p>
+    <p>平台车辆超高性价比，平均租金低于市场价30%-50%，车型数量远远大于传统市场。</p>
+  </div>
+
+</ion-content>
+<ion-footer-bar class="lcb-footer-button-container">
+  <car-switcher value="ctrl.car" type="button" on-change="ctrl.reload(car)" class="lcb-bigger-font"></car-switcher>
+</ion-footer-bar>

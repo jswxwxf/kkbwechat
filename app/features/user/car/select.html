@@ -1,0 +1,12 @@
+<ion-view view-title="车辆选择" id="user-car-select-container">
+  <ion-content>
+
+    <div id="user-car-select" ng-repeat="car in ctrl.cars">
+      <ion-radio ng-model="ctrl.car" ng-value="car" ng-change="ctrl.carSelected()" icon="ion-checkmark">车牌号：{{car.license_no}}</ion-radio>
+    </div>
+
+  </ion-content>
+  <div class="bar bar-footer">
+    <button ui-sref="user.car.add" class="button button-block button-balanced lcb-bigger-font">添加车辆</button>
+  </div>
+</ion-view>

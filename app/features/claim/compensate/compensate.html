@@ -1,0 +1,67 @@
+<ion-view view-title="专车停运补偿" id="claim-compensate-container">
+  <ion-content class="has-footer">
+
+    <form name="ctrl.compensateForm" id="claim-compensate" novalidate>
+
+      <div class="list padding-top">
+        <label class="item item-input">
+          <span class="input-label">姓名 <span class="assertive">*</span></span>
+          <input name="name" ng-model="ctrl.compensate.name" type="text" placeholder="请输入姓名" required lcb-validator="name" ng-readonly="ctrl.readonly()">
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.compensateForm.name.$dirty && ctrl.compensateForm.name.$invalid">请输入正确的中文姓名</div>
+        <label class="item item-input">
+          <span class="input-label">身份证 <span class="assertive">*</span></span>
+          <input name="id" ng-model="ctrl.compensate.id_card" type="text" placeholder="请输入车主身份证" required lcb-validator="idCard" ng-readonly="ctrl.readonly()">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.compensateForm.id.$dirty && ctrl.compensateForm.id.$invalid">请输入正确格式的身份证号</div>
+        <label class="item item-input">
+          <span class="input-label">发动机号 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.compensate.engine_no" type="text" placeholder="请输入发动机号" required ng-readonly="ctrl.readonly()">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">停运日期 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.compensate.stoped_on" type="date" placeholder="请输入停运日期" required ng-readonly="ctrl.readonly()">
+        </label>
+      </div>
+
+      <div class="list">
+        <div class="item item-icon-right lcb-file-upload" lcb-disable-by="ctrl.readonly()">
+          <span>行驶证暂停证明 <span class="assertive">*</span></span>
+          <img ng-src="{{ctrl.compensate.stoped_cert}}" ng-if="ctrl.readonly()">
+          <img src="/static/images/sample_license_no.jpg" ng-if="!ctrl.readonly()">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='ctrl.compensate.stoped_cert' lcb-file-uploader lcb-file-use-src="true" required ng-if="!ctrl.readonly()">
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item item-icon-right lcb-file-upload" lcb-disable-by="ctrl.readonly()">
+          <span>罚款缴纳凭证 <span class="assertive">*</span></span>
+          <img ng-src="{{ctrl.compensate.forfeit_cert}}" ng-if="ctrl.readonly()">
+          <img src="/static/images/sample_punish.jpg" ng-if="!ctrl.readonly()">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='ctrl.compensate.forfeit_cert' lcb-file-uploader lcb-file-use-src="true" required ng-if="!ctrl.readonly()">
+        </div>
+      </div>
+
+      <div class="list padding-bottom">
+        <div class="item">
+          有效期
+          <span class="item-note">{{ctrl.compensate.validate_from}} - {{ctrl.compensate.validate_to}}</span>
+        </div>
+        <div class="item">
+          订单状态
+          <span class="item-note energized">{{ctrl.compensate.status}}</span>
+        </div>
+        <div class="item item-divider lcb-font-note lcb-no-border-bottom lcb-smaller-font lcb-normal-fontweight">
+          备注：{{ctrl.getStatusText()}}
+        </div>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <div class="bar bar-footer">
+    <button type="button" class="button button-block button-balanced lcb-bigger-font" ng-disabled="!ctrl.canClaim()" ng-click="ctrl.claim()">申请理赔</button>
+  </div>
+</ion-view>

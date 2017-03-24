@@ -1,0 +1,41 @@
+<ion-view view-title="完善资料">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content>
+
+    <form name="registerForm" id="oauth-detail" class="list padding-vertical" novalidate>
+
+      <label class="item item-input">
+        <span class="input-label">手机号</span>
+        <input name="mobile" ng-model="ctrl.user.mobile" type="tel" placeholder="请输入注册手机" required lcb-validator="mobile">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="registerForm.mobile.$dirty && registerForm.mobile.$invalid">请输入正确的手机号</div>
+      <div class="item item-input lcb-input-button-right">
+        <label for="code" class="input-label">验证码</label>
+        <input name="code" id="code" ng-model="ctrl.user.code" maxlength="6" type="number" placeholder="请输入验证码" required lcb-validator="verifyCode">
+        <div class="lcb-border-left">
+          <button type="button" class="button button-clear button-balanced" ng-disabled="registerForm.mobile.$invalid" ng-click="ctrl.sendCode()" count-down>获取验证码</button>
+        </div>
+      </div>
+      <label class="item item-input">
+        <span class="input-label">密　码</span>
+        <input name="password" ng-model="ctrl.user.password" type="password" maxlength="20" placeholder="请设置密码" required lcb-validator="password">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="registerForm.password.$dirty && registerForm.password.$invalid">请输入格式正确的密码</div>
+
+      <div class="more-padding text-center lcb-font-note lcb-smaller-font">密码只能使用字母和数字，长度为6-20位，字母区分大小写</div>
+
+      <div id="actions" class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="registerForm.$invalid" ng-click="ctrl.register()">确定</button>
+        <button type="button" class="button button-block button-stable lcb-bigger-font" ui-sref="oauth.bind">已注册手机请点这里</button>
+      </div>
+
+      <div class="more-padding">
+        注册代表你已经阅读并同意<a ng-click="ctrl.showModal('license')" href="javascript:void(0)" class="balanced lcb-link-button lcb-normal-font">《用户服务协议》</a>和<a ng-click="ctrl.showModal('privacy')" href="javascript:void(0)" class="balanced lcb-link-button lcb-normal-font">《隐私条款》</a>
+        <div class="padding-top lcb-font-note">您正在使用微信帐号登录本站，请完善以上信息享受更优质的服务，开开保将保障您信息的隐私。<br>该绑定设置只需一次，下次使用微信登录，即可直接快捷登录。</div>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

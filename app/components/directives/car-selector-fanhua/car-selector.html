@@ -1,0 +1,34 @@
+<ion-modal-view class="lcb-car-selector-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">选择品牌型号</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('car-selector')">关闭</button>
+  </ion-header-bar>
+  <form name="queryForm" class="bar bar-subheader item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="请输入车型关键字" ng-model="ctrl.carInfo.vehicleName" required>
+    </label>
+    <button class="button button-balanced button-clear" ng-disabled="queryForm.$invalid" ng-click="ctrl.searchCar()">
+      搜索
+    </button>
+  </form>
+  <ion-content>
+
+    <div class="padding has-header lcb-position-relative" ng-if="!ctrl.result">
+      <h4>精确查找</h4>
+      <p>请按照行驶证上的车型输入</p>
+      <h4>模糊查找</h4>
+      <p>输入车辆品牌、车系名称、排气量等关键词，支持中文、英文和拼音输入，如“奔驰”、“马自达2.0”等。</p>
+      <h4>进口车查找</h4>
+      <p>请按照行驶证上的VIN码输入。</p>
+    </div>
+
+    <div class="list has-header" ng-if="ctrl.result">
+      <lcb-radio ng-model="ctrl.selectedCar" ng-value="car" class="item item-checkbox-right checkbox-balanced" ng-repeat="car in ctrl.result.carModelInfos">
+        <h2>{{car.vehicleName}}</h2>
+        <p>{{car.gearbox}} {{car.seat}} {{car.maketDate}} {{car.taxPrice}}</p>
+      </lcb-radio>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,24 @@
+#claim-lcb {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  input[name='end_mile']:read-only {
+    background-color: transparent;
+  }
+
+  #actions {
+    span {
+      position: relative;
+      top: 20px;
+    }
+    img {
+      float: right;
+      width: 100px;
+      max-width: 100px;
+      height: 65px;
+      max-height: 65px;
+    }
+  }
+
+}

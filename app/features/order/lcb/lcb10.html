@@ -1,0 +1,101 @@
+<ion-view view-title="里程保1.0订单">
+  <ion-content>
+
+    <div id="order-lcb">
+
+      <div class="padding-vertical">
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-car"></i>
+          车牌
+          <span class="item-note">
+            {{ctrl.order.license_no}}
+          </span>
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-company"></i>
+          保险公司
+          <span class="item-note">
+            {{ctrl.order.company | lcbInsuranceCompany}}
+          </span>
+        </div>
+        <<div id="order-number">
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-commercial-sn"></i>
+          商业险保单号<span class="item-note">{{ctrl.order.commercial_sn}}</span>
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-compulsory-sn"></i>
+          交强险保单号<span class="item-note">{{ctrl.order.compulsory_sn}}</span>
+        </div>
+      </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-time"></i>
+          保障期限
+          <span class="item-note">
+            {{ctrl.order.valid_from}} - {{ctrl.order.valid_to}}
+          </span>
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-list"></i>
+          险种列表
+        </div>
+        <div id="detail" class="light-bg text-center">
+          <package-viewer package="ctrl.order"></package-viewer>
+        </div>
+        <div class="item item-icon-left">
+          <i class="icon lcb-icon-money"></i>
+          保费
+        </div>
+        <div id="lcb10fees" class="item lcb-normal-font">
+          <table>
+            <thead>
+              <tr><th>类别</th><th>标准价格</th><th>实缴价格</th><th>最惠价格</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>商业险</th><td>{{ctrl.order.standard_commercial}}</td><td><span class="lcb-less">{{ctrl.order.real_commercial}}<br/>(-15%)</span></td><td><span
+                  class="lcb-less">{{ctrl.order.discount_commercial}}<br/>(-25%)</span></td></tr>
+              <tr><th>交强险</th><td>{{ctrl.order.compulsory}}</td><td>{{ctrl.order.compulsory}}</td><td>{{ctrl.order.compulsory}}</td></tr>
+              <tr><th>车船税</th><td>{{ctrl.order.tax}}</td><td>{{ctrl.order.tax}}</td><td>{{ctrl.order.tax}}</td></tr>
+              <tr><th>合计</th><td>{{ctrl.order.standard_price}}</td><td>{{ctrl.order.real_price}}</td><td>{{ctrl.order.discount_price}}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="padding lcb-font-note lcb-no-border lcb-smaller-font lcb-normal-fontweight">
+        <span class="assertive">*</span> 最惠价格（年底返现）
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon lcb-icon-currency"></i>
+        返现（元）
+      </div>
+
+      <div id="reward" class="lcb-white-bg padding lcb-border-bottom">
+        <div class="row text-center padding-top">
+          <lcb-score-bar label="10000" score="100" value="ctrl.order.rewards[0]" vertical="true" color-class="lcb-money-color"></lcb-score-bar>
+          <lcb-score-bar label="12500" score="80" value="ctrl.order.rewards[1]" vertical="true" color-class="lcb-money-color"></lcb-score-bar>
+          <lcb-score-bar label="15000" score="60" value="ctrl.order.rewards[2]" vertical="true" color-class="lcb-money-color"></lcb-score-bar>
+          <lcb-score-bar label="17500" score="40" value="ctrl.order.rewards[3]" vertical="true" color-class="lcb-money-color"></lcb-score-bar>
+          <lcb-score-bar label="20000" score="20" value="ctrl.order.rewards[4]" vertical="true" color-class="lcb-money-color"></lcb-score-bar>
+        </div>
+        <div class="lcb-font-note lcb-smaller-font text-center padding-bottom">安全行驶里程（km）</div>
+      </div>
+
+      <div id="rule">
+        <h3>安全里程奖励标准</h3>
+        <ol class="lcb-ol">
+          <li>保险车辆下一保单年度不发生保险理赔，且行驶公里数在10000公里以内，获得最高安全里程奖励。</li>
+          <li>保险车辆下一保单年度不发生保险理赔，如行驶里程超过10000公里，每超过2500公里，安全里程奖励减少20%，直至奖励归零。</li>
+          <li>保险车辆下一保单年度如发生保险理赔，安全里程奖励为零。</li>
+          <li>具体奖励比例因地域和保险公司不同而有所差异。</li>
+        </ol>
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-balanced button-block lcb-bigger-font" ui-sref="claim.lcb({ order_id: ctrl.order.order_id, order_type: 3 })" >申请返现</button>
+  </ion-footer-bar>
+</ion-view>

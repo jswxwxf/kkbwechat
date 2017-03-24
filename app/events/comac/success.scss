@@ -1,0 +1,23 @@
+#comac-success {
+
+  text-align: center;
+  h3, h4 {
+    color: white;
+  }
+  img {
+    width: 50%;
+    margin-top: 25px;
+  }
+
+}
+
+#comac-success-container {
+
+  background-image: url('/static/images/comac/background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #941e1e;
+
+  @include lcb-center-all(100%);
+
+}

@@ -1,0 +1,64 @@
+#user-reward-general {
+
+  #total {
+    background-color: #f56400;
+    color: white;
+    .icon {
+      padding-right: 5px;
+    }
+    #amount {
+      font-size: 3em;
+      text-align: center;
+      padding: 15px 0px;
+    }
+  }
+
+  #radar {
+    div:first-child {
+      padding-right: 13px;
+    }
+    div:last-child {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      right: -50px;
+      top: 30px;
+    }
+  }
+
+  #legend {
+    margin: 0 auto;
+    > div {
+      display: inline-block;
+    }
+    > div:first-child {
+      > div {
+        display: inline-block;
+        vertical-align: middle;
+        height: 15px;
+        width: 30px;
+        background-color: #ffad00;
+        margin-right: 2px;
+      }
+    }
+    > div:last-child {
+      > div {
+        display: inline-block;
+        vertical-align: middle;
+        height: 15px;
+        width: 30px;
+        background-color: #ff6700;
+        margin-right: 2px;
+      }
+    }
+  }
+
+  .item-toggle {
+    background-color: transparent;
+    border: none;
+    .toggle {
+      top: 20px;
+    }
+  }
+
+}

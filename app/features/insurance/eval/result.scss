@@ -1,0 +1,88 @@
+#insurance-eval-result {
+
+  padding-top: 15px;
+
+  h3, h4 {
+    color: white;
+  }
+
+  #save {
+    padding-top: 5px;
+    > div {
+      margin: 0 auto;
+      font-size: 20pt;
+      line-height: 100px;
+      height: 100px;
+      width: 100px;
+      background-image: url("/static/images/white_circle.png");
+      background-size: contain;
+    }
+  }
+
+  #compare {
+    padding: 8px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    table {
+      width: 100%;
+      th {
+        text-align: right;
+        width: 55px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        position: relative;
+        top: -2px;
+      }
+      td {
+        padding: 5px;
+        padding-left: 15px;
+        vertical-align: middle;
+        .lcb-progress-bar {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      tr > td:last-child {
+        width: 50px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+
+  button#inquiry {
+    color: white;
+    font-size: 13pt!important;
+    font-weight: bold;
+  }
+
+}
+
+#insurance-eval-result-container {
+
+  height: 440px;
+
+  background-color: #30c34d;
+
+  .lcb-footer-button-container {
+
+    background-color: #30c34d;
+
+    button {
+      background-color: transparent;
+      color: white;
+      font-size: 13pt;
+      font-weight: bold;
+    }
+
+  }
+
+  .bar-header {
+    background-color: #30c34d;
+    .title, .button-clear {
+      color: white;
+    }
+  }
+
+}

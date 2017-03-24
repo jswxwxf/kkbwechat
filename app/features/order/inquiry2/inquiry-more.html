@@ -1,0 +1,41 @@
+<ion-view id="insurance-inquiry2-container" view-title="补充信息">
+  <ion-content id="insurance-inquiry2">
+
+    <form id="step2" novalidate class="list padding-vertical">
+
+      <label class="item item-input">
+        <span class="input-label">车型代码 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.model_code" type="text" placeholder="请输入车型代码">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">车辆识别代号 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.frame_no" type="text" placeholder="请输入车辆识别代号">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">发动机号码 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.engine_no" type="text" placeholder="请输入发动机号">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">注册日期 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.register_date" type="date" placeholder="请输入注册日期">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">发证日期（过户车填写） </span>
+        <input ng-model="ctrl.insurance.lincense_date" type="date" placeholder="请输入注册日期">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">核定载客 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.seat_count" type="number" placeholder="请输入核定载客">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">整备质量 <span class="assertive">*</span></span>
+        <input ng-model="ctrl.insurance.vehicle_weight" type="number" placeholder="请输入整备质量">
+      </label>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-click="ctrl.moreSubmitted()">确认信息</button>
+  </ion-footer-bar>
+</ion-view>

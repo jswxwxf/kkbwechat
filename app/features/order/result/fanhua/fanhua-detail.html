@@ -1,0 +1,131 @@
+<ion-view id="insurance-fanhua-detail-container" view-title="查看详情">
+  <ion-content>
+
+    <div id="insurance-fanhua-detail" class="dark">
+
+      <div class="list">
+
+        <div class="padding-vertical">
+          <div class="item">
+            订单状态
+            <span class="item-note">
+              {{ctrl.detail.taskStateDescription}}
+            </span>
+          </div>
+          <div class="item">
+            保险公司
+            <span class="item-note">
+              {{ctrl.detail.prvName}}
+            </span>
+          </div>
+          <div class="item">
+            保费合计
+            <span class="item-note">
+              {{ctrl.getTotalPrice() | lcbCurrency}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.remark">
+            备注
+            <span class="item-note">
+              {{ctrl.detail.remark}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.bizInsureInfo.startDate">
+            商业险生效日期
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.bizInsureInfo.startDate}} - {{ctrl.detail.insureInfo.bizInsureInfo.endDate}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.efcInsureInfo.startDate">
+            交强险生效日期
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.efcInsureInfo.startDate}} - {{ctrl.detail.insureInfo.efcInsureInfo.endDate}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.bizInsureInfo.policyNo">
+            商业险保单号
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.bizInsureInfo.policyNo}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.efcInsureInfo.policyNo">
+            交强险保单号
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.efcInsureInfo.policyNo}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.delivery.expressCompanyName">
+            快递公司
+            <span class="item-note">
+              {{ctrl.detail.delivery.expressCompanyName}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.delivery.expressNo">
+            快递单号
+            <span class="item-note">
+              {{ctrl.detail.delivery.expressNo}}
+            </span>
+          </div>
+        </div>
+
+        <div class="padding-bottom">
+          <div class="item item-divider">
+            车辆信息
+          </div>
+          <div class="item">
+            车牌号
+            <span class="item-note">
+              {{ctrl.detail.carInfo.carLicenseNo}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.carInfo.vehicleName">
+            品牌型号
+            <span class="item-note">
+              {{ctrl.detail.carInfo.vehicleName}}
+            </span>
+          </div>
+        </div>
+
+        <div class="padding-bottom">
+          <div class="item item-divider">
+            车主信息
+          </div>
+          <div class="item">
+            姓名
+            <span class="item-note">
+              {{ctrl.detail.carOwner.name}}
+            </span>
+          </div>
+        </div>
+
+        <div class="padding-bottom">
+          <div class="item item-divider">
+            险种信息
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.efcInsureInfo.premium">
+            交强险
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.efcInsureInfo.premium | lcbCurrency}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.taxInsureInfo.taxFee">
+            车船税
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.taxInsureInfo.taxFee | lcbCurrency}}
+            </span>
+          </div>
+          <div class="item" ng-if="ctrl.detail.insureInfo.bizInsureInfo.premium">
+            商业险合计
+            <span class="item-note">
+              {{ctrl.detail.insureInfo.bizInsureInfo.premium | lcbCurrency}}
+            </span>
+          </div>
+          <package-viewer-fanhua package="ctrl.detail.insureInfo.bizInsureInfo.riskKinds"></package-viewer-fanhua>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

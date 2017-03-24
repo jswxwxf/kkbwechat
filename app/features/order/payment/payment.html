@@ -1,0 +1,49 @@
+<ion-view view-title="支付" id="order-payment-container">
+  <ion-content class="has-footer">
+
+    <form name="ctrl.payForm" id="order-payment" novalidate>
+
+      <div class="list padding-top">
+        <div class="item">
+          产品名称
+          <span class="item-note">{{ctrl.order.product}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item item-divider lcb-white-bg lcb-normal-fontweight">支付方式</div>
+        <!--lcb-radio ng-model="ctrl.payment.pay_type" ng-value="1" class="item-checkbox-right checkbox-balanced item-icon-left" required ng-if="!lcbConfig.inWechat()"><i class="icon lcb-icon-pos"></i>线下POS机</lcb-radio-->
+        <lcb-radio ng-model="ctrl.payment.pay_type" ng-value="4" class="item-checkbox-right checkbox-balanced item-icon-left" required ng-if="lcbConfig.inWechat()"><i class="icon lcb-icon-wechat"></i>微信支付</lcb-radio>
+        <lcb-radio ng-model="ctrl.payment.pay_type" ng-value="5" class="item-checkbox-right checkbox-balanced item-icon-left" required ng-if="!lcbConfig.inWechat()"><i class="icon lcb-icon-alipay"></i>支付宝</lcb-radio>
+      </div>
+
+      <!--div class="list">
+        <div class="item item-input item-select">
+          <div class="input-label">优惠券</div>
+          <select>
+            <option value="">未使用</option>
+          </select>
+        </div>
+      </div-->
+
+      <div class="list padding-bottom">
+        <div class="item">
+          <span class="lcb-font-note">订单金额</span>
+          <div class="item-note energized">{{ctrl.order.pay_price | lcbCurrency:{ yuan: true, type: 'float' } }}</div>
+        </div>
+        <!--div id="coupon" class="item">
+          <span class="lcb-font-note">抵用券</span>
+          <div class="item-note energized">-￥100</div>
+        </div-->
+      </div>
+
+    </form>
+
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="button-bar">
+      <button class="button button-dark button-outline lcb-bigger-font" ng-click="ctrl.cancel()">取消订单</button>
+      <button class="button button-balanced lcb-bigger-font" ng-disabled="ctrl.payForm.$invalid" ng-click="ctrl.pay()">去支付</button>
+    </div>
+  </div>
+</ion-view>

@@ -1,0 +1,40 @@
+#lcb-menu {
+
+  background-image: url('/static/images/side_menu_bg.png');
+  background-size: cover;
+  height: 100%;
+
+  .item, .item-content {
+    background-color: transparent;
+  }
+
+  .lcb-hotline {
+    width: 63%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .lcb-user-container > div {
+    margin-bottom: -20px;
+  }
+
+  .lcb-user {
+    padding-bottom: 15px;
+    margin-left: -10px;
+    img {
+      width: 50px;
+      border-radius: 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      vertical-align: middle;
+      margin: auto 5px;
+    }
+    span {
+      display: inline-block;
+      line-height: 50px;
+      min-width: 120px;
+    }
+  }
+
+}

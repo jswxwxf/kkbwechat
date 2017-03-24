@@ -1,0 +1,37 @@
+#user-reward-assess-hint-container {
+
+  height: 400px;
+
+  $color: #0db35e;
+
+  #user-reward-assess-hint {
+    padding: 7px;
+  }
+
+  .bar-header, .popover-arrow:after {
+    background-color: $color;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  dd {
+    padding-bottom: 5px;
+  }
+
+  dl {
+    margin-bottom: 0px;
+  }
+
+  .bar-footer {
+    .button-block {
+      margin: 0;
+    }
+    border-bottom: {
+      left-radius: 10px;
+      right-radius: 10px;
+    }
+  }
+
+}

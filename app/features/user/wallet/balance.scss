@@ -1,0 +1,33 @@
+#user-balance {
+  sub {
+    margin-right: 5px;
+  }
+  > div:first-child {
+    background-color: white;
+    margin: 10px 0;
+    > h1 {
+      padding: 25px;
+      > sub {
+        position: relative;
+        top: 0px;
+        font-size: 0.5em;
+      }
+    }
+    > p {
+      padding: 0 30px;
+    }
+  }
+  > div:last-child {
+    span {
+      display: block;
+    }
+    > div {
+      padding: 5px 15px;
+      font-size: 1em;
+      > div:first-child {
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+}

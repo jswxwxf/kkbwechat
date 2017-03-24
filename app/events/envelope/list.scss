@@ -1,0 +1,35 @@
+#envelope-list {
+
+  color: #f6e596;
+
+  table {
+    width: 100%;
+    font-size: 12pt;
+    th {
+      font-weight: bold;
+    }
+    td, th {
+      padding: 10px 2px;
+      text-align: center;
+    }
+  }
+
+  #again-button {
+    > .button {
+      background-color: #f6e998;
+      color: #e95a4d;
+    }
+  }
+
+  #empty {
+    > div:first-child {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
+  }
+
+}
+
+#envelope-list-container {
+  background-color: #e95a4d;
+}

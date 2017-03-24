@@ -1,0 +1,18 @@
+#insurance-fanhua {
+
+  .item-body {
+    h2, p {
+      margin-top: 0;
+    }
+  }
+
+  .lcb-cross-out {
+    > * {
+      text-decoration: line-through;
+      color: grey;
+    }
+    border-color: lightgrey;
+    background-color: lightgrey;
+  }
+
+}

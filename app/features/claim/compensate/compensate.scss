@@ -1,0 +1,53 @@
+#claim-compensate {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  .input-label {
+    width: 30%;
+  }
+
+  .item-note {
+    color: $dark;
+  }
+
+  .energized {
+    color: $energized;
+  }
+
+  .ion-chevron-right {
+    font-size: 12pt;
+  }
+
+  .lcb-file-upload > span {
+    position: relative;
+    top: 22px;
+  }
+
+  img {
+    float: right;
+    width: 100px;
+    max-width: 100px;
+    height: 65px;
+    max-height: 65px;
+  }
+
+  .lcb-disabled {
+    padding-right: 20px;
+  }
+
+}
+
+
+#claim-compensate-container {
+
+  .button-block {
+    margin: 0;
+  }
+
+  .bar-footer {
+    padding: 5px;
+    height: 54px;
+  }
+
+}

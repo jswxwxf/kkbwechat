@@ -1,0 +1,38 @@
+#insurance-inquiry-insurance {
+  
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  h3 {
+    font-size: 12pt;
+    position: relative;
+    top: 5px;
+    left: 5px;
+  }
+
+  .item-checkbox .item-content {
+    font-weight: bold;
+  }
+
+  .lcb-margin-bottom {
+    margin-bottom: 20px;
+  }
+
+  .lcb-package-selector {
+    margin-bottom: 0;
+  }
+
+  #hint {
+    font-size: 11pt;
+    line-height: 20pt;
+    color: $dark;
+    span {
+      color: $assertive;
+    }
+  }
+
+}
+
+#insurance-inquiry-insurance-container {
+
+}

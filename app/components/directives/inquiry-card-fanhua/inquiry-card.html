@@ -1,0 +1,10 @@
+<div class="lcb-inquiry-card-fanhua" ui-sref="order.fanhua({ inquiry_id: ctrl.inquiry.taskId })">
+  <div class="row">
+    <div class="col positive lcb-bold lcb-bigger-font lcb-nowrap">{{ctrl.inquiry.carLicenseNo}}</div>
+    <div class="col text-right">{{ctrl.lcbUtils.formatDate(ctrl.inquiry.createdAt)}}</div>
+  </div>
+  <div class="row lcb-bigger-font">
+    <div class="col">车主：{{ctrl.inquiry.quote.carOwner.name}}</div>
+    <div class="col text-right">共<span class="energized"> {{ctrl.getCount()}} </span>家完成报价</div>
+  </div>
+</div>

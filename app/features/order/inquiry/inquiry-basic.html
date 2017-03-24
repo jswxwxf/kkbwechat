@@ -1,0 +1,50 @@
+<ion-view id="insurance-inquiry-basic-container" view-title="车险报价">
+  <ion-content>
+
+    <form id="insurance-inquiry-basic" name="ctrl.basicForm" novalidate>
+
+      <div class="list padding-top">
+
+        <lcb-city-picker class="dark" ng-model="ctrl.inquiry.city">城　市 <span class="assertive">*</span></lcb-city-picker>
+        <label class="item item-input">
+          <span class="input-label">车牌号 <span class="assertive">*</span></span>
+          <input name="licenseNumber" ng-model="ctrl.inquiry.license_no" type="text" placeholder="请输入车牌号，如：沪A98981" required lcb-validator="licenseNumber">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.basicForm.licenseNumber.$dirty && ctrl.basicForm.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+        <label class="item item-input">
+          <span class="input-label">姓　名 <span class="assertive">*</span></span>
+          <input name="name" ng-model="ctrl.inquiry.name" type="text" placeholder="请输入车主姓名" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">身份证 <span class="assertive">*</span></span>
+          <input name="id" ng-model="ctrl.inquiry.id_card" type="text" placeholder="请输入车主身份证" required lcb-validator="idCard">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.basicForm.id.$dirty && ctrl.basicForm.id.$invalid">请输入正确格式的身份证号</div>
+
+      </div>
+
+      <div class="list">
+        <div class="item lcb-white-bg lcb-normal-fontweight">请选择车险产品 <span class="assertive">*</span></div>
+        <lcb-radio ng-repeat="p in ctrl.products.products" ng-model="ctrl.inquiry.product_id" ng-value="p.product_id" class="item-checkbox-right checkbox-assertive" required>{{p.product}}</lcb-radio>
+      </div>
+
+      <div id="hint" class="padding">
+        温馨提示<br>
+        <span class="icon ion-arrow-up-b"></span> 交强险/车船税可提前{{ctrl.products.compulsory_forward}}天投保<br>
+        <span class="icon ion-arrow-up-b"></span> 商业险可提前{{ctrl.products.commercial_forward}}天投保<br>
+        如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <div class="button-bar">
+      <button type="button" class="button button-outline button-assertive lcb-bigger-font2" ui-sref="inquiry.list">
+        历史报价
+        <span class="badge badge-assertive" ng-if="ctrl.pendingInquiries.length > 0">{{ctrl.pendingInquiries.length}}</span>
+      </button>
+      <button type="button" class="button button-assertive lcb-bigger-font2" ng-disabled="ctrl.basicForm.$invalid" ng-click="ctrl.createInquiry()">新建报价</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

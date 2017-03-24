@@ -1,0 +1,31 @@
+<ion-view view-title="活动介绍">
+  <ion-nav-buttons side="right">
+    <span class="icon lcb-icon-camera-own lcb-hunt2-success-icon-camera-own" ui-sref="hunt2.selfie"></span>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div id="hunt2-intro">
+
+      <img src="static/images/hunt2_intro.png" class="lcb-img-responsive">
+
+      <div id="intro" class="more-padding lcb-margin">
+        <div class="lcb-title lcb-border-bottom">活动说明</div>
+        <ol class="lcb-ol">
+          <li>免费安装智能车载设备正常行驶三个月，即可得到开开保相对应车险折扣评级说明。</li>
+          <li>凭借评级在开开保车险平台中选择车主自己喜欢的保险公司进行投保，每家保险公司对应折扣不同。</li>
+          <li>本次活动的保险公司有中国人保、中国人寿、太平洋保险、安盛天平、大地保险、紫金保险。</li>
+          <li>如对车险折扣不满意，行驶满三个月仅需将设备归还至开开保即可，全程免费！</li>
+          <li>活动时间：<span class="assertive">2016年4月8日—4月10日 11:30—16:30</span></li>
+          <li ng-if="ctrl.source == 'yd'">免责声明：本次活动解释权归易到用车、开开保公司所有</li>
+          <li ng-if="ctrl.source == 'db'">免责声明：本次活动解释权归嘀友、开开保公司所有</li>
+          <li ng-if="ctrl.source == 'kkb'">免责声明：本次活动解释权归开开保公司所有</li>
+        </ol>
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-assertive lcb-bigger-font" ui-sref="hunt2.deliver">开始接单</button>
+  </ion-footer-bar>
+</ion-view>

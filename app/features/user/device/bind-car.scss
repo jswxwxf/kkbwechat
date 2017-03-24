@@ -1,0 +1,21 @@
+#user-bind-car {
+
+  .ion-chevron-right {
+    font-size: 12pt;
+  }
+  .item-icon-right {
+    padding-right: 48px;
+    .icon {
+      right: 4px;
+    }
+  }
+  #photo {
+    div:first-child {
+      font-size: 16px;
+    }
+    img {
+      height: 100px;
+    }
+  }
+
+}

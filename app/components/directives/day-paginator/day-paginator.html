@@ -1,0 +1,5 @@
+<form class="text-center dark lcb-day-paginator" novalidate>
+  <img src="/static/images/dvr/day_l.png" ng-click="ctrl.previousDay()">
+  <span class="padding-horizontal" ng-click="ctrl.pick()">{{ctrl.day.format('YYYY-MM-DD')}}</span>
+  <img src="/static/images/dvr/day_r.png" ng-click="ctrl.nextDay()" ng-disabled="ctrl.nextDisabled">
+</form>

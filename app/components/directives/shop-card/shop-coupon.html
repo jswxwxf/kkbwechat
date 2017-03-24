@@ -1,0 +1,19 @@
+<div class="lcb-shop-card" ng-class="{ 'lcb-shop-card-coupon': ctrl.card.available, 'lcb-shop-card-not-available': !ctrl.card.available}">
+  <div class="row row-center">
+    <div class="col col-20 text-center">
+      <img src="static/images/shop/icon_coupon.png" class="lcb-img-responsive lcb-shop-card-icon"><br/>
+      抵扣券
+    </div>
+    <div class="col">
+      <h4 class="lcb-nowrap">{{ctrl.card.name}}</h4>
+      <div>{{ctrl.card.cost_price}}里程豆</div>
+    </div>
+    <div class="col col-25 text-center lcb-nowrap">
+      <button class="button button-assertive button-outline button-small" ng-if="ctrl.card.available" ng-disabled="ctrl.parseInt(ctrl.bean) < ctrl.parseInt(ctrl.card.cost_price)" ng-click="ctrl.exchange()">兑换</button>
+      <button class="button button-assertive button-outline button-small" ng-if="!ctrl.card.available" disabled>无货</button>
+    </div>
+  </div>
+  <img src="../../../static/images/shop/shop_card_coupon_bottom.png" ng-if="ctrl.card.available" class="lcb-img-responsive lcb-shop-card-bottom">
+  <img src="static/images/shop/shop_card_not_available_bottom.png" ng-if="!ctrl.card.available" class="lcb-img-responsive lcb-shop-card-bottom">
+
+</div>

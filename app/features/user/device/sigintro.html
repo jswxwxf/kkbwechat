@@ -1,0 +1,71 @@
+<ion-modal-view id="user-sigintro-container">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">指示灯说明</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('sigintro')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+
+    <div id="user-sigintro" class="padding dark">
+
+      <div class="padding-vertical">
+        <div class="row">
+          <div class="col"><h4>设备初始化</h4></div>
+        </div>
+        <div class="row">
+          <div class="col col-67 lcb-head">指示灯状态描述</div>
+          <div class="col lcb-head">盒子状态描述</div>
+        </div>
+        <div class="row">
+          <div class="col col-67"><span class="lcb-blue">蓝</span>-<span class="lcb-purple">紫</span>-<span class="lcb-red">红</span>-灭（交替闪烁）</div>
+          <div class="col">持续1到3分钟</div>
+        </div>
+      </div>
+
+      <div class="padding-vertical">
+        <div class="row">
+          <div class="col"><h4>初始化完成</h4></div>
+        </div>
+        <div class="row">
+          <div class="col col-67 lcb-head">指示灯状态描述</div>
+          <div class="col lcb-head">盒子状态描述</div>
+        </div>
+        <div class="row">
+          <div class="col col-67"><span class="lcb-pink">粉</span>（常亮）</div>
+          <div class="col">持续两秒</div>
+        </div>
+      </div>
+
+      <div class="padding-vertical">
+        <div class="row">
+          <div class="col"><h4>设备运行</h4></div>
+        </div>
+        <div class="row">
+          <div class="col lcb-head text-center">设备上信号灯闪烁三次作为一次循环，<br> 代表设备状态</div>
+        </div>
+        <div class="row lcb-light">
+          <div class="col col-center">第一次闪烁</div>
+          <div class="col">
+            <span class="lcb-blue">(蓝)</span> GPS定位 <br>
+            <span class="lcb-red">(红)</span> GPS未定位
+          </div>
+        </div>
+        <div class="row lcb-light">
+          <div class="col col-center">第二次闪烁</div>
+          <div class="col">
+            <span class="lcb-blue">(蓝)</span> 车启动 <br>
+            <span class="lcb-red">(红)</span> 车熄火
+          </div>
+        </div>
+        <div class="row lcb-light">
+          <div class="col col-center">第三次闪烁</div>
+          <div class="col">
+            <span class="lcb-blue">(蓝)</span> 网络连接 <br>
+            <span class="lcb-red">(红)</span> 网络未连接
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-modal-view>

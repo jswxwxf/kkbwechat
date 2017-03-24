@@ -1,0 +1,86 @@
+#hunt2-deliver-container {
+
+}
+
+#hunt2-deliver {
+
+  padding-bottom: 15px;
+
+  h3 {
+    white-space: nowrap;
+    button {
+      margin-left: 5px;
+      margin-top: -2px;
+      width: 100px;
+      font-size: 13pt;
+      font-weight: bold;
+    }
+  }
+
+  .lcb-item {
+    margin-top: 15px;
+    span:last-child {
+      font-size: 14pt;
+      color: black;
+      margin-left: 10px;
+    }
+    span:nth-child(2) {
+      color: gray;
+      font-size: 18px;
+      margin-left: 15px;
+      margin-right: -5px;
+    }
+  }
+
+  .lcb-beauty {
+    position: relative;
+    float:  right;
+    width: 122px;
+    margin-top: -6px;
+    margin-right: -5px;
+    img {
+      padding: 0 15px;
+    }
+    .lcb-zoon {
+      position: absolute;
+      right: 0;
+      top: 60px;
+    }
+  }
+
+  .lcb-tags {
+    span {
+      border: 1px solid #EDDDC4;
+      border-radius: 5px;
+      font-size: 10pt;
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 1px;
+      display: inline-block;
+      width: 60px;
+      text-align: center;
+      background-color: #FDBF5C;
+      color: white;
+    }
+  }
+
+  /* The starting CSS styles for the enter animation */
+  .animate-show {
+    line-height: 20px;
+    opacity: 1;
+    padding: 10px;
+    background: white;
+  }
+
+  .animate-show.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+  }
+
+  .animate-show.ng-hide {
+    line-height: 0;
+    opacity: 0;
+    padding: 0 10px;
+  }
+
+}

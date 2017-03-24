@@ -1,0 +1,7 @@
+<div class="lcb-company-selector">
+  <div class="row" ng-repeat="line in ctrl.companies">
+    <div class="col lcb-company-logo" ng-class="'lcb-company-logo-' + line[0].company_id" ng-click="selectCompany(line[0].company_id)" id="{{line[0].company_id}}"><img class="lcb-company-selector" src="/static/images/ico_p_on2x.png"><img class="lcb-company-recommend" src="/static/images/flag_recommend.png" ng-if="$first"></div>
+    <div class="col lcb-company-logo" ng-class="'lcb-company-logo-' + line[1].company_id" ng-click="selectCompany(line[1].company_id)" id="{{line[1].company_id}}"><img class="lcb-company-selector" src="/static/images/ico_p_on2x.png"></div>
+    <div class="col lcb-company-logo" ng-class="'lcb-company-logo-' + line[2].company_id" ng-click="selectCompany(line[2].company_id)" id="{{line[2].company_id}}"><img class="lcb-company-selector" src="/static/images/ico_p_on2x.png"></div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<ion-view view-title="专车停运补偿" id="order-compensate-container">
+  <ion-content>
+
+    <div id="order-compensate">
+
+      <div class="list padding-top">
+        <div class="item">
+          姓名
+          <span class="item-note">{{ctrl.compensate.name}}</span>
+        </div>
+        <div class="item">
+          手机
+          <span class="item-note">{{ctrl.compensate.mobile}}</span>
+        </div>
+        <div class="item">
+          车牌号
+          <span class="item-note">{{ctrl.compensate.license_no}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          保障额度
+          <span class="item-note">{{ctrl.compensate.final_amount}}</span>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item">
+          有效期
+          <span class="item-note">{{ctrl.compensate.validate_from}} - {{ctrl.compensate.validate_to}}</span>
+        </div>
+        <div class="item">
+          订单状态
+          <span class="item-note energized">{{ctrl.compensate.status}}</span>
+        </div>
+        <div class="item item-divider lcb-font-note lcb-no-border-bottom lcb-smaller-font lcb-normal-fontweight">
+          注意事项：<br/>
+          有效期为激活次日0时起的30天内
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-if="ctrl.needActivate()" ng-click="ctrl.activate()">我要激活</button>
+    <button class="button button-block button-balanced lcb-bigger-font" ng-if="!ctrl.needActivate()" ng-disabled="!ctrl.canClaim()" ui-sref="claim.compensate">申请补偿</button>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,78 @@
+<ion-view view-title="专车停运补偿" id="claim-compensate2-container">
+  <ion-content>
+
+    <form name="ctrl.compensateForm" id="claim-compensate2" novalidate>
+
+      <div class="list padding-top">
+        <div class="item">
+          姓名 <span class="assertive">*</span>
+          <span class="item-note">{{ctrl.compensate.name}}</span>
+        </div>
+        <div class="item">
+          身份证 <span class="assertive">*</span>
+          <span class="item-note">{{ctrl.compensate.id_card | lcbProtect}}</span>
+        </div>
+        <div class="item">
+          车牌号 <span class="assertive">*</span>
+          <span class="item-note">{{ctrl.compensate.license_no}}</span>
+        </div>
+        <label class="item item-input">
+          <span class="input-label">停运日期 <span class="assertive">*</span></span>
+          <input ng-model="ctrl.claim.fined_on" type="date" placeholder="请输入停运日期" required>
+        </label>
+      </div>
+
+      <div class="list">
+        <div class="item item-icon-right lcb-file-upload">
+          <span>行驶证暂停证明 <span class="assertive">*</span></span>
+          <img src="/static/images/sample_license_no.jpg">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='ctrl.claim.evidence' lcb-file-uploader required>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item item-icon-right lcb-file-upload">
+          <span>罚款缴纳发票/收据 <span class="assertive">*</span></span>
+          <img src="/static/images/sample_punish.jpg">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='ctrl.claim.invoice' lcb-file-uploader required>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="item item-icon-right lcb-file-upload">
+          <span>专车订单截图 <span class="assertive">*</span></span>
+          <img src="/static/images/sample_punish.jpg">
+          <i class="icon ion-chevron-right"></i>
+          <input type="file" accept="image/*" ng-model='ctrl.claim.screenshot' lcb-file-uploader required>
+        </div>
+      </div>
+
+      <div class="list padding-top">
+        <div class="item">
+          接收补偿的银行卡信息
+        </div>
+        <label class="item item-input">
+          <span class="input-label">开户名</span>
+          <input ng-model="ctrl.claim.name" type="text" maxlength="20" placeholder="请输入开户人" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">开户行</span>
+          <input ng-model="ctrl.claim.bank_name" type="text" maxlength="20" placeholder="请输入开户行" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">卡号</span>
+          <input ng-model="ctrl.claim.card_no" maxlength="50" type="number" placeholder="请输入银行卡号" required>
+        </label>
+      </div>
+
+      <div class="padding-horizontal">备注：您可以直接电话到<a href="tel:4009663899">400-966-3899</a>进行咨询；也可在公众号“虎啸行车”中留言，客服人员会尽快回复。</div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-balanced lcb-bigger-font" ng-disabled="!ctrl.compensateForm.$valid" ng-click="ctrl.makeClaim()">申请理赔</button>
+  </ion-footer-bar>
+</ion-view>

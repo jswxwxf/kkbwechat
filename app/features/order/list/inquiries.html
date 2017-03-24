@@ -1,0 +1,11 @@
+<ion-view view-title="历史报价">
+  <ion-content>
+
+    <div id="inquiry-list" ng-repeat="inquiry in ctrl.inquiries | orderBy: '-'">
+      <inquiry-card inquiry="inquiry"></inquiry-card>
+    </div>
+
+    <h4 class="more-padding dark text-center" ng-if="isEmpty(ctrl.inquiries)">暂时没有您的报价信息</h4>
+
+  </ion-content>
+</ion-view>

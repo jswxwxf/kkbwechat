@@ -1,0 +1,111 @@
+#welcome {
+
+  .box {
+    display: block;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  #summary {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-top: $lcb-border;
+    border-bottom: $lcb-border;
+    img {
+      width: 100%;
+    }
+    > .col:first-child {
+      border-right: $lcb-border;
+      > div {
+        padding: 20px;
+      }
+    }
+    > .col:last-child {
+      > .row:first-child {
+        border-bottom: $lcb-border;
+      }
+    }
+    #total {
+      img {
+        width: 80%;
+      }
+    }
+    #score {
+      background-image: url("/static/images/icon_fenshu2x.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-size: 7vh;
+      text-align: center;
+      line-height: 10vh;
+      color: white;
+      padding-top: 0;
+    }
+  }
+
+  #actions {
+    padding-bottom: 20px;
+    img {
+      padding: 0 20px;
+      margin: 10px 0;
+      border-right: $lcb-border;
+    }
+    .col:last-child img {
+      border-right: none;
+    }
+  }
+
+  #insureance {
+    sup {
+      font-size: 0.75em;
+      color: $assertive;
+      top: -0.4em;
+    }
+    .button {
+      font-size: 13pt;
+      @include small-screen() {
+        font-size: 10pt;
+      }
+      line-height: normal;
+    }
+    .col-20 {
+      margin-right: 5px;
+    }
+    .item {
+      padding: 5px;
+      .col {
+        padding-top: 5px;
+      }
+      .col-50 {
+        padding-top: 15px;
+        padding-left: 5px;
+      }
+      .col-20 {
+        text-align: right;
+      }
+    }
+    * {
+      overflow: visible;
+    }
+    p {
+      font-size: 0.85em;
+    }
+    .image {
+      width: 80%;
+    }
+    h2 {
+      font-size: 1.2em;
+      img {
+        width: 25px;
+        position: relative;
+        left: 4px;
+      }
+    }
+    .col-67 {
+      padding-left: 5px;
+    }
+  }
+}

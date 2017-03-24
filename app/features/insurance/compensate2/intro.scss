@@ -1,0 +1,34 @@
+#insurance-compensate2-intro {
+
+  table {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+    tr {
+      th, td {
+        text-align: center;
+        border: $lcb-border;
+        padding: 5px 10px;
+      }
+      th {
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+#insurance-compensate2-intro-container {
+
+  .lcb-footer-button-container {
+    padding: 0;
+    height: 50px;
+    .button {
+      border-radius: 0;
+      width: 100%;
+      font-size: 12pt!important;
+      line-height: 45px;
+    }
+  }
+
+}

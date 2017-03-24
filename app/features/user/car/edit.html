@@ -1,0 +1,40 @@
+<ion-view view-title="{{ctrl.pageTitle}}">
+  <ion-content>
+
+    <form name="editForm" id="user-car-edit" novalidate>
+
+      <div class="list">
+        <div class="item" ng-if="ctrl.editing">
+          车牌号
+          <span class="item-note">{{ctrl.car.license_no}}</span>
+        </div>
+        <label class="item item-input" ng-if="!ctrl.editing">
+          <span class="input-label">车牌号 <span class="assertive">*</span></span>
+          <input name="licenseNumber" type="text" ng-model="ctrl.car.license_no" maxlength="20" placeholder="请输入车牌号，如：沪A98981" required lcb-validator="licenseNumber">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="editForm.licenseNumber.$dirty && editForm.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+        <car-selector brands="ctrl.brands" ng-model="ctrl.car.car"></car-selector>
+        <label class="item item-input item-select">
+          <span class="input-label">油品</span>
+          <select ng-model="ctrl.car.oil_type" ng-options="oil.oil_id as (oil.oil_type + oil.name_cn) for oil in ctrl.oils">
+            <option value="">请选择油品</option>
+          </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">车架号</span>
+          <input ng-model="ctrl.car.car_vin" type="text" maxlength="20" placeholder="请输入车架号">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">发动机号</span>
+          <input ng-model="ctrl.car.engine_no" type="text" maxlength="20" placeholder="请输入发动机号">
+        </label>
+      </div>
+
+      <div class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="editForm.$invalid" ng-click="ctrl.saveCar()">保存</button>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

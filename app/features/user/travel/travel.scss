@@ -1,0 +1,54 @@
+#ubi-travel {
+
+  .button-bar {
+    padding: 10px 70px;
+  }
+
+  #total {
+    background-color: white;
+    border-bottom: $lcb-border;
+    .row .col {
+      text-align: center;
+      .col50 {
+        position: relative;
+      }
+      svg {
+        transform: rotate(180deg) scale(1) skew(1deg) translate(0px);
+      }
+      > span {
+        position: absolute;
+        width: 100%;
+        font-size: 3em;
+        left: 0;
+        line-height: 100px;
+      }
+      div {
+        span:first-child {
+          font-size: 2em;
+        }
+        span:last-child {
+          color: grey;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  #summary {
+    img {
+      width: 20px;
+      position: absolute;
+    }
+    .lcb-summary-margin {
+      margin-left: 24px;
+    }
+    .lcb-congratulation {
+      text-indent: -14px;
+      padding-left: 40px;
+      .icon {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+<ion-view view-title="绑定已有帐户">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-content>
+
+    <form name="bindForm" id="oauth-bind" class="list padding-vertical" novalidate>
+
+      <label class="item item-input">
+        <span class="input-label">手机号</span>
+        <input name="mobile" ng-model="ctrl.user.mobile" type="tel" placeholder="请输入注册手机" required lcb-validator="mobile">
+      </label>
+      <div class="item item-divider lcb-item-error text-center" ng-show="bindForm.mobile.$dirty && bindForm.mobile.$invalid">请输入正确的手机号</div>
+      <div class="item item-input lcb-input-button-right">
+        <label for="code" class="input-label">验证码</label>
+        <input name="code" id="code" ng-model="ctrl.user.code" maxlength="6" type="number" placeholder="请输入验证码" required lcb-validator="verifyCode">
+        <div class="lcb-border-left">
+          <button type="button" class="button button-clear button-balanced" ng-disabled="bindForm.mobile.$invalid" ng-click="ctrl.sendCode()" count-down>获取验证码</button>
+        </div>
+      </div>
+
+      <div id="actions" class="padding">
+        <button type="button" class="button button-block button-balanced" ng-disabled="bindForm.$invalid" ng-click="ctrl.bind()">确定</button>
+      </div>
+
+      <div class="more-padding lcb-font-note">
+        绑定开开保帐户将享受更优质的服务，开开保将保障您信息的隐私。该绑定设置只需一次，下次使用微信登录，即可直接快捷登录。
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+#insurance-inquiry3-basic {
+  
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  #hint {
+    font-size: 11pt;
+    line-height: 20pt;
+    color: $dark;
+    .icon {
+      color: $assertive;
+    }
+  }
+
+}
+
+#insurance-inquiry3-basic-container {
+
+  .lcb-footer-button-container {
+    padding: 0;
+    .button-bar>.button:first-child {
+      border-radius: 0;
+    }
+    .button-bar>.button:last-child {
+      border-radius: 0;
+    }
+  }
+
+}

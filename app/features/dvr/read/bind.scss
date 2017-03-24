@@ -1,0 +1,17 @@
+#dvr-read-bind {
+
+    p {
+      margin-top: 50px;
+      font-size: 12pt;
+      line-height: 24px;
+    }
+    img {
+      width: 80%;
+    }
+
+}
+
+#dvr-read-bind-container {
+  @include lcb-center-all();
+  background-color: white;
+}

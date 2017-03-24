@@ -1,0 +1,45 @@
+<ion-view view-title="接单纪录" id="hunt2-fail-container">
+  <ion-content>
+
+    <div id="hunt2-fail">
+
+      <div id="route" class="padding lcb-white-bg">
+        <img id="fail" src="/static/images/hunt2/fail.png">
+        <h3>随叫随到</h3>
+        <table class="padding">
+          <tr>
+            <td><img src="/static/images/icon_clock.png"></td>
+            <td>{{now}}</td>
+          </tr>
+          <tr>
+            <td><img src="/static/images/icon_start.png"></td>
+            <td>{{beauty.boarding}}</td>
+          </tr>
+          <tr>
+            <td><img src="/static/images/icon_terminal.png"></td>
+            <td>省钱终点站</td>
+          </tr>
+        </table>
+      </div>
+      <div class="list">
+        <div class="item text-center lcb-smaller-font">输给{{car}}，不是你的错，手慢就是你不对了。</div>
+      </div>
+
+      <div id="compete" class="row row-no-padding text-center padding-vertical">
+        <div class="col">
+          <img src="/static/images/hunt2/driver1.png" class="lcb-img-responsive">
+          <div class="padding-top">您的爱车</div>
+        </div>
+        <div class="col col-center"><h3 class="dark">VS</h3></div>
+        <div class="col">
+          <img src="/static/images/hunt2/driver2.png" class="lcb-img-responsive">
+          <div class="padding-top">{{car}}</div>
+        </div>
+      </div>
+
+      <img id="failbeauty" src="/static/images/hunt2/failbeauty.png" class="lcb-img-responsive">
+
+    </div>
+
+  </ion-content>
+</ion-view>

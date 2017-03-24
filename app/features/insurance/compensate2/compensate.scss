@@ -1,0 +1,66 @@
+#insurance-compensate2 {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  padding-bottom: 10px;
+
+  .input-label {
+    width: 25%;
+  }
+
+  #verifycode {
+    #code {
+      flex: 1 120px;
+    }
+    > div:last-child {
+      position: relative;
+      left: -5px;
+      margin-top: -2px;
+      button {
+        display: inline-block;
+        font-size: 1em;
+        min-width: 100px;
+      }
+    }
+  }
+
+  .lcb-file-upload > span {
+    position: relative;
+    top: 22px;
+  }
+
+  img {
+    float: right;
+    width: 100px;
+    max-width: 100px;
+    height: 65px;
+    max-height: 65px;
+  }
+
+  .ion-chevron-right {
+    font-size: 12pt;
+  }
+
+  #agreement {
+    margin-top: -15px;
+    &.item {
+      background-color: transparent;
+      border: none;
+      font-size: 11pt;
+      @include small-screen() {
+        font-size: 10.5pt;
+      }
+    }
+    &.item-checkbox {
+      padding-left: 50px;
+    }
+    .item-content {
+      white-space: normal;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+}

@@ -1,0 +1,35 @@
+.lcb-earningtaskbox {
+
+  border-radius: 5px;
+  margin: 10px;
+  line-height: 30px;
+
+  .item-header {
+    color: white;
+    padding: 15px;
+    background-color: #529BFC;
+  }
+
+  .item {
+    .button {
+      margin-top: 5px;
+      &.disabled, &[disabled] {
+        opacity: 1;
+      }
+    }
+    .button-positive {
+      background-color: #529BFC;
+    }
+    .button-stable {
+      background-color: #D5D5D5;
+      color: white;
+    }
+  }
+
+  .item-more {
+    .button {
+      margin: 0;
+    }
+  }
+
+}

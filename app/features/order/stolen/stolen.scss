@@ -1,0 +1,19 @@
+#order-stolen {
+
+  .item-note {
+    color: $dark;
+  }
+
+  .energized {
+    color: #ff6e18;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 20px;
+    li {
+      white-space: pre-wrap;
+    }
+  }
+
+}

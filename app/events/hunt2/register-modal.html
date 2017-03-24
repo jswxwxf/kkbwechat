@@ -1,0 +1,28 @@
+<ion-modal-view id="hunt2-register-container">
+  <ion-header-bar class="bar-assertive">
+    <h1 class="title">请输入手机号</h1>
+    <button class="button button-clear" ng-click="ctrl.hideModal('register')">关闭</button>
+  </ion-header-bar>
+  <ion-content>
+    <div id="hunt2-register">
+      <form name="ctrl.registerForm" novalidate>
+        <label class="item item-input">
+          <span class="input-label">手机号</span>
+          <input name="mobile" ng-model="ctrl.registry.mobile" type="tel" placeholder="请输入手机" lcb-validator="mobile">
+        </label>
+        <div class="item item-divider lcb-item-error text-center" ng-show="ctrl.registerForm.mobile.$dirty && ctrl.registerForm.mobile.$invalid">请输入正确的手机号</div>
+        <div class="item item-input lcb-input-button-right">
+          <label for="code" class="input-label">验证码</label>
+          <input name="code" id="code" ng-model="ctrl.registry.code" maxlength="6" type="number" placeholder="请输入验证码" required>
+          <div>
+            <button type="button" class="button button-clear button-assertive" ng-disabled="ctrl.registerForm.mobile.$invalid" ng-click="ctrl.sendCode()" count-down2>获取验证码</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <button class="button button-block button-assertive lcb-bigger-font" ng-disabled="ctrl.registerForm.$invalid" ng-click="ctrl.register()">马上约单</button>
+  </ion-footer-bar>
+</ion-modal-view>

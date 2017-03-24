@@ -1,0 +1,41 @@
+<ion-view id="insurance-fanhua-container" view-title="报价列表">
+  <ion-nav-buttons side="right">
+    <button class="button button-positive button-clear" ui-sref="order.inquiry3.basic">新建报价</button>
+  </ion-nav-buttons>
+  <ion-content id="insurance-fanhua">
+
+    <div id="result" class="dark padding-vertical">
+
+      <div class="list" ng-repeat="(prvId, prvName) in ctrl.inquiry.providers">
+
+        <div class="item" ng-class="ctrl.emphasize(prvId)">
+          <span class="item-note">{{ctrl.getTotalPrice(ctrl.inquiry.data[prvId]) | lcbCurrency}}</span>
+          <h2>{{prvName}}</h2>
+        </div>
+
+        <div class="item" ng-if="!ctrl.inquiry.data[prvId]">
+          正在为您获取精确报价，请稍候……
+        </div>
+
+        <div class="item item-body" ng-if="ctrl.inquiry.data[prvId]">
+          <h2 class="calm">{{ctrl.inquiry.data[prvId].taskStateDescription}}</h2>
+          <p>{{ctrl.getTaskMessage(ctrl.inquiry.data[prvId])}}</p>
+          <p>
+            <a href="javascript:void(0)" ui-sref="order.fanhua.detail({ provider_id: prvId })" class="subdued" ng-if="!ctrl.lcbUtils.in(['20'], ctrl.inquiry.data[prvId].taskState)">查看详情</a>
+            <a href="javascript:void(0)" ui-sref="order.fanhua.pay({ provider_id: prvId })" class="subdued assertive" ng-if="ctrl.inquiry.data[prvId].taskState == 3">马上支付</a>
+            <span ng-if="!ctrl.uploadImagesDone">
+            <a href="javascript:void(0)" ng-click="ctrl.refund(ctrl.inquiry.data[prvId])" class="subdued assertive" ng-if="ctrl.lcbUtils.in(['5', '19'], ctrl.inquiry.data[prvId].taskState)">退款</a>
+            <a href="javascript:void(0)" ng-click="ctrl.showUploadImage(ctrl.inquiry.data[prvId])" class="subdued assertive" ng-if="ctrl.inquiry.data[prvId].taskState == 5">上传影像</a>
+            </span>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+  <!--ion-footer-bar class="lcb-footer-button-container">
+    <button type="button" class="button button-block button-assertive lcb-bigger-font2" ui-sref="order.inquiry3.insurance({ areaCode: ctrl.inquiry.quote.insureAreaCode, inquiry_id: ctrl.inquiry.taskId })">重新报价</button>
+  </ion-footer-bar-->
+</ion-view>

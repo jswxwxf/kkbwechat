@@ -1,0 +1,32 @@
+#user-draw {
+  > h1 {
+    padding: 25px;
+    > sub {
+      position: relative;
+      top: 0px;
+      font-size: 0.5em;
+    }
+  }
+  > p {
+    padding: 0 30px;
+  }
+  .item-checkbox {
+    padding-left: 50px;
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    .item-content {
+      font-size: 11pt;
+      white-space: normal;
+    }
+  }
+  .lcb-hint {
+    font-size: 1em;
+    > span {
+      color: red;
+    }
+  }
+  .list {
+    margin-bottom: 0;
+  }
+}

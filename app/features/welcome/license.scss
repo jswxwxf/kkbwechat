@@ -1,0 +1,29 @@
+#user-license, #user-privacy, #insurance-lcb-agreement, #stolen-rule, #stolen-agreement, .lcb-license {
+
+  p:first-child {
+    font-weight: bold;
+    text-indent: 2em;
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  li {
+    padding-bottom: 10px;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  ol.lcb-first {
+    list-style: decimal;
+  }
+
+  ol.lcb-second {
+    list-style: lower-alpha;
+  }
+
+}

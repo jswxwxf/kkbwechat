@@ -1,0 +1,26 @@
+#user-car-status {
+
+  .list {
+    margin-bottom: 0;
+    .item {
+      border: none;
+    }
+    .item:first-child {
+      border-top: $lcb-border;
+    }
+    .item:last-child {
+      border-bottom: $lcb-border;
+    }
+  }
+
+  .item-note {
+    font-size: 1em;
+    color: $balanced;
+  }
+
+  .lcb-error {
+    @extend .item-note;
+    color: $assertive;
+  }
+
+}

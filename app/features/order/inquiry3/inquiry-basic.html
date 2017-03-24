@@ -1,0 +1,48 @@
+<ion-view id="insurance-inquiry3-basic-container" view-title="泛华报价">
+  <ion-content>
+
+    <form id="insurance-inquiry3-basic" name="ctrl.basicForm" novalidate>
+
+      <div class="list padding-top">
+
+        <lcb-city-picker-fanhua class="dark" ng-model="ctrl.inquiry.insureAreaCode">城　市 <span class="assertive">*</span></lcb-city-picker-fanhua>
+        <label class="item item-input">
+          <span class="input-label">车牌号</span>
+          <input name="licenseNumber" ng-model="ctrl.inquiry.carInfo.carLicenseNo" type="text" placeholder="请输入车牌号，未上牌请留空" lcb-validator2="licenseNumber">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.basicForm.licenseNumber.$dirty && ctrl.basicForm.licenseNumber.$invalid">请输入正确格式的车牌号，如：沪A98981</div>
+        <label class="item item-input">
+          <span class="input-label">姓　名 <span class="assertive">*</span></span>
+          <input name="name" ng-model="ctrl.inquiry.carOwner.name" type="text" placeholder="请输入车主姓名" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">身份证</span>
+          <input name="id" ng-model="ctrl.inquiry.carOwner.idcardNo" type="text" placeholder="请输入车主身份证" lcb-validator2="idCard">
+        </label>
+        <div class="item item-divider lcb-item-error text-right" ng-show="ctrl.basicForm.id.$dirty && ctrl.basicForm.id.$invalid">请输入正确格式的身份证号</div>
+        <label class="item item-input">
+          <span class="input-label">备　注</span>
+          <input name="remark" ng-model="ctrl.inquiry.remark" type="text" placeholder="可选备注">
+        </label>
+
+      </div>
+
+      <div id="hint" class="padding">
+        温馨提示<br>
+        <span class="icon ion-arrow-up-b"></span> 交强险/车船税可提前{{ctrl.products.compulsory_forward}}天投保<br>
+        <span class="icon ion-arrow-up-b"></span> 商业险可提前{{ctrl.products.commercial_forward}}天投保<br>
+        如有任何问题，请拔打客服热线 <a href="tel:4009663899">400-966-3899</a>
+      </div>
+
+    </form>
+
+  </ion-content>
+  <ion-footer-bar class="lcb-footer-button-container">
+    <div class="button-bar">
+      <button type="button" class="button button-outline button-assertive lcb-bigger-font2" ui-sref="inquiry3.list">
+        历史报价
+      </button>
+      <button type="button" class="button button-assertive lcb-bigger-font2" ng-disabled="ctrl.basicForm.$invalid" ng-click="ctrl.searchInquiry()">新建报价</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view view-title="活动承诺函" id="user-recall-container" hide-nav-bar="true">
+  <ion-content>
+
+    <img src="/static/images/recall/page_header.png" class="lcb-img-responsive">
+    <div id="user-recall">
+
+      <h3 class="text-center">开开保“寻找好车主”活动承诺函</h3>
+      <p>尊敬的车主，您好！</p>
+      <p class="lcb-text-indent">感谢您使用{{ctrl.agreement.license_no}}的车辆参与开开保寻找好车主驾驶评测活动，三个月最终驾驶评级为{{ctrl.agreement.grade_level}}！最高可在保险公司商业险报价基础上减{{ctrl.agreement.discount_rate}}%，对应不同保险公司可以获得不同的车险折扣。开开保承诺您的驾驶评级对应的车险折扣一年之内有效！</p>
+      <p>
+        <span class="lcb-text-indent lcb-red">温馨提示：</span><br/>
+        <span class="lcb-text-indent">可在车险到期日前通过开开保免费咨询驾驶评级对应的车险价格。记得在考虑投保时首先咨询开开保提供的价格~价格的惊喜等着你哦~祝君生活愉快！</span>
+      </p>
+      <p class="lcb-text-indent">请遵循参与活动初期的活动协议将对应的设备寄回开开保！</p>
+      <p id="address">
+        <span>设备寄回地址：<br/>上海市虹桥路333号交大慧谷305A</span><br/>
+        <span>收件人：开开保</span><br/>
+        <span>联系电话：<br/>13267452784 / 021-31208556</span><br/>
+        <span>设备IMEI：{{ctrl.agreement.imei}}</span><br/>
+      </p>
+      <p class="lcb-text-indent">开开保会在收到设备以后发送确认短信，可选择快递到付！</p>
+
+      <img id="staple" src="/static/images/staple.png" class="lcb-img-responsive">
+
+    </div>
+
+  </ion-content>
+</ion-view>

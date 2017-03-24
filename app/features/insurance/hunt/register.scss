@@ -1,0 +1,55 @@
+#hunt-register-container {
+
+  .bar-footer {
+    background-color: transparent;
+    background-image: none;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0 15px;
+    > div {
+      margin: 0 auto;
+    }
+  }
+
+}
+
+#hunt-register {
+
+  #rule {
+    padding: 20px;
+    padding-top: 0px;
+  }
+
+  #result {
+    padding: 40px;
+    padding-top: 50px;
+    h2 {
+      padding: 10px 0;
+      text-align: center;
+      .icon {
+        font-size: 1.5em;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+
+  #verifycode {
+    border-left: $lcb-border;
+    button {
+      min-height: initial;
+      line-height: normal;
+      min-width: 100px;
+      margin-right: 10px;
+    }
+  }
+
+  .lcb-register-actions {
+    padding-top: 10px;
+  }
+
+  input[readonly] {
+    background-color: transparent;
+  }
+
+}

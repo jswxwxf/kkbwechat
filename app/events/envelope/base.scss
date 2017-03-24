@@ -1,0 +1,51 @@
+.lcb-envelope-container {
+  
+  background-image: url("/static/images/envelope/bg.png");
+  background-size: cover;
+  color: white;
+
+}
+
+.lcb-envelope-base {
+
+  color: white;
+
+  #helpers {
+    > div:first-child {
+      .energized {
+        color: #faea34;
+      }
+      border-bottom: 1px groove white;
+    }
+    > div:last-child {
+      > span {
+        display: inline-block;
+        padding: 5px;
+        width: 90px;
+        vertical-align: top;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  #again-button {
+    margin-top: 50px;
+    > .button {
+      padding: 0 50px;
+      border-radius: 30px;
+      background-color: #fc3849;
+      color: yellow;
+    }
+  }
+
+  .button.disabled, .button[disabled] {
+    opacity: .8;
+    background-color: #737373!important;
+    color: white!important;
+  }
+
+}

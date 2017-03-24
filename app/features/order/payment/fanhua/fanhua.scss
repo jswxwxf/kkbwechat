@@ -1,0 +1,36 @@
+#order-fanhua-pay {
+
+  @include lcb-placeholder();
+  @include lcb-input-align();
+
+  .padding-bottom > {
+    .item-divider:first-child {
+      border-top: none;
+    }
+  }
+
+}
+
+#order-fanhua-pay-container {
+  .bar-footer {
+    .title {
+      text-align: left;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding-left: 10px;
+      width: 100%;
+      height: 100%;
+    }
+    .button {
+      background-color: $balanced;
+      color: white;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 0px 20px;
+      border-radius: 0;
+      min-height: 44px;
+    }
+  }
+}

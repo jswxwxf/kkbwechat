@@ -1,0 +1,28 @@
+#envelope-draw {
+
+}
+
+#envelope-fail {
+
+  #message {
+    position: relative;
+    h3 {
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      font-size: 20pt;
+      color: white;
+      line-height: 40px;
+      @include small-screen() {
+        top: 30px;
+      }
+    }
+  }
+
+  #again-button {
+    & ~ div > a {
+      color: white;
+    }
+  }
+
+}

@@ -1,0 +1,34 @@
+<ion-view view-title="设备激活">
+  <ion-content>
+
+    <form id="user-bind-car" name="carForm" novalidate>
+
+      <step-indicator step-index="2"></step-indicator>
+
+      <div class="list">
+        <car-switcher cars="ctrl.cars" value="ctrl.car" type="list-item" on-change="ctrl.selectCar(car)"></car-switcher>
+        <car-selector brands="ctrl.brands" ng-model="ctrl.car.car" label-prefix="选择" disabled="!ctrl.car.car_id" required="true"></car-selector>
+      </div>
+
+      <div id="photo" class="more-padding dark lcb-white-bg lcb-border-vertical">
+        <div class="padding-bottom">拍照上传</div>
+        <div class="lcb-font-note">请提供行驶证信息，这将有助于我们为您提供精准车险报价，并简化车险投保流程</div>
+        <div class="row row-no-padding padding-top">
+          <div class="col lcb-margin-right">
+            <img ng-src="{{ctrl.license_vehicle || '/static/images/license_front.png'}}" class="lcb-img-responsive">
+            <input type="file" accept="image/*" ng-model='license_vehicle' lcb-file-uploader="ctrl.updateLicense" lcb-file-use-src="true">
+          </div>
+          <div class="col padding-left">
+            <img src="/static/images/sample_license1.png" class="lcb-img-responsive">
+          </div>
+        </div>
+      </div>
+
+      <div class="padding more-padding-vertical">
+        <button type="button" class="button button-block button-balanced" ng-disabled="carForm.$invalid" ng-click="ctrl.bindCar()">下一步</button>
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>

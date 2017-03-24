@@ -1,0 +1,14 @@
+<ion-view view-title="驾驶行为分析" id="dvr-container">
+  <ion-content>
+
+    <div id="dvr-trip">
+
+      <lcb-day-paginator name="ctrl.paginator" class="padding-top" on-day="ctrl.onDay(day)"></lcb-day-paginator>
+
+      <h4 class="more-padding-vertical text-center dark" ng-hide="true" ng-show="ctrl.trips.length == 0">您今天没有行程</h4>
+      <lcb-tripbox lcb-trip="trip" lcb-on-delete="ctrl.deleteTrip(trip)" lcb-on-map="ctrl.showMap(trip)" class="lcb-margin-horizontal" ng-repeat="trip in ctrl.trips"></lcb-tripbox>
+
+    </div>
+
+  </ion-content>
+</ion-view>

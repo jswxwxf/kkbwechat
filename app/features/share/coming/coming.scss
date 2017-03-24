@@ -1,0 +1,27 @@
+#share-coming {
+
+  > img {
+    width: 80%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    color: #4974d4;
+    line-height: 30px;
+    a {
+      text-decoration: none;
+    }
+    img {
+      position: relative;
+      top: 5px;
+      width: 15px;
+    }
+  }
+
+}
+
+#share-coming-container {
+  @include lcb-center-all(90%);
+  background-color: white;
+}

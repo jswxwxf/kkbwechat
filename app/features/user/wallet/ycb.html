@@ -1,0 +1,17 @@
+<ion-view view-title="养车宝">
+  <ion-content overflow-scroll="true">
+    
+    <div id="user-ycb">
+
+      <div class="padding lcb-smaller-font lcb-font-note">复制兑换码，打开养车宝APP，注册用户，进行服务兑换；请在兑换码有效期内兑换使用，过期未使用自动作废。</div>
+
+      <div ng-repeat="card in ctrl.ycb">
+        <ticket-card ticket="card"></ticket-card>
+      </div>
+
+    </div>
+
+    <ion-infinite-scroll on-infinite="ctrl.loadMoreCards()" ng-if="ctrl.hasMore()"></ion-infinite-scroll>
+    
+  </ion-content>
+</ion-view>
